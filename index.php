@@ -20,7 +20,7 @@ switch ($message)
     case 'Паша':
         $message = 'Правильно, Хон!';
         sendMessage($token, $id, $message);
-        mysqli_query($connect,"INSERT INTO `users` (`email`, `pass`, `money`) VALUES ('hooy', 'pizda', 'konoplya');");
+        mysqli_query($connect,"INSERT INTO `users` (`email`, `pass`, `money`) VALUES ('hooy', 'pizda', 'konoplya')");
         break;
     case 'Ниджат':
         $message = 'Иди нахуй, Хон!';
