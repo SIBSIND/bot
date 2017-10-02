@@ -2,5 +2,8 @@
 
 $output = json_decode(file_get_contents('php://input'),true);
 
-$text = $output['message']['text'];
-file_put_contents("logs.txt",$text);
+$id = $output['message']['chat']['id'];
+
+sendMessage($id, "Пидорас ебаный");
+
+file_put_contents("logs.txt",$id);
