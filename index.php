@@ -27,6 +27,7 @@ function KeyboardMenu($if, $message, $id, $token)
     if($message == $if){
         $message = "Пидорасы";
         sendMessage($token, $id, $message);
+        return sendMessage($token, $id, $message);
     }
 }
 
