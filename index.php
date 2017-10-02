@@ -11,7 +11,7 @@ function sendMessage($token, $id, $message)
     file_get_contents("https://api.telegram.org/bot" . $token . "/sendMessage?chat_id=" . $id . "&text=" . $message);
 }
 
-if (!$link and $message == "пидор") {
+if (!$connect and $message == "пидор") {
     $message = "точно";
     sendMessage($token, $id, $message);
 }
