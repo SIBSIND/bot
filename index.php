@@ -14,7 +14,7 @@ function sendMessage($token, $id, $message)
 $if = "привет";
 
 
-KeyboardMenu($if, $text, $message, $id, $token)
+sendIf($if, $text, $message, $id, $token)
 
 
 
@@ -22,7 +22,7 @@ KeyboardMenu($if, $text, $message, $id, $token)
 file_put_contents("logs.txt",$id);
 
 
-function KeyboardMenu($if, $message, $id, $token)
+function sendIf($if, $message, $id, $token)
 {
     if($message == $if){
         $message = "Пидорасы";
