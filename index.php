@@ -11,26 +11,9 @@ function sendMessage($token, $id, $message)
     file_get_contents("https://api.telegram.org/bot" . $token . "/sendMessage?chat_id=" . $id . "&text=" . $message);
 }
 
+$if = "Привет!";
 
-
-switch ($message)
-{
-    case '/start':
-        $message = 'Привет, Хон! Кто пидор больше?';
-        sendMessage($token, $id, $message.KeyboardMenu());
-        break;
-    case 'Паша':
-        $message = 'Правильно, Хон!';
-        sendMessage($token, $id, $message);
-        break;
-    case 'Ниджат':
-        $message = 'Иди нахуй, Хон!';
-        sendMessage($token, $id, $message);
-        break;
-    default:
-        $message = 'Ну и в пизду';
-        sendMessage($token, $id, $message);
-}
+KeyboardMenu($if, $message, $id, $token)
 
 
 
@@ -38,13 +21,21 @@ switch ($message)
 file_put_contents("logs.txt",$id);
 
 
+function KeyboardMenu($if, $message, $id, $token)
+{
+    if($message == mb_strtolower($if)
+        {
+        $message = "Пидорасы";
+        sendMessage($token, $id, $message);
+        }
+}
 
 function KeyboardMenu(){
     $buttons = [['Паша'],['Ниджат']];
     $keyboard =json_encode($keyboard = ['keyboard' => $buttons,
-                                        'resize_keyboard' => true,
-                                        'one_time_keyboard' => false,
-                                        'selective' => true]);
+        'resize_keyboard' => true,
+        'one_time_keyboard' => false,
+        'selective' => true]);
     $reply_markup = '&reply_markup=' . $keyboard . '';
 
     return $reply_markup;
