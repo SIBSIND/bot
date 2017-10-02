@@ -5,7 +5,7 @@ $message = $output['message']['text'];
 $token = "332809777:AAHjqELf5LmeTgrqxWIp5BxtsTIi9upLsl4";
 
 
-if($message == mb_strtolower('осел')
+if(mb_strtolower($message) == 'осел')
 {
     $message = "Пидорасы!";
     sendMessage($token, $id, $message);
