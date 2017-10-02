@@ -5,7 +5,22 @@ $message = $output['message']['text'];
 $token = "332809777:AAHjqELf5LmeTgrqxWIp5BxtsTIi9upLsl4";
 
 
-sendMessage($token, $id, $message);
+switch ($message)
+{
+    case "привет":
+        sendMessage($token, $id, Ку!);
+        break;
+    case "пока":
+        sendMessage($token, $id, Досвидос!);
+        break;
+    case "гыгы":
+        sendMessage($token, $id, умри!);
+        break;
+    default:
+        sendMessage($token, $id, Что ты несешь?!);
+}
+
+//sendMessage($token, $id, $message);
 
 
 
