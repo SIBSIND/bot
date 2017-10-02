@@ -11,7 +11,7 @@ function sendMessage($token, $id, $message)
     file_get_contents("https://api.telegram.org/bot" . $token . "/sendMessage?chat_id=" . $id . "&text=" . $message);
 }
 
-$if = "Привет!";
+$if = "привет";
 
 KeyboardMenu($if, $message, $id, $token)
 
