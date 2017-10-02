@@ -15,13 +15,20 @@ function sendMessage($token, $id, $message)
 
 switch ($message)
 {
-    case 'белово':
-        $message = 'ты выбрал белово!';
+    case '/start':
+        $message = 'Привет, Хон! Кто пидор больше?';
         sendMessage($token, $id, $message.KeyboardMenu());
         break;
-
+    case 'Паша':
+        $message = 'Правильно, Хон!';
+        sendMessage($token, $id, $message);
+        break;
+    case 'Пиджат':
+        $message = 'Иди нахуй, Хон!';
+        sendMessage($token, $id, $message);
+        break;
     default:
-        $message = 'Говно';
+        $message = 'Ну и в пизду';
         sendMessage($token, $id, $message);
 }
 
@@ -33,7 +40,7 @@ file_put_contents("logs.txt",$id);
 
 
 function KeyboardMenu(){
-    $buttons = [['hi'],['how are you']];
+    $buttons = [['Паша'],['Ниджат']];
     $keyboard =json_encode($keyboard = ['keyboard' => $buttons,
                                         'resize_keyboard' => true,
                                         'one_time_keyboard' => false,
