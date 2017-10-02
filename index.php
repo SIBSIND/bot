@@ -11,15 +11,6 @@ function sendMessage($token, $id, $message)
     file_get_contents("https://api.telegram.org/bot" . $token . "/sendMessage?chat_id=" . $id . "&text=" . $message);
 }
 
-if (!$connect and $message == "пидор") {
-    $message = "точно";
-    sendMessage($token, $id, $message);
-}
-if ($message == "пидор") {
-    $message = "не точно";
-    sendMessage($token, $id, $message);
-}
-
 switch ($message)
 {
     case '/start':
@@ -29,7 +20,7 @@ switch ($message)
     case 'Паша':
         $message = 'Правильно, Хон!';
         sendMessage($token, $id, $message);
-        mysqli_query($connect,"INSERT INTO `users` (`email`, `pass`, `money`) VALUES ('hooy', 'pizda', 'konoplya')");
+        mysqli_query("INSERT INTO `users` (`email`, `pass`, `money`) VALUES ('hodoy', 'pidzda', 'konodplya')");
         break;
     case 'Ниджат':
         $message = 'Иди нахуй, Хон!';
