@@ -1,14 +1,4 @@
 <?php
-///////////////////////////////////////////
-
-$host = 'localhost'; // адрес сервера 
-$database = 'a0160954_baza'; // имя базы данных
-$user = 'a0160954_baza'; // имя пользователя
-$password = 'Ghjcnjq2'; // пароль
-
-$connect = mysqli_connect($host, $user, $password, $database);
-///////////////////////////////////////////
-
 $output = json_decode(file_get_contents('php://input'),true);
 $id = $output['message']['chat']['id'];
 $message = $output['message']['text'];
@@ -16,7 +6,6 @@ $token = "332809777:AAHjqELf5LmeTgrqxWIp5BxtsTIi9upLsl4";
 
 if($message == 'олень')
 {
-  mysqli_query($connect, "INSERT INTO users (email,pass) VALUES('$message','$id') ");  
   $message = "ящерица";  
   sendMessage($token, $id, $message)
 }
