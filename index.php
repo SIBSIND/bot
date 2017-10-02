@@ -14,7 +14,7 @@ function sendMessage($token, $id, $message)
 $if = "привет";
 
 
-sendIf($if, $text, $message, $id, $token)
+sendIf($if, $text, $message, $id, $token);
 
 
 
