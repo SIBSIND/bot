@@ -4,22 +4,39 @@ $id = $output['message']['chat']['id'];
 $message = $output['message']['text'];
 $token = "332809777:AAHjqELf5LmeTgrqxWIp5BxtsTIi9upLsl4";
 
-if($message == 'олень')
+
+
+function sendMessage($token, $id, $message)
 {
-  $message = "ящерица";  
-  sendMessage($token, $id, $message)
+    file_get_contents("https://api.telegram.org/bot" . $token . "/sendMessage?chat_id=" . $id . "&text=" . $message);
 }
 
+
+
+switch ($message)
+{
+    case '/start':
+        $message = 'Привет, Хон! Кто пидор больше?';
+        sendMessage($token, $id, $message.KeyboardMenu());
+        break;
+    case 'Паша':
+        $message = 'Правильно, Хон!';
+        sendMessage($token, $id, $message);
+        break;
+    case 'Ниджат':
+        $message = 'Иди нахуй, Хон!';
+        sendMessage($token, $id, $message);
+        break;
+    default:
+        $message = 'Ну и в пизду';
+        sendMessage($token, $id, $message);
+}
 
 
 
 
 file_put_contents("logs.txt",$id);
 
-function sendMessage($token, $id, $message)
-{
-    file_get_contents("https://api.telegram.org/bot" . $token . "/sendMessage?chat_id=" . $id . "&text=" . $message);
-}
 
 function KeyboardMenu(){
     $buttons = [['Паша'],['Ниджат']];
