@@ -1,5 +1,4 @@
 <?php
-include "connect.php";
 $output = json_decode(file_get_contents('php://input'),true);
 $id = $output['message']['chat']['id'];
 $message = $output['message']['text'];
@@ -13,20 +12,19 @@ function sendMessage($token, $id, $message)
 switch ($message)
 {
     case '/start':
-        $message = 'Привет, Хон! Кто пидор больше?';
+        $message = 'Привет, Хон! Кто лучше?';
         sendMessage($token, $id, $message.KeyboardMenu());
         break;
-    case 'Паша':
+    case 'маша':
         $message = 'Правильно, Хон!';
         sendMessage($token, $id, $message);
-        mysqli_query("INSERT INTO `users` (`email`, `pass`, `money`) VALUES ('hodoy', 'pidzda', 'konodplya')");
         break;
-    case 'Ниджат':
-        $message = 'Иди нахуй, Хон!';
+    case 'катя':
+        $message = 'Ошибка, Хон!';
         sendMessage($token, $id, $message);
         break;
     default:
-        $message = 'Ну и в пизду';
+        $message = 'ни одна';
         sendMessage($token, $id, $message);
 }
 
