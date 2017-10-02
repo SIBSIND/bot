@@ -7,9 +7,17 @@ $token = "332809777:AAHjqELf5LmeTgrqxWIp5BxtsTIi9upLsl4";
 
 switch ($message)
 {
-    case 'привет':
-        $message = 'Уеба';
+    case 'белово':
+        $message = 'ты выбрал белово, выбери гашиш';
         sendMessage($token, $id, $message);
+        
+            switch ($message) 
+            {
+                case 'гашиш':
+                $message = 'пизда рублю';
+                sendMessage($token, $id, $message);
+            }
+        
         break;
     default:
         $message = 'Говно';
