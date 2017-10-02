@@ -7,17 +7,13 @@ $token = "332809777:AAHjqELf5LmeTgrqxWIp5BxtsTIi9upLsl4";
 
 switch ($message)
 {
-    case "привет":
-        sendMessage($token, $id, Ку!);
-        break;
-    case "пока":
-        sendMessage($token, $id, Досвидос!);
-        break;
-    case "гыгы":
-        sendMessage($token, $id, умри!);
+    case 'привет':
+        $message = 'Уеба';
+        sendMessage($token, $id, $message);
         break;
     default:
-        sendMessage($token, $id, Что ты несешь?!);
+        $message = 'Говно';
+        sendMessage($token, $id, $message);
 }
 
 //sendMessage($token, $id, $message);
