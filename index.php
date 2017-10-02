@@ -23,7 +23,7 @@ switch ($message)
         $message = 'Правильно, Хон!';
         sendMessage($token, $id, $message);
         break;
-    case 'Пиджат':
+    case 'Ниджат':
         $message = 'Иди нахуй, Хон!';
         sendMessage($token, $id, $message);
         break;
