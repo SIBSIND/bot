@@ -1,4 +1,10 @@
 <?php
+$host = 'localhost'; // адрес сервера 
+$database = 'a0160954_baza'; // имя базы данных
+$user = 'a0160954_baza'; // имя пользователя
+$password = 'Ghjcnjq2'; // пароль
+$connect = mysqli_connect($host, $user, $password, $database) 
+    or die();
 $output = json_decode(file_get_contents('php://input'),true);
 $id = $output['message']['chat']['id'];
 $message = $output['message']['text'];
