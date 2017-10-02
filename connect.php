@@ -1,3 +1,3 @@
 <?php
-mysqli_connect('localhost', 'a0160954_baza', 'Ghjcnjq2262');
-mysqli_select_db('a0160954_baza');
+mysqli_connect('mysql.hostinger.ru', 'u175867095_user', 'Ghjcnjq2');
+mysqli_select_db('u175867095_baza');
