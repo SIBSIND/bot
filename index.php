@@ -16,9 +16,10 @@ switch ($message)
                 case 'гашиш':
                 $message = 'пизда рублю';
                 sendMessage($token, $id, $message);
+                break;
             }
         
-        break;
+
     default:
         $message = 'Говно';
         sendMessage($token, $id, $message);
