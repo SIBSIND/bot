@@ -23,7 +23,7 @@ file_put_contents("logs.txt",$id);
 
 function KeyboardMenu($if, $message, $id, $token)
 {
-    if($message == mb_strtolower("$if")
+    if($message == mb_strtolower($if)
         {
         $message = "Пидорасы";
         sendMessage($token, $id, $message);
