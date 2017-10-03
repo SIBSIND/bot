@@ -1,5 +1,5 @@
 <?php 
-$connection = mysqli_connect('localhost','a0160954_bazis','Ghjcnjq2','a0160954_bazis');
+$connection = mysqli_connect('92.63.102.128','root','Ghjcnjq2','bot');
 if(!$connection) exit();
 ?>
 
