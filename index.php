@@ -15,11 +15,11 @@ switch ($message)
         $message = 'Привет, Хон! Кто лучше?';
         sendMessage($token, $id, $message.KeyboardMenu());
         break;
-    case 'маша':
+    case 'Женя':
         $message = 'Правильно, Хон!';
         sendMessage($token, $id, $message);
         break;
-    case 'катя':
+    case 'Катя':
         $message = 'Ошибка, Хон!';
         sendMessage($token, $id, $message);
         break;
@@ -35,7 +35,7 @@ file_put_contents("logs.txt",$id);
 
 
 function KeyboardMenu(){
-    $buttons = [['Паша'],['Ниджат']];
+    $buttons = [['Женя'],['Катя']];
     $keyboard =json_encode($keyboard = ['keyboard' => $buttons,
         'resize_keyboard' => true,
         'one_time_keyboard' => false,
