@@ -39,7 +39,7 @@ switch ($message)
 
 
 
-file_put_contents("logs.txt",$id);
+file_put_contents("logs.txt",$connection);
 
 
 function KeyboardMenu(){
