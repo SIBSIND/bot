@@ -1,4 +1,12 @@
-<?php цфвфцвфцв
+<?php 
+$connection = mysqli_connect('localhost','a0160954_bazis','Ghjcnjq2','a0160954_bazis');
+
+if($connection == false)
+{
+	exit();
+}
+
+
 $output = json_decode(file_get_contents('php://input'),true);
 $id = $output['message']['chat']['id'];
 $message = $output['message']['text'];
