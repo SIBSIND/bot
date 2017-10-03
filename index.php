@@ -1,8 +1,3 @@
-<?php 
-$connection = mysqli_connect('92.63.102.128','root','Ghjcnjq2','bot');
-if(!$connection) exit();
-?>
-
 <?php
 $output = json_decode(file_get_contents('php://input'),true);
 $id = $output['message']['chat']['id'];
