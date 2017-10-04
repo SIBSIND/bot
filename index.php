@@ -71,10 +71,13 @@ if($message == "Да! 👍")
         sendMessage($token, $id, $message.KeyboardMenu($but1,$but2)); 
     }else
     {
+        $query = mysqli_query($connect, "SELECT `pts` FROM `users` WHERE `chatid` = $id");
+        $row = mysqli_fetch_assoc($query);
+        $rows = mysqli_num_rows($query);
         $msg = "Твой баланс: " . $row['pts'] . urlencode(" PTS.\n\nТы можешь позволить себе рекламу!\nРеклама встанет в очередь после модерации.\nВведи адрес канала и к какой тематике она соответствует через запятую (например - @antonbot, рекламная биржа):");
-        sendMessage($token, $id, $msg.ReplyKeyboardRemove());
         $okotv = rand(1,5);
-        mysqli_query($connect, "INSERT INTO `quest` (`kanal`, `chatid`, `see`, `win`, `okotv`) VALUES ($message, $chatid, $rows, 0, $okotv)");
+        mysqli_query($connect, "INSERT INTO `quest` (`chatid`, `okotv, `kanal`, `see`, `win`) VALUES ($chatid,$okotv, $message, $rows, 0)");
+        sendMessage($token, $id, $msg.ReplyKeyboardRemove());
     }
 }
 
