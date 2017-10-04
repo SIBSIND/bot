@@ -1,5 +1,5 @@
 <?php
-$connection = mysqli_connect('a0160954.xsph.ru:3306','a0160954_bazis','Ghjcnjq2','a0160954_bazis');
+$connection = mysqli_connect('a0160954.xsph.ru:3306','a0160954_b2zis','Ghjcnjq2','a0160954_bazis');
 if(!$connection) exit();
 
 $output = json_decode(file_get_contents('php://input'),true);
