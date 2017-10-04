@@ -28,7 +28,7 @@ if($message == "/start" or $message == "Выйти в меню 🔙")
     $message = urlencode("Вы зарегистрированы! Ваш ChatID: $id. \n\nПривет, меня зовут Бот Антон!\nПопав сюда, ты встретил самого выгодного телеграм бота!\n\nВыбери, чем ты хочешь заняться");
     $but1 = "Подзаработать денег! 💰";
     $but2 = "Рекламировать проект! 📢";
-    sendMessage($token, $id, $message.KeyboardMenu($but1,$but2));
+    sendMessage($token, $id, $message.KeyboardMenu($but1,$but2,$bur3,$but4));
     }
 
 
@@ -64,7 +64,6 @@ if($message == "Да! 👍")
     $but1 = "Пополнить через QIWI ✔";
     $but2 = "Подзаработать денег! 💰";
     sendMessage($token, $id, $message.KeyboardMenu($but1,$but2)); 
-    $good = 2;
 }
 
 if($message == "Пополнить через QIWI ✔")
@@ -77,18 +76,16 @@ if($message == "Пополнить через QIWI ✔")
     $but1 = "Проверить 🔄";
     $but2 = "Выйти в меню 🔙";
     sendMessage($token, $id, $message.KeyboardMenu($but1,$but2)); 
-    $good = 3;
 }
 
 if($message == "Проверить 🔄")
 {
-    $query = mysqli_query($connect, "SELECT `pts` FROM `users` WHERE `chatid` = 343099999");
+    $query = mysqli_query($connect, "SELECT `pts` FROM `users` WHERE `chatid` = $id");
     $row = mysqli_fetch_assoc($query);
     $message = "Твой баланс: " . $row['pts'] . urlencode(" PTS.\n\nБаланс обновляется раз в 3 минуты. ");
     $but1 = "Проверить 🔄";
     $but2 = "Выйти в меню 🔙";
     sendMessage($token, $id, $message.KeyboardMenu($but1,$but2)); 
-    $good = 3;
 }
 
 
@@ -96,8 +93,8 @@ if($message == "Проверить 🔄")
 file_put_contents("logs.txt",$connection);
 
 
-function KeyboardMenu($but1,$but2){
-    $buttons = [[$but1],[$but2]];
+function KeyboardMenu($but1,$but2,$bur3,$but4){
+    $buttons = [[$but1],[$but2],[$but3],[$but4]];
     $keyboard =json_encode($keyboard = ['keyboard' => $buttons,
         'resize_keyboard' => true,
         'one_time_keyboard' => false,
