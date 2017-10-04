@@ -46,7 +46,7 @@ file_put_contents("logs.txt",$connection);
 
 
 function KeyboardMenu($but1,$but2){
-    $buttons = [['$but1'],['$but2']];
+    $buttons = [[$but1],[$but2]];
     $keyboard =json_encode($keyboard = ['keyboard' => $buttons,
         'resize_keyboard' => true,
         'one_time_keyboard' => false,
