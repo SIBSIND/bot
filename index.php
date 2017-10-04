@@ -72,7 +72,7 @@ if($message == "Да! 👍")
     }else
     {
         $message = urlencode("Ты можешь позволить себе рекламу!\nВведи адрес канала:");
-        sendMessage($token, $id, $message.ReplyKeyboardRemove());
+        sendMessage($token, $id, $message);
     }
 }
 
@@ -115,7 +115,7 @@ function KeyboardMenu($but1,$but2){
     return $reply_markup;
 }
 
-public function ReplyKeyboardRemove(){
+ function ReplyKeyboardRemove(){
         $removeKeyboard = json_encode($removeKeyboard = ['remove_keyboard' => true]);
         $reply_markup = '&reply_markup=' . $removeKeyboard . '';
         return $reply_markup;
