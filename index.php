@@ -75,9 +75,15 @@ if($message == "Да! 👍")
         $row = mysqli_fetch_assoc($query);
         $rows = mysqli_num_rows($query);
         $msg = "Твой баланс: " . $row['pts'] . urlencode(" PTS.\n\nТы можешь позволить себе рекламу!\nРеклама встанет в очередь после модерации.\nВведи адрес канала и к какой тематике она соответствует через запятую (например - @antonbot, рекламная биржа):");
+        sendMessage($token, $id, $msg.ReplyKeyboardRemove());
+        if(preg_match("/@/",$message))
+        {
         $okotv = rand(1,5);
         mysqli_query($connect, "INSERT INTO `quest` (`chatid`, `okotv, `kanal`, `see`, `win`) VALUES ($chatid,$okotv, $message, $rows, 0)");
-        sendMessage($token, $id, $msg.ReplyKeyboardRemove());
+        $but1 = "Подзаработать денег! 💰";
+        $but2 = "Рекламировать проект! 📢";
+        sendMessage($token, $id, $message.KeyboardMenu($but1,$but2));
+        }
     }
 }
 
