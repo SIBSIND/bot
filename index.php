@@ -26,7 +26,9 @@ if($message == "/start")
     }else
     {
     $message = urlencode("Вы зарегистрированы! Ваш ChatID: $id. \n\nПривет, меня зовут Бот Антон!\nПопав сюда, ты встретил самого выгодного телеграм бота!\n\nВыбери, чем ты хочешь заняться?");
-    sendMessage($token, $id, $message);
+    $but1 = "Подзаработать денег!";
+    $but2 = "Рекламировать проект";
+    sendMessage($token, $id, $message.KeyboardMenu($but1,$but2));
     }
 
 
