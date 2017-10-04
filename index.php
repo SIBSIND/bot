@@ -12,7 +12,7 @@ function sendMessage($token, $id, $message)
     file_get_contents("https://api.telegram.org/bot" . $token . "/sendMessage?chat_id=" . $id . "&text=" . $message);
 }
 
-if($message == "/start")
+if($message == "/start" or $message == "Выйти в меню 🔙")
 {
     $query = mysqli_query($connect, "SELECT `chatid` FROM `users` WHERE chatid = $id");
     $row = mysqli_fetch_array($query);
