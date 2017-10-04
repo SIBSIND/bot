@@ -58,7 +58,7 @@ if ($message == "Рекламировать проект! 📢")
 
 if($message == "Да! 👍")
 {
-    $query = mysqli_query($connect, "SELECT `pts` FROM `users` WHERE chatid = $id");
+    $query = mysqli_query($connect, "SELECT `pts` FROM `users` WHERE `chatid` = 343099999");
     $row = mysqli_fetch_assoc($query);
     $message = urlencode("Твой баланс: $row['pts'] баллов.\n\nТебе не хватает денег для покупки рассылки!\nЕсть два варианта:\n1) Пополнить через QIWI\n2) Подзаработать денег");
     $but1 = "Пополнить через QIWI ✔";
