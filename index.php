@@ -15,7 +15,8 @@ function sendMessage($token, $id, $message)
 if($message == "/start")
 {
     $query = mysqli_query($connect, "SELECT `chatid` FROM `users` WHERE chatid = $id");
-    if (!$query) 
+    $row = mysqli_fetch_array($query);
+    if (!$row) 
     {
     mysqli_query($connect, "INSERT INTO `users` (`chatid`) VALUES ($id)");
     }
