@@ -131,13 +131,13 @@ function KeyboardMenu($but1,$but2){
 }
 
 function KeyboardMenu1($but1){
-    $buttons = [[$but1]];
-    $keyboard =json_encode($keyboard = ['keyboard' => $buttons,
+    $buttons1 = [[$but1]];
+    $keyboard1 =json_encode($keyboard1 = ['keyboard' => $buttons1,
         'resize_keyboard' => true,
         'one_time_keyboard' => false,
         'selective' => true]);
-    $reply_markup = '&reply_markup=' . $keyboard . '';
+    $reply_markup1 = '&reply_markup=' . $keyboard1 . '';
 
-    return $reply_markup;
+    return $reply_markup1;
 }
 ?>
