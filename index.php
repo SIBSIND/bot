@@ -20,11 +20,13 @@ if($message == "/start")
     {
     mysqli_query($connect, "INSERT INTO `users` (`chatid`) VALUES ($id)");
     $message = urlencode("Вы зарегистрировались! Ваш ChatID: $id. \n\nПривет, меня зовут Бот Антон!\nПопав сюда, ты встретил самого выгодного телеграм бота!\n\nВыбери, чем ты хочешь заняться?");
-    sendMessage($token, $id, $message.KeyboardMenu());
+    $but1 = "Подзаработать денег!";
+    $but2 = "Рекламировать проект";
+    sendMessage($token, $id, $message.KeyboardMenu($but1,$but2));
     }else
     {
     $message = urlencode("Вы зарегистрированы! Ваш ChatID: $id. \n\nПривет, меня зовут Бот Антон!\nПопав сюда, ты встретил самого выгодного телеграм бота!\n\nВыбери, чем ты хочешь заняться?");
-    sendMessage($token, $id, $message.KeyboardMenu());
+    sendMessage($token, $id, $message);
     }
 
 
@@ -44,7 +46,7 @@ file_put_contents("logs.txt",$connection);
 
 
 function KeyboardMenu($but1,$but2){
-    $buttons = [['but1'],['$but2']];
+    $buttons = [['$but1'],['$but2']];
     $keyboard =json_encode($keyboard = ['keyboard' => $buttons,
         'resize_keyboard' => true,
         'one_time_keyboard' => false,
