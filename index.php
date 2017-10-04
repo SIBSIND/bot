@@ -14,9 +14,9 @@ function sendMessage($token, $id, $message)
 
 if($message == "/start")
 {
-    $message = "Выполнили!";
-    mysqli_query($connect, "INSERT INTO `users` (`id`, `email`, `pass`, `money`, `data`, `ref`) VALUES (NULL, 'piska', 'pisya', '1515', CURRENT_TIMESTAMP, NULL)");
-    sendMessage($token, $id, $message);
+    $message = "Привет, меня зовут Бот Антон!\nПопав сюда, ты встретил самого выгодного телеграм бота! \n\nВыбери, чем ты хочешь заняться? ";
+    mysqli_query($connect, "INSERT INTO `users` (`id`) VALUES ($id)");
+    sendMessage($token, $id, $message.KeyboardMenu());
 }
 
 
@@ -26,7 +26,7 @@ file_put_contents("logs.txt",$connection);
 
 
 function KeyboardMenu(){
-    $buttons = [['Женя'],['Катя']];
+    $buttons = [['Заработать денег'],['Рекламировать проект']];
     $keyboard =json_encode($keyboard = ['keyboard' => $buttons,
         'resize_keyboard' => true,
         'one_time_keyboard' => false,
