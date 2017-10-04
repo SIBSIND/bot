@@ -22,13 +22,13 @@ if($message == "/start" or $message == "Нет :-1:")
     $message = urlencode("Вы зарегистрировались! Ваш ChatID: $id. \n\nПривет, меня зовут Бот Антон!\nПопав сюда, ты встретил самого выгодного телеграм бота!\n\nВыбери, чем ты хочешь заняться?");
     $but1 = "Подзаработать денег! :moneybag:";
     $but2 = "Рекламировать проект! :mega:";
-    sendMessage($token, $id, $message.KeyboardMenu($but1,$but2,$but3));
+    sendMessage($token, $id, $message.KeyboardMenu($but1,$but2));
     }else
     {
     $message = urlencode("Вы зарегистрированы! Ваш ChatID: $id. \n\nПривет, меня зовут Бот Антон!\nПопав сюда, ты встретил самого выгодного телеграм бота!\n\nВыбери, чем ты хочешь заняться?");
     $but1 = "Подзаработать денег! :moneybag:";
     $but2 = "Рекламировать проект! :mega:";
-    sendMessage($token, $id, $message.KeyboardMenu($but1,$but2,$but3));
+    sendMessage($token, $id, $message.KeyboardMenu($but1,$but2));
     }
 
 
@@ -39,7 +39,7 @@ if($message == "Подзаработать денег! :moneybag:")
     $message = urlencode("Отлично! \n\nУ меня ты можешь зарабатывать баллы выполняя всего три простых шага! \nЯ буду присылать тебе каналы, а твоя задача переходить по ним, изучать тематику канала и ответить на заданный вопрос!\n\nЕсли ты ответишь правильно - заработаешь 1 балл, если ответишь не верно, тогда мы спишем 1 балл с твоего баланса! \nБаллы можно обменивать на реальные рубли по курсу: \n1 балл = 50 копеек!");
     $but1 = "Отлично, жду квест! :hourglass:";
     $but2 = "Рекламировать проект! :mega:";
-    sendMessage($token, $id, $message.KeyboardMenu($but1,$but2,$but3));
+    sendMessage($token, $id, $message.KeyboardMenu($but1,$but2));
 }
 
 if ($message == "Отлично, жду квест! :hourglass:")
