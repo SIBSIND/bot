@@ -1,6 +1,6 @@
 <?php
-$connection = mysqli_connect('a0160954.xsph.ru:3306','a0160954_bazis','Ghjcnjq2','a0160954_bazis');
-if(!$connection) exit();
+$connect = mysqli_connect('a0160954.xsph.ru:3306','a0160954_bazis','Ghjcnjq2','a0160954_bazis');
+if(!$connect) exit();
 
 $output = json_decode(file_get_contents('php://input'),true);
 $id = $output['message']['chat']['id'];
@@ -12,23 +12,11 @@ function sendMessage($token, $id, $message)
     file_get_contents("https://api.telegram.org/bot" . $token . "/sendMessage?chat_id=" . $id . "&text=" . $message);
 }
 
-switch ($message)
+if($message == "/start")
 {
-    case '/start':
-        $message = 'Привет, Хон! Кто лучше?';
-        sendMessage($token, $id, $message.KeyboardMenu());
-        break;
-    case 'Женя':
-        $message = 'Правильно, Хон!';
-        sendMessage($token, $id, $message);
-        break;
-    case 'Катя':
-        $message = 'Ошибка, Хон!';
-        sendMessage($token, $id, $message);
-        break;
-    default:
-        $message = 'ни одна';
-        sendMessage($token, $id, $message);
+    $message = "Выполнили!";
+    mysqli_query($connect, "INSERT INTO `users` (`id`, `email`, `pass`, `money`, `data`, `ref`) VALUES (NULL, 'piska', 'pisya', '1515', CURRENT_TIMESTAMP, NULL)");
+    sendMessage($token, $id, $message);
 }
 
 
