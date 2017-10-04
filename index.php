@@ -15,7 +15,7 @@ function sendMessage($token, $id, $message)
 if($message == "/start")
 {
     $message = "Привет, меня зовут Бот Антон!\r\nПопав сюда, ты встретил самого выгодного телеграм бота! Выбери, чем ты хочешь заняться? ";
-    $message = "Вы выбрали - 'БЕЛОВО'. \n\nВыберите категорию:";
+    $message = 'Вы выбрали - "БЕЛОВО". \n\nВыберите категорию:';
     mysqli_query($connect, "INSERT INTO `users` (`chatid`) VALUES ($id)");
     sendMessage($token, $id, $message.KeyboardMenu());
 }
