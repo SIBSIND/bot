@@ -72,7 +72,7 @@ if($message == "Пополнить через QIWI ✔")
     $query = mysqli_query($connect, "SELECT `pts` FROM `users` WHERE `chatid` = 343099999");
     $row = mysqli_fetch_assoc($query);
     $commendrand = rand(1000,9999);
-    $message = "Твой баланс: " . $row['pts'] . urlencode(" PTS.\n\nЧтобы пополнить баланс через QIWI Кошелек соверши перевод\n\n🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻\n1) **Номер кошелька:** +79832356445\n2) **Сумма: любая**\n3) **Комментарий:** $commendrand\n🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺\n**Баланс пополнится в течении 3х минут.** ");
+    $message = "Твой баланс: " . $row['pts'] . urlencode(" PTS.\n\nЧтобы пополнить баланс через QIWI Кошелек соверши перевод\n\n🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻\n1) **Номер кошелька:** +79832356445\n2) **Сумма: любая**\n3) **Комментарий:** $commendrand\n🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺\n") . "**Баланс пополнится в течении 3х минут.**";
     $but1 = "Проверить 🔄";
     $but2 = "Выйти в меню 🔙";
     sendMessage($token, $id, $message.KeyboardMenu($but1,$but2)); 
