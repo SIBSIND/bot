@@ -12,7 +12,7 @@ function sendMessage($token, $id, $message)
     file_get_contents("https://api.telegram.org/bot" . $token . "/sendMessage?chat_id=" . $id . "&text=" . $message);
 }
 
-if($god != 0 and $message == "/start")
+if($message == "/start")
 {
     $msg = urlencode("Если тебя кто-то пригласил, напиши его реферальный код (получишь бонус!):");
     $but1 = "Нет кода ❗";
@@ -44,13 +44,6 @@ if($god != 0 and $message == "Нет кода ❗")
         $but2 = "Рекламировать проект! 📢";
         sendMessage($token, $id, $message.KeyboardMenu($but1,$but2));
         $god = 0;
-    }else
-    {
-        $message = urlencode("Неверный реферальный код!");
-        $but1 = "Ввести снова 🔄";
-        $but2 = "Нет кода ❗";
-        sendMessage($token, $id, $message.KeyboardMenu($but1,$but2)); 
-    }
 }
 
 
