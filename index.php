@@ -20,14 +20,14 @@ if($message == "/start")
     {
     mysqli_query($connect, "INSERT INTO `users` (`chatid`) VALUES ($id)");
     $message = urlencode("Вы зарегистрировались! Ваш ChatID: $id. \n\nПривет, меня зовут Бот Антон!\nПопав сюда, ты встретил самого выгодного телеграм бота!\n\nВыбери, чем ты хочешь заняться?");
-    $but1 = "Подзаработать денег! :moneybag:";
-    $but2 = "Рекламировать проект! :mega:";
+    $but1 = "Подзаработать денег!";
+    $but2 = "Рекламировать проект!";
     sendMessage($token, $id, $message.KeyboardMenu($but1,$but2));
     }else
     {
     $message = urlencode("Вы зарегистрированы! Ваш ChatID: $id. \n\nПривет, меня зовут Бот Антон!\nПопав сюда, ты встретил самого выгодного телеграм бота!\n\nВыбери, чем ты хочешь заняться?");
-    $but1 = "Подзаработать денег! :moneybag:";
-    $but2 = "Рекламировать проект! :mega:";
+    $but1 = "Подзаработать денег!";
+    $but2 = "Рекламировать проект!";
     sendMessage($token, $id, $message.KeyboardMenu($but1,$but2));
     }
 
