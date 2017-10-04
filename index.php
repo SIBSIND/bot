@@ -21,7 +21,6 @@ switch ($message)
     case 'Женя':
         $message = 'Правильно, Хон!';
         sendMessage($token, $id, $message);
-        mysqli_query($connection, "INSERT INTO `users` (`email`, `pass`, `money`) VALUES ('em', 'pas', '1515'));
         break;
     case 'Катя':
         $message = 'Ошибка, Хон!';
