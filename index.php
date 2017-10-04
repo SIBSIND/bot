@@ -14,51 +14,23 @@ function sendMessage($token, $id, $message)
 
 if($message == "/start")
 {
-    $msg = urlencode("Если тебя кто-то пригласил, напиши его реферальный код (получишь бонус!):");
-    $but1 = "Нет кода ❗";
-    sendMessage($token, $id, $msg.KeyboardMenu1($but1));
-    $ref = $message;
-}  
-if($god != 0 and $message == "Нет кода ❗")
-{
     $query = mysqli_query($connect, "SELECT `chatid` FROM `users` WHERE chatid = $id");
     $row = mysqli_fetch_array($query);
     if (!$row) 
     {
-    mysqli_query($connect, "INSERT INTO `users` (`chatid`, `pts`) VALUES ($id, 0)");
-    $message = urlencode("Вы зарегистрировались! Ваш ChatID: $id. \n\nПривет, меня зовут Бот Антон!\nПопав сюда, ты встретил самого выгодного телеграм бота!\n\nВыбери, чем ты хочешь заняться?");
-    $but1 = "Подзаработать денег! 💰";
-    $but2 = "Рекламировать проект! 📢";
-    sendMessage($token, $id, $message.KeyboardMenu($but1,$but2));
-    $god = 0;
-    }
-}else
-{
-    $query = mysqli_query($connect, "SELECT `chatid` FROM `users` WHERE chatid = $ref");
-    $row = mysqli_fetch_array($query);
-    if($row)
-    {
-        mysqli_query($connect, "INSERT INTO `users` (`chatid`, `pts`, `ref`) VALUES ($id, 0, $ref)");
-        $message = urlencode("Вы зарегистрировались и получили бонус (+5 PTS на баланс)! Ваш ChatID: $id\nВаш реферер: $ref. \n\nПривет, меня зовут Бот Антон!\nПопав сюда, ты встретил самого выгодного телеграм бота!\n\nВыбери, чем ты хочешь заняться?");
+        mysqli_query($connect, "INSERT INTO `users` (`chatid`, `pts`) VALUES ($id, 0)");
+        $message = urlencode("Вы зарегистрировались! Ваш ChatID: $id. \n\nПривет, меня зовут Бот Антон!\nПопав сюда, ты встретил самого выгодного телеграм бота!\n\nВыбери, чем ты хочешь заняться?");
         $but1 = "Подзаработать денег! 💰";
         $but2 = "Рекламировать проект! 📢";
         sendMessage($token, $id, $message.KeyboardMenu($but1,$but2));
-        $god = 0;
+    }else
+    {
+        $message = urlencode("Вы зарегистрированы! Ваш ChatID: $id. \n\nПривет, меня зовут Бот Антон!\nПопав сюда, ты встретил самого выгодного телеграм бота!\n\nВыбери, чем ты хочешь заняться");
+        $but1 = "Подзаработать денег! 💰";
+        $but2 = "Рекламировать проект! 📢";
+        sendMessage($token, $id, $message.KeyboardMenu($but1,$but2));
+    }
 }
-
-
-
-
-
-{
-    $message = urlencode("Вы зарегистрированы! Ваш ChatID: $id. \n\nПривет, меня зовут Бот Антон!\nПопав сюда, ты встретил самого выгодного телеграм бота!\n\nВыбери, чем ты хочешь заняться");
-    $but1 = "Подзаработать денег! 💰";
-    $but2 = "Рекламировать проект! 📢";
-    sendMessage($token, $id, $message.KeyboardMenu($but1,$but2));
-}
-
-
-
 
 if($message == "Подзаработать денег! 💰")
 {
@@ -130,14 +102,4 @@ function KeyboardMenu($but1,$but2){
     return $reply_markup;
 }
 
-function KeyboardMenu1($but1){
-    $buttons1 = [[$but1]];
-    $keyboard1 =json_encode($keyboard1 = ['keyboard' => $buttons1,
-        'resize_keyboard' => true,
-        'one_time_keyboard' => false,
-        'selective' => true]);
-    $reply_markup1 = '&reply_markup=' . $keyboard1 . '';
-
-    return $reply_markup1;
-}
 ?>
