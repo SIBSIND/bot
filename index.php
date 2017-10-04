@@ -63,7 +63,7 @@ if($message == "Да! 👍")
     $row = mysqli_fetch_assoc($query);
     $rows = mysqli_num_rows($query);
     $rows =  $rows * 0.7;
-    if($row['pts'] >= $rows)
+    if($row['pts'] < $rows)
     {
         $message = "Твой баланс: " . $row['pts'] . urlencode(" PTS.\n\nТебе не хватает денег для покупки рассылки!\nЕсть два варианта:\n1) Пополнить через QIWI\n2) Подзаработать денег");
         $but1 = "Пополнить через QIWI ✔";
@@ -71,8 +71,10 @@ if($message == "Да! 👍")
         sendMessage($token, $id, $message.KeyboardMenu($but1,$but2)); 
     }else
     {
-        $message = urlencode("Ты можешь позволить себе рекламу!\nВведи адрес канала:");
-        sendMessage($token, $id, $message.ReplyKeyboardRemove());
+        $msg = "Твой баланс: " . $row['pts'] . urlencode(" PTS.\n\nТы можешь позволить себе рекламу!\Реклама встанет в очередь после модерации.\nВведи адрес канала и к какой тематике она соответствует через запятую (например '@antonbot, рекламная биржа'):");
+        sendMessage($token, $id, $msg.ReplyKeyboardRemove());
+        $okotv = rand(1,5);
+        mysqli_query($connect, "INSERT INTO `quest` (`kanal`, `chatid`, `see`, `win`, `okotv`) VALUES ($message, $chatid, $rows, 0, $okotv)");
     }
 }
 
