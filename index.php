@@ -54,7 +54,7 @@ if ($message == "Рекламировать проект! 📢")
     $message = urlencode("Хочешь пропиарить свой телеграм канал? - Ты по адресу!\nЯ помогу тебе набрать кучу подписчиков, но эта услуга стоит денег!\n\nВстать на рассылку стоит $cena PTS!\n\nЧто это тебе даст?\n•) Ровно $row человек увидят твою рекламу.\n\nГотов оплатить?");
     $but1 = "Да! 👍";
     $but2 = "Выйти в меню 🔙";
-    sendMessage($token, $id, $message.KeyboardMenu($but1,$but2)); 
+    sendMessage($token, $id, $message); 
 }
 
 if($message == "Да! 👍")
@@ -114,12 +114,4 @@ function KeyboardMenu($but1,$but2){
 
     return $reply_markup;
 }
-
-function ReplyKeyboardRemove(){
-        $removeKeyboard = json_encode([
-            'remove_keyboard' => true,
-            'selective' = > true]);
-        $reply_markup = '&reply_markup=' . $removeKeyboard . '';
-        return $reply_markup;
-    }
 ?>
