@@ -19,26 +19,32 @@ if($message == "/start")
     if (!$row) 
     {
     mysqli_query($connect, "INSERT INTO `users` (`chatid`) VALUES ($id)");
-    $message = "Вы зарегистрировались! Ваш chatid: $id";
-    sendMessage($token, $id, $message);
+    $message = urlencode("Вы зарегистрировались! Ваш ChatID: $id. \n\nПривет, меня зовут Бот Антон!\nПопав сюда, ты встретил самого выгодного телеграм бота!\n\nВыбери, чем ты хочешь заняться?");
+    sendMessage($token, $id, $message.KeyboardMenu());
     }else
     {
-    $message = "Вы зарегистрированы! Ваш chatid: $id";
-    sendMessage($token, $id, $message);
-    }
-    $message = urlencode("Привет, меня зовут Бот Антон!\nПопав сюда, ты встретил самого выгодного телеграм бота!\n\nВыбери, чем ты хочешь заняться?");
+    $message = urlencode("Вы зарегистрированы! Ваш ChatID: $id. \n\nПривет, меня зовут Бот Антон!\nПопав сюда, ты встретил самого выгодного телеграм бота!\n\nВыбери, чем ты хочешь заняться?");
     sendMessage($token, $id, $message.KeyboardMenu());
+    }
+
 
 }
 
+if($message == "Подзаработать денег")
+{
+    $message = urlencode("Отлично! \n\nУ меня ты можешь зарабатывать баллы выполняя всего три простых шага! \nЯ буду присылать тебе ссылки, а твоя задача переходить по ним, изучать тематику проекта и ответить на заданный вопрос!\n\n Если ты ответишь правильно - заработаешь 1 балл, если ответишь не верно, тогда мы спишем 1 балл с твоего баланса! \nБаллы можно обменивать на реальные рубли по курсу 1 балл = 50 копеек!");
+    $but1 = "Отлично, жду ссылку!";
+    $but2 = "Рекламировать проект";
+    sendMessage($token, $id, $message.KeyboardMenu($but1,$but2));
+}
 
 
 
 file_put_contents("logs.txt",$connection);
 
 
-function KeyboardMenu(){
-    $buttons = [['Заработать денег'],['Рекламировать проект']];
+function KeyboardMenu($but1,$but2){
+    $buttons = [['but1'],['$but2']];
     $keyboard =json_encode($keyboard = ['keyboard' => $buttons,
         'resize_keyboard' => true,
         'one_time_keyboard' => false,
