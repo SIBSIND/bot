@@ -59,20 +59,30 @@ if ($message == "Рекламировать проект! 📢")
 
 if($message == "Да! 👍")
 {
-    $query = mysqli_query($connect, "SELECT `pts` FROM `users` WHERE `chatid` = 343099999");
+    $query = mysqli_query($connect, "SELECT `pts` FROM `users` WHERE `chatid` = $id");
     $row = mysqli_fetch_assoc($query);
-    $message = "Твой баланс: " . $row['pts'] . urlencode(" PTS.\n\nТебе не хватает денег для покупки рассылки!\nЕсть два варианта:\n1) Пополнить через QIWI\n2) Подзаработать денег");
-    $but1 = "Пополнить через QIWI ✔";
-    $but2 = "Подзаработать денег! 💰";
-    sendMessage($token, $id, $message.KeyboardMenu($but1,$but2)); 
+    $rows = mysqli_num_rows($query);
+    $rows =  $rows * 0.7;
+    if($row['pts'] < $rows)
+    {
+        $message = "Твой баланс: " . $row['pts'] . urlencode(" PTS.\n\nТебе не хватает денег для покупки рассылки!\nЕсть два варианта:\n1) Пополнить через QIWI\n2) Подзаработать денег");
+        $but1 = "Пополнить через QIWI ✔";
+        $but2 = "Подзаработать денег! 💰";
+        sendMessage($token, $id, $message.KeyboardMenu($but1,$but2)); 
+    }else
+    {
+        $message = urlencode("Ты можешь позволить себе рекламу!\nВведи адрес канала:");
+        sendMessage($token, $id, $message.ReplyKeyboardRemove());
+    }
 }
 
 if($message == "Пополнить через QIWI ✔")
 {
     $query = mysqli_query($connect, "SELECT `pts` FROM `users` WHERE `chatid` = 343099999");
     $row = mysqli_fetch_assoc($query);
+    $rows = mysqli_num_rows($query);
     $commendrand = rand(1000,9999);
-    $summ = 500 - $row['pts'];
+    $summ = ($rows * 0.7) - $row['pts'];
     $message = "ТВОЙ БАЛАНС: " . $row['pts'] . urlencode(" PTS.\n\nПереведите на QIWI в течение 24 часов! \n\n🔻🔻🔻🔻🔻🔻🔻🔻🔻🔻\n1) КОШЕЛЕК: +79832356445\n2) СУММА: $summ рублей\n3) КОММЕНТАРИЙ: $commendrand\n🔺🔺🔺🔺🔺🔺🔺🔺🔺🔺\n\nБаланс пополнится в течении 3х минут.");
     $but1 = "Проверить 🔄";
     $but2 = "Выйти в меню 🔙";
@@ -105,4 +115,11 @@ function KeyboardMenu($but1,$but2){
     return $reply_markup;
 }
 
+function ReplyKeyboardRemove(){
+        $removeKeyboard = json_encode([
+            'remove_keyboard' => true,
+            'selective' = > true]);
+        $reply_markup = '&reply_markup=' . $removeKeyboard . '';
+        return $reply_markup;
+    }
 ?>
