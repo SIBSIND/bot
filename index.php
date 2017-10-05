@@ -37,7 +37,15 @@ if( $message == "/start" or $message == "В главное меню"){
 }
 
 if($message == $but1){
-	$msg = "Вы выбрали "  . $but1 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
+	$msg = "Вы выбрали "  . '$but1' . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
+	sendMessage($token, $id, $msg);
+}
+if($message == $but2){
+	$msg = "Вы выбрали "  . '$but2' . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
+	sendMessage($token, $id, $msg);
+}
+if($message == $but3){
+	$msg = "Вы выбрали "  . '$but3' . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but3 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
 	sendMessage($token, $id, $msg);
 }
 
