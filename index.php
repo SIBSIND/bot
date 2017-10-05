@@ -37,15 +37,55 @@ if( $message == "/start" or $message == "В главное меню"){
 }
 
 if($message == $but1){
-	$msg = "Вы выбрали "  . '$but1' . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
+	$msg = "Вы выбрали "  . "$but1" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
 	sendMessage($token, $id, $msg);
 }
-if($message == $but2){
-	$msg = "Вы выбрали "  . '$but2' . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
+else if($message == $but2){
+	$msg = "Вы выбрали "  . "$but2" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
 	sendMessage($token, $id, $msg);
 }
-if($message == $but3){
-	$msg = "Вы выбрали "  . '$but3' . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but3 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
+else if($message == $but3){
+	$msg = "Вы выбрали "  . "$but3" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but3 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
+	sendMessage($token, $id, $msg);
+}
+else if($message == $but4){
+	$msg = "Вы выбрали "  . "$but4" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but4 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
+	sendMessage($token, $id, $msg);
+}
+else if($message == $but5){
+	$msg = "Вы выбрали "  . "$but5" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but5 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
+	sendMessage($token, $id, $msg);
+}
+else if($message == $but6){
+	$msg = "Вы выбрали "  . "$but6" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but6 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
+	sendMessage($token, $id, $msg);
+}
+else if($message == $but7){
+	$msg = "Вы выбрали "  . "$but7" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but7 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
+	sendMessage($token, $id, $msg);
+}
+else if($message == $but8){
+	$msg = "Вы выбрали "  . "$but8" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but8 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
+	sendMessage($token, $id, $msg);
+}
+else if($message == $but9){
+	$msg = "Вы выбрали "  . "$but9" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but9 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
+	sendMessage($token, $id, $msg);
+}
+else if($message == $but10){
+	$msg = "Вы выбрали "  . "$but10" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but10 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
+	sendMessage($token, $id, $msg);
+}
+else if($message == $but11){
+	$msg = "Вы выбрали "  . "$but11" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but11 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
+	sendMessage($token, $id, $msg);
+}
+else if($message == $but12){
+	$msg = "Вы выбрали "  . "$but12" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but12 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
+	sendMessage($token, $id, $msg);
+}
+else if($message == $but13){
+	$msg = "Вы выбрали "  . "$but13" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but13 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
 	sendMessage($token, $id, $msg);
 }
 
