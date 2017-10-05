@@ -31,13 +31,15 @@ function sendMessage($token, $id, $message)
 	$but12 = "Прайс";
 	$but13 = "Помощь";
 
-if( $message == "/start" or $message == "В главное меню")
-{
+if( $message == "/start" or $message == "В главное меню"){
 	$msg = $welcome . urlencode("\n\nОтзывы покупателей (нажмите 👉 /otzivi)\nОставить отзыв (нажмите 👉 /otziv)\n\nДля покупки нажмите на свой город внизу:");
 	sendMessage($token, $id, $msg.KeyboardMenu($but1,$but2,$but3,$but4,$but5,$but6,$but7,$but8,$but9,$but10,$but11,$but12,$but13));
 }
 
-
+if($message == $but1){
+	$msg = "Вы выбрали '$but1'";
+	sendMessage($token, $id, $msg);
+}
 
 file_put_contents("logs.txt",$connection);
 
