@@ -17,7 +17,7 @@ if( $message == "/start" or $message == "В главное меню")
 	$query = mysqli_query($connect, "SELECT * FROM `settings` WHERE `botid` = 1");
 	$fetch = mysqli_fetch_assoc($query);
 	$welcome = $fetch['welcome'];
-	$msg = $welcome . urlencode("\nЭто сообщение взято с сайта!");
+	$msg = $welcome . urlencode("\n\nОтзывы покупателей (нажмите 👉 /otzivi)\nОставить отзыв (нажмите 👉 /otziv)\n\nДля покупки нажмите на свой город внизу:");
 	$but1 = "Пидорасы";
 	$but2 = "Хуесосы";
     sendMessage($token, $id, $msg.KeyboardMenu($but1,$but2));
