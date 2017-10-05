@@ -28,7 +28,7 @@ if( $message == "/start" or $message == "В главное меню")
 file_put_contents("logs.txt",$connection);
 
 
-function KeyboardMenu($but1,$but2){
+function KeyboardMenu($but1,$but2,$but3){
     $buttons = [[$but1],[$but2],[$but3]];
     $keyboard = json_encode($keyboard = ['keyboard' => $buttons,
         'resize_keyboard' => true,
