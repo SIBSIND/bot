@@ -31,14 +31,6 @@ function sendMessage($token, $id, $message)
 	$but12 = "Прайс";
 	$but13 = "Помощь";
 
-	////КАТЕГОРИИ////
-	$queryc = mysqli_query($connect, "SELECT * FROM `cat` WHERE `botid` = $botid");
-	$fetchc = mysqli_fetch_assoc($queryc);
-	$but1 = $fetchc['cat1'];
-	$but2 = $fetchc['cat2'];
-	$but3 = $fetchc['cat3'];
-	$but4 = $fetchc['cat4'];
-	$but5 = $fetchc['cat5'];
 
 if( $message == "/start" or $message == "В главное меню"){
 	$msg = $welcome . urlencode("\n\nОтзывы покупателей (нажмите 👉 /otzivi)\nОставить отзыв (нажмите 👉 /otziv)\n\nДля покупки нажмите на свой город внизу:");
@@ -49,11 +41,11 @@ if($message == $but1){
 	$msg = "Вы выбрали "  . "$but1" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
 	$cats = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = 'but1'");
 	$fetchc = mysqli_fetch_assoc($cats);
-	$but1 = $fetchc['cat1'];
-	$but2 = $fetchc['cat2'];
-	$but3 = $fetchc['cat3'];
-	$but4 = $fetchc['cat4'];
-	$but5 = $fetchc['cat5'];
+	$but1 = $fetchc['cat'];
+	$but2 = $fetchc['cat'];
+	$but3 = $fetchc['cat'];
+	$but4 = $fetchc['cat'];
+	$but5 = $fetchc['cat'];
 	$but6 = "";
 	$but7 = "";
 	$but8 = "";
