@@ -1,7 +1,7 @@
 <?php
 $connect = mysqli_connect('a0160954.xsph.ru:3306','a0160954_bazis','Ghjcnjq2','a0160954_bazis');
 if(!$connect) exit();
-
+$botid = 1;
 $output = json_decode(file_get_contents('php://input'),true);
 $id = $output['message']['chat']['id'];
 $message = $output['message']['text'];
@@ -14,7 +14,7 @@ function sendMessage($token, $id, $message)
 
 if( $message == "/start" or $message == "В главное меню")
 {
-	$query = mysqli_query($connect, "SELECT * FROM `settings` WHERE `botid` = 1");
+	$query = mysqli_query($connect, "SELECT * FROM `settings` WHERE `botid` = $botid");
 	$fetch = mysqli_fetch_assoc($query);
 	$welcome = $fetch['welcome'];
 	$msg = $welcome . urlencode("\n\nОтзывы покупателей (нажмите 👉 /otzivi)\nОставить отзыв (нажмите 👉 /otziv)\n\nДля покупки нажмите на свой город внизу:");
