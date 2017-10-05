@@ -36,6 +36,11 @@ if( $message == "/start" or $message == "В главное меню")
 	sendMessage($token, $id, $msg.KeyboardMenu($but1,$but2,$but3,$but4,$but5,$but6,$but7,$but8,$but9,$but10,$but11,$but12,$but13));
 }
 
+if($message == $but1 or $message == $but2 or $message == $but3 or $message == $but4 or $message == $but5 or $message == $but6 or $message == $but7 or $message == $but8 or $message == $but9 or $message == $but10){
+	$msg = urlencode("Вы выбрали ") . "$message"; 
+	sendMessage($token, $id, $msg)
+}
+
 
 file_put_contents("logs.txt",$connection);
 
