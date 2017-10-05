@@ -5,7 +5,7 @@ if(!$connect) exit();
 $output = json_decode(file_get_contents('php://input'),true);
 $id = $output['message']['chat']['id'];
 $message = $output['message']['text'];
-$token = "353692369:AAG8oKq8id2URz9Xzr8RFGlYOAWFA30A0LI";
+$token = "332809777:AAHjqELf5LmeTgrqxWIp5BxtsTIi9upLsl4";
 
 function sendMessage($token, $id, $message)
 {
