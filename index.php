@@ -20,7 +20,7 @@ if( $message == "/start" or $message == "В главное меню")
 	$msg = $welcome . urlencode("\n\nОтзывы покупателей (нажмите 👉 /otzivi)\nОставить отзыв (нажмите 👉 /otziv)\n\nДля покупки нажмите на свой город внизу:");
 	$but1 = "Пидорасы";
 	$but2 = "Хуесосы";
-	$but3 = "Wdwdw";
+	$but3 = " ";
 	sendMessage($token, $id, $msg.KeyboardMenu($but1,$but2,$but3));
 }
 
@@ -28,8 +28,8 @@ if( $message == "/start" or $message == "В главное меню")
 file_put_contents("logs.txt",$connection);
 
 
-function KeyboardMenu($but1,$but2,$but3){
-    $buttons = [[$but1],[$but2],$but3];
+function KeyboardMenu($but1,$but2){
+    $buttons = [[$but1],[$but2],[$but3]];
     $keyboard = json_encode($keyboard = ['keyboard' => $buttons,
         'resize_keyboard' => true,
         'one_time_keyboard' => false,
