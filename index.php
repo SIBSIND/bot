@@ -48,10 +48,13 @@ if( $message == "/start" or $message == "В главное меню"){
 if($message == $but1){
 	$msg = "Вы выбрали "  . "$but1" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
 	$cats1 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = $botid and `city` = '$but1' and `cat` = '$cat1' limit 1");
-	$assocn = mysqli_num_rows($cats1);
+	$assocn1 = mysqli_num_rows($cats1);
 	$assoc1 = mysqli_fetch_assoc($cats1);
 	if($assocn){ $but1 = $assoc1['cat']; }else{ $but1 = ""; } 
-	$but2 = "";
+	$cats2 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = $botid and `city` = '$but1' and `cat` = '$cat2' limit 1");
+	$assocn2 = mysqli_num_rows($cats2);
+	$assoc2 = mysqli_fetch_assoc($cats2);
+	if($assocn){ $but2 = $assoc2['cat']; }else{ $but2 = ""; } 
 	$but3 = "";
 	$but4 = "";
 	$but5 = "";
