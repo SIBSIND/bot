@@ -33,12 +33,12 @@ function sendMessage($token, $id, $message)
 
 	////КАТЕГОРИИ////
 	$queryc = mysqli_query($connect, "SELECT * FROM `cat` WHERE `botid` = $botid");
-	$fetchc = mysqli_fetch_assoc($querys);
-	$cat1 = $fetchs['cat1'];
-	$cat2 = $fetchs['cat2'];
-	$cat3 = $fetchs['cat3'];
-	$cat4 = $fetchs['cat4'];
-	$cat5 = $fetchs['cat5'];
+	$fetchc = mysqli_fetch_assoc($queryc);
+	$cat1 = $fetchc['cat1'];
+	$cat2 = $fetchc['cat2'];
+	$cat3 = $fetchc['cat3'];
+	$cat4 = $fetchc['cat4'];
+	$cat5 = $fetchc['cat5'];
 
 if( $message == "/start" or $message == "В главное меню"){
 	$msg = $welcome . urlencode("\n\nОтзывы покупателей (нажмите 👉 /otzivi)\nОставить отзыв (нажмите 👉 /otziv)\n\nДля покупки нажмите на свой город внизу:");
