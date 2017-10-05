@@ -67,6 +67,9 @@ if($message == $but1){
 	$but8 = "";
 	$but9 = "";
 	$but10 = "";
+	$but11 = "В главное меню";
+	$but12 = "Прайс";
+	$but13 = "Помощь";
 	sendMessage($token, $id, $msg.KeyboardMenu($but1,$but2,$but3,$but4,$but5,$but6,$but7,$but8,$but9,$but10,$but11,$but12,$but13));
 	$check = 1;
 }
