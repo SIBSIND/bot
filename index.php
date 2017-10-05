@@ -49,7 +49,7 @@ if($message == $but1){
 	$msg = "Вы выбрали "  . "$but1" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
 	$cats1 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = $botid and `city` = '$but1' and `cat` = '$cat1' limit 1");
 	$assoc1 = mysqli_fetch_assoc($cats1);
-	else if($assoc1){$but1 = $assoc1['cat']}else{$but1 = ""} 
+	if($assoc1){$but1 = $assoc1['cat']}else{$but1 = ""} 
 	$cats2 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = $botid and `city` = '$but1' and `cat` = '$cat2' limit 1");
 	$assoc2 = mysqli_fetch_assoc($cats2);
 	else if($assoc2){$but2 = $assoc2['cat']}else{$but2 = ""} 
