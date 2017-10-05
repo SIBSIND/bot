@@ -37,8 +37,8 @@ if( $message == "/start" or $message == "В главное меню")
 }
 
 if($message == $but1 or $message == $but2 or $message == $but3 or $message == $but4 or $message == $but5 or $message == $but6 or $message == $but7 or $message == $but8 or $message == $but9 or $message == $but10){
-	$msg = urlencode("Вы выбрали ") . "$message"; 
-	sendMessage($token, $id, $msg)
+	$msg = urlencode("Вы выбрали ") . $message; 
+	sendMessage($token, $id, $msg);
 }
 
 
