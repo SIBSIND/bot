@@ -16,9 +16,10 @@ if( $message == "/start" or $message == "В главное меню")
 {
 	$query = mysqli_query($connect, "SELECT * FROM `settings` WHERE `botid` = 1");
 	$fetch = mysqli_fetch_assoc($query);
-    $welcome = $fetch['welcome'];
-    $but1 = "Пидорасы";
-    $but2 = "Хуесосы";
+	$welcome = $fetch['welcome'];
+	$msg = $welcome . "Отныне мир будет моим!";
+	$but1 = "Пидорасы";
+	$but2 = "Хуесосы";
     sendMessage($token, $id, $msg.KeyboardMenu($but1,$but2));
 }
 
