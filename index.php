@@ -39,11 +39,12 @@ file_put_contents("logs.txt",$connection);
 
 
 function KeyboardMenu($but1,$but2,$but3,$but4,$but5,$but6,$but7,$but8,$but9,$but10,$but11,$but12,$but13){
-    $buttons = [[$but1],[$but2],[$but3],[$but4],[$but5],[$but6],[$but7],[$but8],[$but9],[$but10],[$but11],[$but12],[$but13]];
-    $keyboard = json_encode($keyboard = ['keyboard' => $buttons,
-        'resize_keyboard' => false,
+	$buttons = [[$but1],[$but2],[$but3],[$but4],[$but5],[$but6],[$but7],[$but8],[$but9],[$but10]];
+	$buttons1 = [[$but11],[$but12],[$but13]];
+	$keyboard = json_encode($keyboard = ['keyboard' => $buttons1, 'keyboard' => $buttons1,
+        'resize_keyboard' => true,
         'one_time_keyboard' => false,
-        'selective' => false]);
+        'selective' => true]);
     $reply_markup = '&reply_markup=' . $keyboard . '';
 
     return $reply_markup;
