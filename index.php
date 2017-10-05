@@ -12,10 +12,9 @@ function sendMessage($token, $id, $message)
     file_get_contents("https://api.telegram.org/bot" . $token . "/sendMessage?chat_id=" . $id . "&text=" . $message);
 }
 
-if($message == "/start"")
-{
+    $but1 = "Пидорасы";
+    $but2 = "Хуесосы";
     sendMessage($token, $id, $message.KeyboardMenu($but1,$but2));
-}
 
 
 
