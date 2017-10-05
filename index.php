@@ -54,11 +54,11 @@ if($message == $but1){
 	$but3 = $fetchc['cat'];
 	$but4 = $fetchc['cat'];
 	$but5 = $fetchc['cat'];
-	$but6 = "$fetchc['cat']";
-	$but7 = "$fetchc['cat']";
-	$but8 = "$fetchc['cat']";
-	$but9 = "$fetchc['cat']";
-	$but10 = "$fetchc['cat']";
+	$but6 = $fetchc['cat'];
+	$but7 = $fetchc['cat'];
+	$but8 = $fetchc['cat'];
+	$but9 = $fetchc['cat'];
+	$but10 = $fetchc['cat'];
 	$but11 = "В главное меню";
 	$but12 = "Прайс";
 	$but13 = "Помощь";
