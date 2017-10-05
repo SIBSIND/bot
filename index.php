@@ -58,7 +58,7 @@ if($message == $but1){
 	$cats5 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = $botid and `city` = '$but1' and `cat` = '$cat5' limit 1");
 	$assoc5 = mysqli_fetch_assoc($cats5);
 	$but1 = $assoc1['cat'];
-	$but2 =	"";
+	$but2 =	$assoc2['cat'];
 	$but3 = "";
 	$but4 = "";
 	$but5 = "";
