@@ -39,19 +39,19 @@ if( $message == "/start" or $message == "В главное меню"){
 
 if($message == $but1){
 	$msg = "Вы выбрали "  . "$but1" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
-	$cats = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = 'but1' and `cat` = 'cat1'");
+	$cats = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but1' and `cat` = 'cat1'");
 	$fetchc = mysqli_fetch_assoc($cats);
 	$but1 = $fetchc['cat'];
-	$cats = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = 'but1' and `cat` = 'cat2'");
+	$cats = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but2' and `cat` = 'cat2'");
 	$fetchc = mysqli_fetch_assoc($cats);
 	$but2 = $fetchc['cat'];
-	$cats = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = 'but1' and `cat` = 'cat3'");
+	$cats = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but3' and `cat` = 'cat3'");
 	$fetchc = mysqli_fetch_assoc($cats);
 	$but3 = $fetchc['cat'];
-	$cats = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = 'but1' and `cat` = 'cat4'");
+	$cats = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but4' and `cat` = 'cat4'");
 	$fetchc = mysqli_fetch_assoc($cats);
 	$but4 = $fetchc['cat'];
-	$cats = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = 'but1' and `cat` = 'cat5'");
+	$cats = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but5' and `cat` = 'cat5'");
 	$fetchc = mysqli_fetch_assoc($cats);
 	$but5 = $fetchc['cat'];
 	$but6 = "";
