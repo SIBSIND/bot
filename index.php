@@ -50,7 +50,9 @@ if($message == $but1){
 	$cats1 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = $botid and `city` = '$but1' and `cat` = '$cat1' limit 1");
 	$assoc1 = mysqli_fetch_assoc($cats1);
 	if($assoc1){$but1 = $assoc1['cat'];}
-	$but2 =	"";
+	$cats2 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = $botid and `city` = '$but1' and `cat` = '$cat2' limit 1");
+	$assoc2 = mysqli_fetch_assoc($cats2);
+	if($assoc2){$but2 = $assoc2['cat'];}
 	$but3 = "";
 	$but4 = "";
 	$but5 = "";
