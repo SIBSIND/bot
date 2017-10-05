@@ -21,15 +21,25 @@ if( $message == "/start" or $message == "В главное меню")
 	$but1 = "Пидорасы";
 	$but2 = "Хуесосы";
 	$but3 = "";
-	sendMessage($token, $id, $msg.KeyboardMenu($but1,$but2,$but3));
+	$but4 = "";
+	$but5 = "";
+	$but6 = "";
+	$but7 = "";
+	$but8 = "";
+	$but9 = "";
+	$but10 = "";
+	$but11 = "В главное меню";
+	$but12 = "Прайс";
+	$but13 = "Помощь";
+	sendMessage($token, $id, $msg.KeyboardMenu($but1,$but2,$but3,$but4,$but5,$but6,$but7,$but8,$but9,$but10,$but11,$but12,$but13));
 }
 
 
 file_put_contents("logs.txt",$connection);
 
 
-function KeyboardMenu($but1,$but2,$but3){
-    $buttons = [[$but1],[$but2],[$but3]];
+function KeyboardMenu($but1,$but2,$but3,$but4,$but5,$but6,$but7,$but8,$but9,$but10,$but11,$but12,$but13){
+    $buttons = [[$but1],[$but2],[$but3],[$but4],[$but5],[$but6],[$but7],[$but8],[$but9],[$but10],[$but11],[$but12],[$but13]];
     $keyboard = json_encode($keyboard = ['keyboard' => $buttons,
         'resize_keyboard' => true,
         'one_time_keyboard' => false,
