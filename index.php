@@ -25,7 +25,7 @@ function sendMessage($token, $id, $message)
 	$but6 = $fetchs['but6'];
 	$but7 = $fetchs['but7'];
 	$but8 = $fetchs['but8'];
-	$but9 = $fetchs['but9'];
+	$but9 = "";
 	$but10 = $fetchs['but10'];
 	$but11 = "В главное меню";
 	$but12 = "Прайс";
