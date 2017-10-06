@@ -671,6 +671,10 @@ if($citypage == 1 and $message == $cat1)
 {
 	$msg = "Вы выбрали Яблоки Город $but1";
 	sendMessage($token, $id, $msg);	
+}else
+{
+	$msg = urlencode("Неправильный выбор, попробуйте еще раз. Для выбора варианта нажмите на кнопку снизу");
+	sendMessage($token, $id, $msg);
 }
 
 
