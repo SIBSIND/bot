@@ -60,13 +60,40 @@ if($message == $but1){
 	
 	
 	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat2' and `city` = '$but1' limit 1");
-	$row2 = mysqli_fetch_assoc($query);
-	$cat2 = $row2['cat'];
+	$row = mysqli_num_rows($query);
+	$ass = mysqli_fetch_assoc($query);
+	if($row){
+	$cat2 = $ass['cat'];
+	}else{
+	$cat2 = "";
+	}
 	
-	
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat3' and `city` = '$but1' limit 1");
+	$row = mysqli_num_rows($query);
+	$ass = mysqli_fetch_assoc($query);
+	if($row){
+	$cat3 = $ass['cat'];
+	}else{
 	$cat3 = "";
+	}
+	
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat4' and `city` = '$but1' limit 1");
+	$row = mysqli_num_rows($query);
+	$ass = mysqli_fetch_assoc($query);
+	if($row){
+	$cat4 = $ass['cat'];
+	}else{
 	$cat4 = "";
+	}
+	
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat5' and `city` = '$but1' limit 1");
+	$row = mysqli_num_rows($query);
+	$ass = mysqli_fetch_assoc($query);
+	if($row){
+	$cat5 = $ass['cat'];
+	}else{
 	$cat5 = "";
+	}
 	sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
 	$check = 1;
 }
