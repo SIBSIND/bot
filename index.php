@@ -702,26 +702,31 @@ else if($citypage == 1 and $message == $cat5)
 
 else if($citypage == 2 and $message == $cat1)
 {
+	mysqli_query($connect, "UPDATE `users` SET `cat` = '1' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat1" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but2 . urlencode("\nКАТЕГОРИЯ: ") . $cat1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
 	sendMessage($token, $id, $msg);	
 }
 else if($citypage == 2 and $message == $cat2)
 {
+	mysqli_query($connect, "UPDATE `users` SET `cat` = '2' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat2" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but2 . urlencode("\nКАТЕГОРИЯ: ") . $cat2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
 	sendMessage($token, $id, $msg);	
 }
 else if($citypage == 2 and $message == $cat3)
 {
+	mysqli_query($connect, "UPDATE `users` SET `cat` = '3' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat3" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but2 . urlencode("\nКАТЕГОРИЯ: ") . $cat3 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
 	sendMessage($token, $id, $msg);	
 }
 else if($citypage == 2 and $message == $cat4)
 {
+	mysqli_query($connect, "UPDATE `users` SET `cat` = '4' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat4" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but2 . urlencode("\nКАТЕГОРИЯ: ") . $cat4 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
 	sendMessage($token, $id, $msg);	
 }
 else if($citypage == 2 and $message == $cat5)
 {
+	mysqli_query($connect, "UPDATE `users` SET `cat` = '5' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat5" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but2 . urlencode("\nКАТЕГОРИЯ: ") . $cat5 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
 	sendMessage($token, $id, $msg);	
 }
