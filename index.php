@@ -125,6 +125,7 @@ else if($message == $but2)
 	$row = mysqli_num_rows($query);
 	if($row)
 	{
+		mysqli_query($connect, "UPDATE `users` SET `city` = '2' WHERE `users`.`chatid` = $id");
 		$msg = "Вы выбрали "  . "$but2" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
 		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but2' limit 1");
 		$row = mysqli_num_rows($query);
@@ -184,6 +185,7 @@ else if($message == $but3)
 	$row = mysqli_num_rows($query);
 	if($row)
 	{
+		mysqli_query($connect, "UPDATE `users` SET `city` = '3' WHERE `users`.`chatid` = $id");
 		$msg = "Вы выбрали "  . "$but3" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but3 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
 		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but3' limit 1");
 		$row = mysqli_num_rows($query);
@@ -243,6 +245,7 @@ else if($message == $but4)
 	$row = mysqli_num_rows($query);
 	if($row)
 	{
+		mysqli_query($connect, "UPDATE `users` SET `city` = '4' WHERE `users`.`chatid` = $id");
 		$msg = "Вы выбрали "  . "$but4" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but4 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
 		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but4' limit 1");
 		$row = mysqli_num_rows($query);
@@ -302,6 +305,7 @@ if($message == $but5)
 	$row = mysqli_num_rows($query);
 	if($row)
 	{
+		mysqli_query($connect, "UPDATE `users` SET `city` = '5' WHERE `users`.`chatid` = $id");
 		$msg = "Вы выбрали "  . "$but5" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but5 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
 		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but5' limit 1");
 		$row = mysqli_num_rows($query);
@@ -361,6 +365,7 @@ else if($message == $but6)
 	$row = mysqli_num_rows($query);
 	if($row)
 	{
+		mysqli_query($connect, "UPDATE `users` SET `city` = '6' WHERE `users`.`chatid` = $id");
 		$msg = "Вы выбрали "  . "$but6" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but6 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
 		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but6' limit 1");
 		$row = mysqli_num_rows($query);
@@ -420,6 +425,7 @@ if($message == $but7)
 	$row = mysqli_num_rows($query);
 	if($row)
 	{
+		mysqli_query($connect, "UPDATE `users` SET `city` = '7' WHERE `users`.`chatid` = $id");
 		$msg = "Вы выбрали "  . "$but7" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but7 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
 		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but7' limit 1");
 		$row = mysqli_num_rows($query);
@@ -479,6 +485,7 @@ else if($message == $but8)
 	$row = mysqli_num_rows($query);
 	if($row)
 	{
+		mysqli_query($connect, "UPDATE `users` SET `city` = '8' WHERE `users`.`chatid` = $id");
 		$msg = "Вы выбрали "  . "$but8" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but8 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
 		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but8' limit 1");
 		$row = mysqli_num_rows($query);
@@ -538,6 +545,7 @@ else if($message == $but9)
 	$row = mysqli_num_rows($query);
 	if($row)
 	{
+		mysqli_query($connect, "UPDATE `users` SET `city` = '9' WHERE `users`.`chatid` = $id");
 		$msg = "Вы выбрали "  . "$but9" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but9 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
 		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but9' limit 1");
 		$row = mysqli_num_rows($query);
@@ -597,6 +605,7 @@ else if($message == $but10)
 	$row = mysqli_num_rows($query);
 	if($row)
 	{
+		mysqli_query($connect, "UPDATE `users` SET `city` = '10' WHERE `users`.`chatid` = $id");
 		$msg = "Вы выбрали "  . "$but10" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but10 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
 		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but10' limit 1");
 		$row = mysqli_num_rows($query);
@@ -651,12 +660,16 @@ else if($message == $but10)
 	}
 }
 
+$queryuser = mysqli_query($connect, "SELECT `city` FROM `users` WHERE `chatid` = $id");
+$rowuser = mysqli_fetch_assoc($queryuser);
+$citypage = $rowuser['city'];
+
 $queryc = mysqli_query($connect, "SELECT * FROM `cat` WHERE `botid` = $botid");
 $fetchc = mysqli_fetch_assoc($queryc);
 $cat1 = $fetchc['cat1'];
-if($check == 228 and $message == $cat1)
+if($citypage == 1 and $message == $cat1)
 {
-	$msg = "Вы выбрали Яблоки";
+	$msg = "Вы выбрали Яблоки Город $but1";
 	sendMessage($token, $id, $msg);	
 }
 
