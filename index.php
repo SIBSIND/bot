@@ -57,7 +57,7 @@ if($message == $but1){
 	$cat3 = "";
 	$cat4 = "";
 	$cat5 = "";
-	sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but6, $but7, $but8));
+	sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
 	$check = 1;
 }
 else if($message == $but2){
@@ -120,8 +120,8 @@ function KeyboardMenu($but1,$but2,$but3,$but4,$but5,$but6,$but7,$but8,$but9,$but
     return $reply_markup;
 }
 
-function KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but6, $but7, $but8){
-	$buttons = [[$cat1],[$cat2],[$cat3],[$cat4],[$cat5],[$but6],[$but7],[$but8]];
+function KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13){
+	$buttons = [[$cat1],[$cat2],[$cat3],[$cat4],[$cat5],[$but11],[$but12],[$but13]];
 	$keyboard = json_encode($keyboard = ['keyboard' => $buttons,
         'resize_keyboard' => true,
         'one_time_keyboard' => false,
