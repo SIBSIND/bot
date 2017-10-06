@@ -674,27 +674,27 @@ $cat4 = $fetchc['cat4'];
 $cat5 = $fetchc['cat5'];
 if($citypage == 1 and $message == $cat1)
 {
-	$msg = "Вы выбрали Яблоки Город $but1";
+	$msg = "Вы выбрали "  . "$cat1" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
 	sendMessage($token, $id, $msg);	
 }
 else if($citypage == 1 and $message == $cat2)
 {
-	$msg = "Вы выбрали Яблоки Город $but1";
+	$msg = "Вы выбрали "  . "$cat2" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
 	sendMessage($token, $id, $msg);	
 }
 else if($citypage == 1 and $message == $cat3)
 {
-	$msg = "Вы выбрали Яблоки Город $but1";
+	$msg = "Вы выбрали "  . "$cat3" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat3 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
 	sendMessage($token, $id, $msg);	
 }
 else if($citypage == 1 and $message == $cat4)
 {
-	$msg = "Вы выбрали Яблоки Город $but1";
+	$msg = "Вы выбрали "  . "$cat4" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat4 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
 	sendMessage($token, $id, $msg);	
 }
 else if($citypage == 1 and $message == $cat5)
 {
-	$msg = "Вы выбрали Яблоки Город $but1";
+	$msg = "Вы выбрали "  . "$cat5" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat5 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
 	sendMessage($token, $id, $msg);	
 }
 
@@ -702,27 +702,27 @@ else if($citypage == 1 and $message == $cat5)
 
 else if($citypage == 2 and $message == $cat1)
 {
-	$msg = "Вы выбрали $cat1 Город $but2";
+	$msg = "Вы выбрали "  . "$cat1" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but2 . urlencode("\nКАТЕГОРИЯ: ") . $cat1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
 	sendMessage($token, $id, $msg);	
 }
 else if($citypage == 2 and $message == $cat2)
 {
-	$msg = "Вы выбрали $cat2 Город $but2";
+	$msg = "Вы выбрали "  . "$cat2" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but2 . urlencode("\nКАТЕГОРИЯ: ") . $cat2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
 	sendMessage($token, $id, $msg);	
 }
 else if($citypage == 2 and $message == $cat3)
 {
-	$msg = "Вы выбрали $cat3 Город $but2";
+	$msg = "Вы выбрали "  . "$cat3" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but2 . urlencode("\nКАТЕГОРИЯ: ") . $cat3 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
 	sendMessage($token, $id, $msg);	
 }
 else if($citypage == 2 and $message == $cat4)
 {
-	$msg = "Вы выбрали $cat4 Город $but2";
+	$msg = "Вы выбрали "  . "$cat4" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but2 . urlencode("\nКАТЕГОРИЯ: ") . $cat4 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
 	sendMessage($token, $id, $msg);	
 }
 else if($citypage == 2 and $message == $cat5)
 {
-	$msg = "Вы выбрали $cat5 Город $but2";
+	$msg = "Вы выбрали "  . "$cat5" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but2 . urlencode("\nКАТЕГОРИЯ: ") . $cat5 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
 	sendMessage($token, $id, $msg);	
 }
 
