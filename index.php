@@ -45,57 +45,73 @@ if( $message == "/start" or $message == "В главное меню"){
 	sendMessage($token, $id, $msg.KeyboardMenu($but1,$but2,$but3,$but4,$but5,$but6,$but7,$but8,$but9,$but10,$but11,$but12,$but13));
 }
 
-if($message == $but1){
-	$msg = "Вы выбрали "  . "$but1" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
+if($message == $but1)
+{
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but1' limit 1");
+	$row = mysqli_num_rows($query);
+	if($row)
+	{
+	
+		$msg = "Вы выбрали "  . "$but1" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
 
-	
-	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but1' limit 1");
-	$row = mysqli_num_rows($query);
-	$ass = mysqli_fetch_assoc($query);
-	if($row){
-	$cat1 = $ass['cat'];
-	}else{
-	$cat1 = "";
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but1' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat1 = $ass['cat'];
+		}else{
+		$cat1 = "";
+		}
+
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat2' and `city` = '$but1' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat2 = $ass['cat'];
+		}else{
+		$cat2 = "";
+		}
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat3' and `city` = '$but1' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat3 = $ass['cat'];
+		}else{
+		$cat3 = "";
+		}
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat4' and `city` = '$but1' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat4 = $ass['cat'];
+		}else{
+		$cat4 = "";
+		}
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat5' and `city` = '$but1' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat5 = $ass['cat'];
+		}else{
+		$cat5 = "";
+		}
+		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
+		$check = 1;
+	}else
+	{
+		$cat1 = "";
+		$cat2 = "";
+		$cat3 = "";
+		$cat4 = "";
+		$cat5 = "";
+		$msg = "В выбранном городе закончились товары, приходите чуть позже.";
+		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
 	}
-	
-	
-	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat2' and `city` = '$but1' limit 1");
-	$row = mysqli_num_rows($query);
-	$ass = mysqli_fetch_assoc($query);
-	if($row){
-	$cat2 = $ass['cat'];
-	}else{
-	$cat2 = "";
-	}
-	
-	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat3' and `city` = '$but1' limit 1");
-	$row = mysqli_num_rows($query);
-	$ass = mysqli_fetch_assoc($query);
-	if($row){
-	$cat3 = $ass['cat'];
-	}else{
-	$cat3 = "";
-	}
-	
-	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat4' and `city` = '$but1' limit 1");
-	$row = mysqli_num_rows($query);
-	$ass = mysqli_fetch_assoc($query);
-	if($row){
-	$cat4 = $ass['cat'];
-	}else{
-	$cat4 = "";
-	}
-	
-	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat5' and `city` = '$but1' limit 1");
-	$row = mysqli_num_rows($query);
-	$ass = mysqli_fetch_assoc($query);
-	if($row){
-	$cat5 = $ass['cat'];
-	}else{
-	$cat5 = "";
-	}
-	sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
-	$check = 1;
 }
 else if($message == $but2){
 	$msg = "Вы выбрали "  . "$but2" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
