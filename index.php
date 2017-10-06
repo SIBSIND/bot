@@ -49,7 +49,7 @@ if($message == $but1){
 	$msg = "Вы выбрали "  . "$but1" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
 	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but1' limit 1");
 	$row1 = mysqli_fetch_assoc($query);
-	if($row1 == $cat1)
+	if(mysqli_fetch_assoc($query))
 	{
 		$cat1 = $row1['cat'];
 	}else
@@ -58,40 +58,16 @@ if($message == $but1){
 	}
 	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat2' and `city` = '$but1' limit 1");
 	$row2 = mysqli_fetch_assoc($query);
-	if($row2 == $cat2)
+	if(mysqli_fetch_assoc($query))
 	{
 		$cat2 = $row2['cat'];
 	}else
 	{
 		$cat2 = "";
 	}
-	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat3' and `city` = '$but1' limit 1");
-	$row3 = mysqli_fetch_assoc($query);
-	if($row3 == $cat3)
-	{
-		$cat3 = $row3['cat'];
-	}else
-	{
-		$cat3 = "";
-	}
-	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat4' and `city` = '$but1' limit 1");
-	$row4 = mysqli_fetch_assoc($query);
-	if($row4 == $cat4)
-	{
-		$cat4 = $row4['cat'];
-	}else
-	{
-		$cat4 = "";
-	}
-	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat5' and `city` = '$but1' limit 1");
-	$row5 = mysqli_fetch_assoc($query);
-	if($row5 == $cat5)
-	{
-		$cat5 = $row5['cat'];
-	}else
-	{
-		$cat5 = "";
-	}
+	$cat3 = "";
+	$cat4 = "";
+	$cat5 = "";
 	sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
 	$check = 1;
 }
