@@ -47,15 +47,24 @@ if( $message == "/start" or $message == "В главное меню"){
 
 if($message == $but1){
 	$msg = "Вы выбрали "  . "$but1" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
+
+	
 	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but1' limit 1");
-	$row1 = mysqli_fetch_assoc($query);
-	$cat1 = $row1['cat'];
+	$row = mysqli_num_rows($query);
+	$ass = mysqli_fetch_assoc($query);
+	if($row){
+	$cat1 = $ass['cat'];
+	}else{
+	$cat1 = "";
+	}
+	
 	
 	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat2' and `city` = '$but1' limit 1");
 	$row2 = mysqli_fetch_assoc($query);
 	$cat2 = $row2['cat'];
 	
-	$cat3 = $but10;
+	
+	$cat3 = "";
 	$cat4 = "";
 	$cat5 = "";
 	sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
