@@ -55,9 +55,9 @@ if($message == $but1){
 	$row2 = mysqli_fetch_assoc($query);
 	$cat2 = $row2['cat'];
 	
-	$cat3 = "";
-	$cat4 = "";
-	$cat5 = "";
+	$cat3 = "фцвфцв";
+	$cat4 = "цв";
+	$cat5 = " ";
 	sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
 	$check = 1;
 }
