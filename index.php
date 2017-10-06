@@ -643,7 +643,7 @@ else if($message == $but10)
 $queryc = mysqli_query($connect, "SELECT * FROM `cat` WHERE `botid` = $botid");
 $fetchc = mysqli_fetch_assoc($queryc);
 $cat1 = $fetchc['cat1'];
-if($check == 228 and $message == $cat1)
+if($message == $cat1)
 {
 	$msg = "Вы выбрали Яблоки";
 	sendMessage($token, $id, $msg);	
