@@ -53,15 +53,9 @@ if($message == $but1){
 	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat2' and `city` = '$but1' limit 1");
 	$row1 = mysqli_fetch_assoc($query);
 	$cat2 = $row1['cat'];
-	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat3' and `city` = '$but1' limit 1");
-	$row2 = mysqli_fetch_assoc($query);
-	$cat3 = $row2['cat'];
-	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat4' and `city` = '$but1' limit 1");
-	$row3 = mysqli_fetch_assoc($query);
-	$cat4 = $row3['cat'];
-	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat5' and `city` = '$but1' limit 1");
-	$row4 = mysqli_fetch_assoc($query);
-	$cat5 = $row4['cat'];
+	$cat3 = "";
+	$cat4 = "";
+	$cat5 = "";
 	sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
 	$check = 1;
 }
