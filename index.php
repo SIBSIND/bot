@@ -95,21 +95,6 @@ else if($message == $but10){
 	sendMessage($token, $id, $msg);
 	$check = 10;
 }
-else if($message == $but11){
-	$msg = "Вы выбрали "  . "$but11" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but11 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
-	sendMessage($token, $id, $msg);
-	$check = 11;
-}
-else if($message == $but12){
-	$msg = "Вы выбрали "  . "$but12" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but12 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
-	sendMessage($token, $id, $msg);
-	$check = 12;
-}
-else if($message == $but13){
-	$msg = "Вы выбрали "  . "$but13" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but13 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
-	sendMessage($token, $id, $msg);
-	$check = 13;
-}
 
 file_put_contents("logs.txt",$connection);
 
