@@ -51,7 +51,7 @@ if($message == $but1)
 	$row = mysqli_num_rows($query);
 	if($row)
 	{
-	
+		$check = 228;
 		$msg = "Вы выбрали "  . "$but1" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
 		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but1' limit 1");
 		$row = mysqli_num_rows($query);
@@ -95,7 +95,6 @@ if($message == $but1)
 		$cat5 = "";
 		}
 		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
-		$check = 228;
 	}else
 	{
 		$cat1 = "";
@@ -643,7 +642,7 @@ else if($message == $but10)
 $queryc = mysqli_query($connect, "SELECT * FROM `cat` WHERE `botid` = $botid");
 $fetchc = mysqli_fetch_assoc($queryc);
 $cat1 = $fetchc['cat1'];
-if($message == $cat1)
+if($check == 228 and $message == $cat1)
 {
 	$msg = "Вы выбрали Яблоки";
 	sendMessage($token, $id, $msg);	
