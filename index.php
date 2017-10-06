@@ -47,7 +47,14 @@ if( $message == "/start" or $message == "В главное меню"){
 
 if($message == $but1){
 	$msg = "Вы выбрали "  . "$but1" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
-	sendMessage($token, $id, $msg);
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but1' limit 1");
+	$row = mysqli_fetch_assoc($query);
+	$cat1 = $row[cat];
+	$cat2 = "";
+	$cat3 = "";
+	$cat4 = "";
+	$cat5 = "";
+	sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but6, $but7, $but8));
 	$check = 1;
 }
 else if($message == $but2){
@@ -101,6 +108,17 @@ file_put_contents("logs.txt",$connection);
 
 function KeyboardMenu($but1,$but2,$but3,$but4,$but5,$but6,$but7,$but8,$but9,$but10,$but11,$but12,$but13){
 	$buttons = [[$but1],[$but2],[$but3],[$but4],[$but5],[$but6],[$but7],[$but8],[$but9],[$but10],[$but11],[$but12],[$but13]];
+	$keyboard = json_encode($keyboard = ['keyboard' => $buttons,
+        'resize_keyboard' => true,
+        'one_time_keyboard' => false,
+        'selective' => true]);
+    $reply_markup = '&reply_markup=' . $keyboard . '';
+
+    return $reply_markup;
+}
+
+function KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but6, $but7, $but8){
+	$buttons = [[$cat1],[$cat2],[$cat3],[$cat4],[$cat5],[$but6],[$but7],[$but8]];
 	$keyboard = json_encode($keyboard = ['keyboard' => $buttons,
         'resize_keyboard' => true,
         'one_time_keyboard' => false,
