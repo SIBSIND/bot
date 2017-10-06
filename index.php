@@ -95,7 +95,7 @@ if($message == $but1)
 		$cat5 = "";
 		}
 		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
-		$check = 1;
+		$check = 228;
 	}else
 	{
 		$cat1 = "";
@@ -156,7 +156,6 @@ else if($message == $but2)
 		$cat5 = "";
 		}
 		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
-		$check = 1;
 	}else
 	{
 		$cat1 = "";
@@ -216,7 +215,6 @@ else if($message == $but3)
 		$cat5 = "";
 		}
 		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
-		$check = 1;
 	}else
 	{
 		$cat1 = "";
@@ -276,7 +274,6 @@ else if($message == $but4)
 		$cat5 = "";
 		}
 		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
-		$check = 1;
 	}else
 	{
 		$cat1 = "";
@@ -336,7 +333,6 @@ if($message == $but5)
 		$cat5 = "";
 		}
 		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
-		$check = 1;
 	}else
 	{
 		$cat1 = "";
@@ -396,7 +392,6 @@ else if($message == $but6)
 		$cat5 = "";
 		}
 		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
-		$check = 1;
 	}else
 	{
 		$cat1 = "";
@@ -456,7 +451,6 @@ if($message == $but7)
 		$cat5 = "";
 		}
 		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
-		$check = 1;
 	}else
 	{
 		$cat1 = "";
@@ -516,7 +510,6 @@ else if($message == $but8)
 		$cat5 = "";
 		}
 		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
-		$check = 1;
 	}else
 	{
 		$cat1 = "";
@@ -576,7 +569,6 @@ else if($message == $but9)
 		$cat5 = "";
 		}
 		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
-		$check = 1;
 	}else
 	{
 		$cat1 = "";
@@ -636,7 +628,6 @@ else if($message == $but10)
 		$cat5 = "";
 		}
 		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
-		$check = 1;
 	}else
 	{
 		$cat1 = "";
@@ -648,6 +639,23 @@ else if($message == $but10)
 		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
 	}
 }
+
+if($check == 228 and $message == $cat1)
+{
+	$msg = "Вы выбрали Яблоки";
+	sendMessage($token, $id, $msg);	
+}
+
+
+
+
+
+
+
+
+
+
+
 
 file_put_contents("logs.txt",$connection);
 
