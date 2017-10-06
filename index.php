@@ -676,93 +676,54 @@ if($citypage == 1 and $message == $cat1)
 {
 	$msg = "Вы выбрали Яблоки Город $but1";
 	sendMessage($token, $id, $msg);	
-}else
-{
-	$msg = urlencode("Неправильный выбор, попробуйте еще раз. \nДля выбора варианта нажмите на кнопку снизу");
-	sendMessage($token, $id, $msg);
 }
 else if($citypage == 1 and $message == $cat2)
 {
 	$msg = "Вы выбрали Яблоки Город $but1";
 	sendMessage($token, $id, $msg);	
-}else
-{
-	$msg = urlencode("Неправильный выбор, попробуйте еще раз. \nДля выбора варианта нажмите на кнопку снизу");
-	sendMessage($token, $id, $msg);
 }
 else if($citypage == 1 and $message == $cat3)
 {
 	$msg = "Вы выбрали Яблоки Город $but1";
 	sendMessage($token, $id, $msg);	
-}else
-{
-	$msg = urlencode("Неправильный выбор, попробуйте еще раз. \nДля выбора варианта нажмите на кнопку снизу");
-	sendMessage($token, $id, $msg);
 }
 else if($citypage == 1 and $message == $cat4)
 {
 	$msg = "Вы выбрали Яблоки Город $but1";
 	sendMessage($token, $id, $msg);	
-}else
-{
-	$msg = urlencode("Неправильный выбор, попробуйте еще раз. \nДля выбора варианта нажмите на кнопку снизу");
-	sendMessage($token, $id, $msg);
 }
 else if($citypage == 1 and $message == $cat5)
 {
 	$msg = "Вы выбрали Яблоки Город $but1";
 	sendMessage($token, $id, $msg);	
-}else
-{
-	$msg = urlencode("Неправильный выбор, попробуйте еще раз. \nДля выбора варианта нажмите на кнопку снизу");
-	sendMessage($token, $id, $msg);
 }
+
 
 
 else if($citypage == 2 and $message == $cat1)
 {
 	$msg = "Вы выбрали $cat1 Город $but2";
 	sendMessage($token, $id, $msg);	
-}else
-{
-	$msg = urlencode("Неправильный выбор, попробуйте еще раз. \nДля выбора варианта нажмите на кнопку снизу");
-	sendMessage($token, $id, $msg);
 }
 else if($citypage == 2 and $message == $cat2)
 {
 	$msg = "Вы выбрали $cat2 Город $but2";
 	sendMessage($token, $id, $msg);	
-}else
-{
-	$msg = urlencode("Неправильный выбор, попробуйте еще раз. \nДля выбора варианта нажмите на кнопку снизу");
-	sendMessage($token, $id, $msg);
 }
 else if($citypage == 2 and $message == $cat3)
 {
 	$msg = "Вы выбрали $cat3 Город $but2";
 	sendMessage($token, $id, $msg);	
-}else
-{
-	$msg = urlencode("Неправильный выбор, попробуйте еще раз. \nДля выбора варианта нажмите на кнопку снизу");
-	sendMessage($token, $id, $msg);
 }
 else if($citypage == 2 and $message == $cat4)
 {
 	$msg = "Вы выбрали $cat4 Город $but2";
 	sendMessage($token, $id, $msg);	
-}else
-{
-	$msg = urlencode("Неправильный выбор, попробуйте еще раз. \nДля выбора варианта нажмите на кнопку снизу");
-	sendMessage($token, $id, $msg);
 }
 else if($citypage == 2 and $message == $cat5)
 {
 	$msg = "Вы выбрали $cat5 Город $but2";
 	sendMessage($token, $id, $msg);	
-}else
-{
-	$msg = urlencode("Неправильный выбор, попробуйте еще раз. \nДля выбора варианта нажмите на кнопку снизу");
-	sendMessage($token, $id, $msg);
 }
 
 
