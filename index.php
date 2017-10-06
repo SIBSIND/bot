@@ -113,45 +113,551 @@ if($message == $but1)
 		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
 	}
 }
-else if($message == $but2){
-	$msg = "Вы выбрали "  . "$but2" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
-	sendMessage($token, $id, $msg);
-	$check = 2;
+
+
+else if($message == $but2)
+{
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but2' limit 1");
+	$row = mysqli_num_rows($query);
+	if($row)
+	{
+	
+		$msg = "Вы выбрали "  . "$but2" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
+
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but2' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat1 = $ass['cat'];
+		}else{
+		$cat1 = "";
+		}
+
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat2' and `city` = '$but2' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat2 = $ass['cat'];
+		}else{
+		$cat2 = "";
+		}
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat3' and `city` = '$but2' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat3 = $ass['cat'];
+		}else{
+		$cat3 = "";
+		}
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat4' and `city` = '$but2' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat4 = $ass['cat'];
+		}else{
+		$cat4 = "";
+		}
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat5' and `city` = '$but2' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat5 = $ass['cat'];
+		}else{
+		$cat5 = "";
+		}
+		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
+		$check = 1;
+	}else
+	{
+		$cat1 = "";
+		$cat2 = "";
+		$cat3 = "";
+		$cat4 = "";
+		$cat5 = "";
+		$msg = "В выбранном городе закончились товары, приходите чуть позже.";
+		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
+	}
 }
-else if($message == $but3){
-	$msg = "Вы выбрали "  . "$but3" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but3 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
-	sendMessage($token, $id, $msg);
-	$check = 3;
+else if($message == $but3)
+{
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but3' limit 1");
+	$row = mysqli_num_rows($query);
+	if($row)
+	{
+	
+		$msg = "Вы выбрали "  . "$but3" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but3 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
+
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but3' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat1 = $ass['cat'];
+		}else{
+		$cat1 = "";
+		}
+
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat2' and `city` = '$but3' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat2 = $ass['cat'];
+		}else{
+		$cat2 = "";
+		}
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat3' and `city` = '$but3' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat3 = $ass['cat'];
+		}else{
+		$cat3 = "";
+		}
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat4' and `city` = '$but3' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat4 = $ass['cat'];
+		}else{
+		$cat4 = "";
+		}
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat5' and `city` = '$but3' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat5 = $ass['cat'];
+		}else{
+		$cat5 = "";
+		}
+		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
+		$check = 1;
+	}else
+	{
+		$cat1 = "";
+		$cat2 = "";
+		$cat3 = "";
+		$cat4 = "";
+		$cat5 = "";
+		$msg = "В выбранном городе закончились товары, приходите чуть позже.";
+		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
+	}
 }
-else if($message == $but4){
-	$msg = "Вы выбрали "  . "$but4" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but4 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
-	sendMessage($token, $id, $msg);
-	$check = 4;
+else if($message == $but4)
+{
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but4' limit 1");
+	$row = mysqli_num_rows($query);
+	if($row)
+	{
+	
+		$msg = "Вы выбрали "  . "$but4" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but4 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
+
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but4' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat1 = $ass['cat'];
+		}else{
+		$cat1 = "";
+		}
+
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat2' and `city` = '$but4' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat2 = $ass['cat'];
+		}else{
+		$cat2 = "";
+		}
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat3' and `city` = '$but4' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat3 = $ass['cat'];
+		}else{
+		$cat3 = "";
+		}
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat4' and `city` = '$but4' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat4 = $ass['cat'];
+		}else{
+		$cat4 = "";
+		}
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat5' and `city` = '$but4' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat5 = $ass['cat'];
+		}else{
+		$cat5 = "";
+		}
+		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
+		$check = 1;
+	}else
+	{
+		$cat1 = "";
+		$cat2 = "";
+		$cat3 = "";
+		$cat4 = "";
+		$cat5 = "";
+		$msg = "В выбранном городе закончились товары, приходите чуть позже.";
+		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
+	}
 }
-else if($message == $but5){
-	$msg = "Вы выбрали "  . "$but5" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but5 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
-	sendMessage($token, $id, $msg);
-	$check = 5;
+if($message == $but5)
+{
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but5' limit 1");
+	$row = mysqli_num_rows($query);
+	if($row)
+	{
+	
+		$msg = "Вы выбрали "  . "$but5" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but5 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
+
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but5' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat1 = $ass['cat'];
+		}else{
+		$cat1 = "";
+		}
+
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat5' and `city` = '$but1' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat2 = $ass['cat'];
+		}else{
+		$cat2 = "";
+		}
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat3' and `city` = '$but5' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat3 = $ass['cat'];
+		}else{
+		$cat3 = "";
+		}
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat4' and `city` = '$but5' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat4 = $ass['cat'];
+		}else{
+		$cat4 = "";
+		}
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat5' and `city` = '$but5' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat5 = $ass['cat'];
+		}else{
+		$cat5 = "";
+		}
+		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
+		$check = 1;
+	}else
+	{
+		$cat1 = "";
+		$cat2 = "";
+		$cat3 = "";
+		$cat4 = "";
+		$cat5 = "";
+		$msg = "В выбранном городе закончились товары, приходите чуть позже.";
+		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
+	}
 }
-else if($message == $but6){
-	$msg = "Вы выбрали "  . "$but6" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but6 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
-	sendMessage($token, $id, $msg);
-	$check = 6;
+else if($message == $but1)
+{
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but6' limit 1");
+	$row = mysqli_num_rows($query);
+	if($row)
+	{
+	
+		$msg = "Вы выбрали "  . "$but6" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but6 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
+
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but6' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat1 = $ass['cat'];
+		}else{
+		$cat1 = "";
+		}
+
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat2' and `city` = '$but6' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat2 = $ass['cat'];
+		}else{
+		$cat2 = "";
+		}
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat3' and `city` = '$but6' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat3 = $ass['cat'];
+		}else{
+		$cat3 = "";
+		}
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat4' and `city` = '$but6' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat4 = $ass['cat'];
+		}else{
+		$cat4 = "";
+		}
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat5' and `city` = '$but6' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat5 = $ass['cat'];
+		}else{
+		$cat5 = "";
+		}
+		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
+		$check = 1;
+	}else
+	{
+		$cat1 = "";
+		$cat2 = "";
+		$cat3 = "";
+		$cat4 = "";
+		$cat5 = "";
+		$msg = "В выбранном городе закончились товары, приходите чуть позже.";
+		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
+	}
 }
-else if($message == $but7){
-	$msg = "Вы выбрали "  . "$but7" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but7 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
-	sendMessage($token, $id, $msg);
-	$check = 7;
+if($message == $but7)
+{
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but7' limit 1");
+	$row = mysqli_num_rows($query);
+	if($row)
+	{
+	
+		$msg = "Вы выбрали "  . "$but7" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but7 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
+
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but7' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat1 = $ass['cat'];
+		}else{
+		$cat1 = "";
+		}
+
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat2' and `city` = '$but7' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat2 = $ass['cat'];
+		}else{
+		$cat2 = "";
+		}
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat3' and `city` = '$but7' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat3 = $ass['cat'];
+		}else{
+		$cat3 = "";
+		}
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat4' and `city` = '$but7' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat4 = $ass['cat'];
+		}else{
+		$cat4 = "";
+		}
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat5' and `city` = '$but7' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat5 = $ass['cat'];
+		}else{
+		$cat5 = "";
+		}
+		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
+		$check = 1;
+	}else
+	{
+		$cat1 = "";
+		$cat2 = "";
+		$cat3 = "";
+		$cat4 = "";
+		$cat5 = "";
+		$msg = "В выбранном городе закончились товары, приходите чуть позже.";
+		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
+	}
 }
-else if($message == $but8){
-	$msg = "Вы выбрали "  . "$but8" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but8 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
-	sendMessage($token, $id, $msg);
-	$check = 8;
+else if($message == $but8)
+{
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but8' limit 1");
+	$row = mysqli_num_rows($query);
+	if($row)
+	{
+	
+		$msg = "Вы выбрали "  . "$but8" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but8 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
+
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but8' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat1 = $ass['cat'];
+		}else{
+		$cat1 = "";
+		}
+
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat2' and `city` = '$but8' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat2 = $ass['cat'];
+		}else{
+		$cat2 = "";
+		}
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat3' and `city` = '$but8' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat3 = $ass['cat'];
+		}else{
+		$cat3 = "";
+		}
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat4' and `city` = '$but8' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat4 = $ass['cat'];
+		}else{
+		$cat4 = "";
+		}
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat5' and `city` = '$but8' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat5 = $ass['cat'];
+		}else{
+		$cat5 = "";
+		}
+		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
+		$check = 1;
+	}else
+	{
+		$cat1 = "";
+		$cat2 = "";
+		$cat3 = "";
+		$cat4 = "";
+		$cat5 = "";
+		$msg = "В выбранном городе закончились товары, приходите чуть позже.";
+		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
+	}
 }
-else if($message == $but9){
-	$msg = "Вы выбрали "  . "$but9" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but9 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
-	sendMessage($token, $id, $msg);
-	$check = 9;
+else if($message == $but10)
+{
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but10' limit 1");
+	$row = mysqli_num_rows($query);
+	if($row)
+	{
+	
+		$msg = "Вы выбрали "  . "$but10" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but10 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
+
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but10' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat1 = $ass['cat'];
+		}else{
+		$cat1 = "";
+		}
+
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat2' and `city` = '$but10' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat2 = $ass['cat'];
+		}else{
+		$cat2 = "";
+		}
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat3' and `city` = '$but10' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat3 = $ass['cat'];
+		}else{
+		$cat3 = "";
+		}
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat4' and `city` = '$but10' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat4 = $ass['cat'];
+		}else{
+		$cat4 = "";
+		}
+
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat5' and `city` = '$but10' limit 1");
+		$row = mysqli_num_rows($query);
+		$ass = mysqli_fetch_assoc($query);
+		if($row){
+		$cat5 = $ass['cat'];
+		}else{
+		$cat5 = "";
+		}
+		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
+		$check = 1;
+	}else
+	{
+		$cat1 = "";
+		$cat2 = "";
+		$cat3 = "";
+		$cat4 = "";
+		$cat5 = "";
+		$msg = "В выбранном городе закончились товары, приходите чуть позже.";
+		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13));
+	}
 }
 else if($message == $but10){
 	$msg = "Вы выбрали "  . "$but10" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but10 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
