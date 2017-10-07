@@ -694,27 +694,11 @@ if($citypage == 1 and $message == $cat1)
 	{
 		$tov2 = "";
 	}
-	if($row['tovid'] == 3)
-	{
-		$tov3 = $row['name'];
-	}else 
-	{
 		$tov3 = "";
-	}
-	if($row['tovid'] == 4)
-	{
-		$tov4 = $row['name'];
-	}else 
-	{
+
 		$tov4 = "";
-	}
-	if($row['tovid'] == 5)
-	{
-		$tov5 = $row['name'];
-	}else 
-	{
 		$tov5 = "";
-	}
+
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '1' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat1" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
 	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));	
