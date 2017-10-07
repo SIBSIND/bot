@@ -680,6 +680,7 @@ if($citypage == 1 and $message == $cat1)
 {
 	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but1'");
 	$row = mysqli_fetch_assoc($query);
+	
 	if($row['tovid'] == 1)
 	{
 		$tov1 = $row['name'];
@@ -687,15 +688,8 @@ if($citypage == 1 and $message == $cat1)
 	{
 		$tov1 = "";
 	}
-	else if($row['tovid'] == 2)
-	{
-		$tov2 = $row['name'];
-	}else 
-	{
 		$tov2 = "";
-	}
 		$tov3 = "";
-
 		$tov4 = "";
 		$tov5 = "";
 
