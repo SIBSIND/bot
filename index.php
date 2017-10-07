@@ -688,7 +688,7 @@ else if($citypage == 1 and $message == $cat2)
 	$row = mysqli_num_rows($query);
 	if($row){
 		$tov1 = "";
-		$tov2 = mysqli_fetch_assoc($query);
+		$tov2 = $row['name'];
 		$tov3 = "";
 		$tov4 = "";
 		$tov5 = "";
