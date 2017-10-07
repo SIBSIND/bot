@@ -40,6 +40,10 @@ function sendMessage($token, $id, $message)
 	$cat4 = $fetchc['cat4'];
 	$cat5 = $fetchc['cat5'];
 
+	////ТОВАРЫ////
+	$tovar = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = $botid");
+	$trow = mysqli_fetch_assoc($queryc);
+
 if( $message == "/start" or $message == "В главное меню")
 {
 	$queryc = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
@@ -680,9 +684,22 @@ if($citypage == 1 and $message == $cat1)
 }
 else if($citypage == 1 and $message == $cat2)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = $botid and `city` = $but1 and `cat` = '$cat2'");
+	$row = mysqli_num_rows($query);
+	if($row){
+		$tov1 = "";
+		$tov2 = mysqli_fetch_assoc($query);
+		$tov3 = "";
+		$tov4 = "";
+		$tov5 = "";
+	}
+	$fetchc = mysqli_fetch_assoc($queryc);
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '1' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat2" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	
+	
+	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));	
 }
 else if($citypage == 1 and $message == $cat3)
 {
@@ -999,8 +1016,6 @@ else if($citypage == 10 and $message == $cat5)
 
 
 
-
-
 file_put_contents("logs.txt",$connection);
 
 
@@ -1016,6 +1031,17 @@ function KeyboardMenu($but1,$but2,$but3,$but4,$but5,$but6,$but7,$but8,$but9,$but
 }
 
 function KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13){
+	$buttons = [[$cat1],[$cat2],[$cat3],[$cat4],[$cat5],[$but11],[$but12],[$but13]];
+	$keyboard = json_encode($keyboard = ['keyboard' => $buttons,
+        'resize_keyboard' => true,
+        'one_time_keyboard' => false,
+        'selective' => true]);
+    $reply_markup = '&reply_markup=' . $keyboard . '';
+
+    return $reply_markup;
+}
+
+function KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13){
 	$buttons = [[$cat1],[$cat2],[$cat3],[$cat4],[$cat5],[$but11],[$but12],[$but13]];
 	$keyboard = json_encode($keyboard = ['keyboard' => $buttons,
         'resize_keyboard' => true,
