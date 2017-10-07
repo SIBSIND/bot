@@ -1034,7 +1034,7 @@ function KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but
 }
 
 function KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13){
-	$buttons = [[$cat1],[$cat2],[$cat3],[$cat4],[$cat5],[$but11],[$but12],[$but13]];
+	$buttons = [[$tov1],[$tov2],[$tov3],[$tov4],[$tov5],[$tov11],[$tov12],[$tov13]];
 	$keyboard = json_encode($keyboard = ['keyboard' => $buttons,
         'resize_keyboard' => true,
         'one_time_keyboard' => false,
