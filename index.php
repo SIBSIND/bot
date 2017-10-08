@@ -668,6 +668,8 @@ else if($message == $but10)
 $queryuser = mysqli_query($connect, "SELECT `city` FROM `users` WHERE `chatid` = $id");
 $rowuser = mysqli_fetch_assoc($queryuser);
 $citypage = $rowuser['city'];
+$catpage = $rowuser['cat'];
+$tovpage = $rowuser['tovid'];
 
 $queryc = mysqli_query($connect, "SELECT * FROM `cat` WHERE `botid` = $botid");
 $fetchc = mysqli_fetch_assoc($queryc);
@@ -2095,11 +2097,18 @@ else if($citypage == 10 and $message == $cat5)
 	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));	
 }
 
-$query = mysqli_query($connect, "SELECT * FROM `users` WHERE `botid` = '$botid' and `chatid` = '$id'");
-$row = mysqli_fetch_assoc($query);
-$tovid = $row['tovid'];
 
-if($citypage == 10 )
+
+$query = mysqli_query($connect, "SELECT * FROM `tovname` WHERE `tovid` = '1' and `botid` = '$botid'");
+$rows = mysqli_fetch_assoc($query);
+$tovname1 = mysqli_fetch_assoc($query);
+
+if($citypage == 10 and $catpage == 1 and $message == "$tovname1")
+{
+	$msg = "Вы выбрали "  . "$tovname1" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but10 . urlencode("\nКАТЕГОРИЯ: ") . $cat3 . urlencode("\nТОВАР: ") . $tovname1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));
+
+}
 
 
 
