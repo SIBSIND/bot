@@ -2111,7 +2111,7 @@ $tovname = $rows['name'];
 if($message == "Товар 1" and $city == 1 and $cat == 1)
 {
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '1' WHERE `users`.`botid` = $botid");
-	$msg = "LOL";
+		$msg = "Вы выбрали "  . $tovname . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but10 . urlencode("\nКАТЕГОРИЯ: ") . $cat1 . urlencode("\nТОВАР: ") . $tovname1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
 	sendMessage($token, $id, $msg);
 
 }
