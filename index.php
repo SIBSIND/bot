@@ -729,7 +729,7 @@ else if($citypage == 1 and $message == $cat2)
 	$row = mysqli_fetch_assoc($query);
 	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
 	
-	mysqli_query($connect, "UPDATE `users` SET `cat` = '1' WHERE `users`.`chatid` = $id");
+	mysqli_query($connect, "UPDATE `users` SET `cat` = '2' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat2" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
 	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));	
 }
@@ -757,7 +757,7 @@ else if($citypage == 1 and $message == $cat3)
 	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
 	
 	
-	mysqli_query($connect, "UPDATE `users` SET `cat` = '1' WHERE `users`.`chatid` = $id");
+	mysqli_query($connect, "UPDATE `users` SET `cat` = '3' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat3" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat3 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
 	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));
 }
@@ -785,7 +785,7 @@ else if($citypage == 1 and $message == $cat4)
 	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
 	
 	
-	mysqli_query($connect, "UPDATE `users` SET `cat` = '1' WHERE `users`.`chatid` = $id");
+	mysqli_query($connect, "UPDATE `users` SET `cat` = '4' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat4" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat4 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
 	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));
 }
@@ -813,7 +813,7 @@ else if($citypage == 1 and $message == $cat5)
 	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
 	
 	
-	mysqli_query($connect, "UPDATE `users` SET `cat` = '1' WHERE `users`.`chatid` = $id");
+	mysqli_query($connect, "UPDATE `users` SET `cat` = '5' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat5" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat5 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
 	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));
 }
