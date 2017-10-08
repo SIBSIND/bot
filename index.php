@@ -46,16 +46,16 @@ function sendMessage($token, $id, $message)
 
 if( $message == "/start" or $message == "В главное меню")
 {
-	$queryc = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
+	$queryc = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id and `botid` = '$botid'");
 	$row = mysqli_num_rows($queryc);
 	if(!$row)
 	{
-		mysqli_query($connect, "INSERT INTO `users` (`chatid`, `city`) VALUES ($id, 0)");
+		mysqli_query($connect, "INSERT INTO `users` (`chatid`,`botid`, `city`,) VALUES ($id, $botid, 0)");
 		$msg = $welcome . urlencode("\n\nОтзывы покупателей (нажмите 👉 /otzivi)\nОставить отзыв (нажмите 👉 /otziv)\n\nДля покупки нажмите на свой город внизу:");
 		sendMessage($token, $id, $msg.KeyboardMenu($but1,$but2,$but3,$but4,$but5,$but6,$but7,$but8,$but9,$but10,$but11,$but12,$but13));
 	}else
 	{
-		mysqli_query($connect, "UPDATE `users` SET `city` = '0' WHERE `users`.`chatid` = $id");
+		mysqli_query($connect, "UPDATE `users` SET `city` = '0' WHERE `users`.`chatid` = $id and `botid` = '$botid'");
 		$msg = $welcome . urlencode("\n\nОтзывы покупателей (нажмите 👉 /otzivi)\nОставить отзыв (нажмите 👉 /otziv)\n\nДля покупки нажмите на свой город внизу:");
 		sendMessage($token, $id, $msg.KeyboardMenu($but1,$but2,$but3,$but4,$but5,$but6,$but7,$but8,$but9,$but10,$but11,$but12,$but13));	
 	}
@@ -68,7 +68,7 @@ if($message == $but1)
 	$row = mysqli_num_rows($query);
 	if($row)
 	{
-		mysqli_query($connect, "UPDATE `users` SET `city` = '1' WHERE `users`.`chatid` = $id");
+		mysqli_query($connect, "UPDATE `users` SET `city` = '1' WHERE `users`.`chatid` = $id ");
 		$msg = "Вы выбрали "  . "$but1" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
 		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but1' limit 1");
 		$row = mysqli_num_rows($query);
@@ -2095,7 +2095,11 @@ else if($citypage == 10 and $message == $cat5)
 	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));	
 }
 
+$query = mysqli_query($connect, "SELECT * FROM `users` WHERE `botid` = '$botid' and `chatid` = '$id'");
+$row = mysqli_fetch_assoc($query);
+$tovid = $row['tovid'];
 
+if($citypage == 10 )
 
 
 
