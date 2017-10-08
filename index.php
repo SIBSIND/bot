@@ -2101,13 +2101,13 @@ else if($citypage == 10 and $message == $cat5)
 
 $query = mysqli_query($connect, "SELECT * FROM `tovname` WHERE `tovid` = '1' and `botid` = '$botid'");
 $rows = mysqli_fetch_assoc($query);
-$tovname1 = mysqli_fetch_assoc($query);
+$tovname1 = $rows['name'];
 
 if($citypage == 1 and $catpage == 1 and $message == $tovname1)
 {
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '1' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$tovname1" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but10 . urlencode("\nКАТЕГОРИЯ: ") . $cat3 . urlencode("\nТОВАР: ") . $tovname1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
-	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));
+	sendMessage($token, $id, $msg);
 
 }
 
