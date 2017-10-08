@@ -1246,193 +1246,853 @@ else if($citypage == 4 and $message == $cat5)
 
 else if($citypage == 5 and $message == $cat1)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but5' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but5' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but5' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but5' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but5' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '1' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat1" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but5 . urlencode("\nКАТЕГОРИЯ: ") . $cat1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));
 }
 else if($citypage == 5 and $message == $cat2)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but5' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but5' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but5' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but5' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but5' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '2' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat2" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but5 . urlencode("\nКАТЕГОРИЯ: ") . $cat2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));
 }
 else if($citypage == 5 and $message == $cat3)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but5' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but5' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but5' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but5' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but5' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '3' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat3" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but5 . urlencode("\nКАТЕГОРИЯ: ") . $cat3 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));
 }
 else if($citypage == 5 and $message == $cat4)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but5' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but5' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but5' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but5' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but5' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '4' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat4" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but5 . urlencode("\nКАТЕГОРИЯ: ") . $cat4 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));
 }
 else if($citypage == 5 and $message == $cat5)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but5' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but5' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but5' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but5' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but5' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '5' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat5" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but5 . urlencode("\nКАТЕГОРИЯ: ") . $cat5 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));
 }
 
 
 else if($citypage == 6 and $message == $cat1)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but6' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but6' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but6' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but6' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but6' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '1' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat1" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but6 . urlencode("\nКАТЕГОРИЯ: ") . $cat1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));
 }
 else if($citypage == 6 and $message == $cat2)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but6' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but6' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but6' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but6' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but6' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '2' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat2" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but6 . urlencode("\nКАТЕГОРИЯ: ") . $cat2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));
 }
 else if($citypage == 6 and $message == $cat3)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but6' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but6' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but6' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but6' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but6' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '3' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat3" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but6 . urlencode("\nКАТЕГОРИЯ: ") . $cat3 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));
 }
 else if($citypage == 6 and $message == $cat4)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but6' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but6' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but6' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but6' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but6' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '4' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat4" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but6 . urlencode("\nКАТЕГОРИЯ: ") . $cat4 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));
 }
 else if($citypage == 6 and $message == $cat5)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but6' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but6' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but6' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but6' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but6' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '5' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat5" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but6 . urlencode("\nКАТЕГОРИЯ: ") . $cat5 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));	
 }
 
 
 else if($citypage == 7 and $message == $cat1)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but7' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but7' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but7' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but7' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but7' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '1' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat1" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but7 . urlencode("\nКАТЕГОРИЯ: ") . $cat1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));
 }
 else if($citypage == 7 and $message == $cat2)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but7' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but7' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but7' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but7' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but7' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '2' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat2" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but7 . urlencode("\nКАТЕГОРИЯ: ") . $cat2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));	
 }
 else if($citypage == 7 and $message == $cat3)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but7' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but7' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but7' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but7' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but7' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '3' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat3" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but7 . urlencode("\nКАТЕГОРИЯ: ") . $cat3 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));
 }
 else if($citypage == 7 and $message == $cat4)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but7' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but7' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but7' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but7' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but7' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '4' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat4" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but7 . urlencode("\nКАТЕГОРИЯ: ") . $cat4 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));
 }
 else if($citypage == 7 and $message == $cat5)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but7' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but7' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but7' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but7' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but7' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '5' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat5" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but7 . urlencode("\nКАТЕГОРИЯ: ") . $cat5 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));
 }
 
 
 else if($citypage == 8 and $message == $cat1)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but8' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but8' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but8' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but8' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but8' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '1' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat1" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but8 . urlencode("\nКАТЕГОРИЯ: ") . $cat1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));
 }
 else if($citypage == 8 and $message == $cat2)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but8' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but8' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but8' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but8' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but8' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '2' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat2" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but8 . urlencode("\nКАТЕГОРИЯ: ") . $cat2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));
 }
 else if($citypage == 8 and $message == $cat3)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but8' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but8' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but8' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but8' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but8' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '3' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat3" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but9 . urlencode("\nКАТЕГОРИЯ: ") . $cat3 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));	
 }
 else if($citypage == 8 and $message == $cat4)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but8' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but8' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but8' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but8' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but8' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '4' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat4" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but9 . urlencode("\nКАТЕГОРИЯ: ") . $cat4 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));	
 }
 else if($citypage == 8 and $message == $cat5)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but8' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but8' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but8' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but8' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but8' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '5' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat5" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but9 . urlencode("\nКАТЕГОРИЯ: ") . $cat5 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));
 }
 
 
 else if($citypage == 9 and $message == $cat1)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but9' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but9' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but9' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but9' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but9' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '1' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat1" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but9 . urlencode("\nКАТЕГОРИЯ: ") . $cat1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));	
 }
 else if($citypage == 9 and $message == $cat2)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but9' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but9' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but9' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but9' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but9' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '2' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat2" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but9 . urlencode("\nКАТЕГОРИЯ: ") . $cat2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));
 }
 else if($citypage == 9 and $message == $cat3)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but9' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but9' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but9' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but9' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but9' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '3' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat3" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but9 . urlencode("\nКАТЕГОРИЯ: ") . $cat3 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));	
 }
 else if($citypage == 9 and $message == $cat4)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but9' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but9' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but9' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but9' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but9' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '4' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat4" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but9 . urlencode("\nКАТЕГОРИЯ: ") . $cat4 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));
 }
 else if($citypage == 9 and $message == $cat5)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but9' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but9' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but9' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but9' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but9' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '5' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat5" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but9 . urlencode("\nКАТЕГОРИЯ: ") . $cat5 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));	
 }
 
 
 else if($citypage == 10 and $message == $cat1)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but10' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but10' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but10' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but10' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but10' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '1' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat1" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but10 . urlencode("\nКАТЕГОРИЯ: ") . $cat1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));
 }
 else if($citypage == 10 and $message == $cat2)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but10' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but10' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but10' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but10' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but10' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '2' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat2" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but10 . urlencode("\nКАТЕГОРИЯ: ") . $cat2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));
 }
 else if($citypage == 10 and $message == $cat3)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but10' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but10' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but10' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but10' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but10' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '3' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat3" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but10 . urlencode("\nКАТЕГОРИЯ: ") . $cat3 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));
 }
 else if($citypage == 10 and $message == $cat4)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but10' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but10' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but10' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but10' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but10' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '4' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat4" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but10 . urlencode("\nКАТЕГОРИЯ: ") . $cat4 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));
 }
 else if($citypage == 10 and $message == $cat5)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but10' and `tovid` = 1");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but10' and `tovid` = 2");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but10' and `tovid` = 3");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but10' and `tovid` = 4");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but10' and `tovid` = 5");
+	$rows = mysqli_num_rows($query);
+	$row = mysqli_fetch_assoc($query);
+	if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `cat` = '5' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . "$cat5" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but10 . urlencode("\nКАТЕГОРИЯ: ") . $cat5 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-	sendMessage($token, $id, $msg);	
+	sendMessage($token, $id, $msg.KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13));	
 }
 
 
