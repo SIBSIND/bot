@@ -2116,6 +2116,38 @@ if($message == $tovname and $city == 1 and $cat == 1)
 
 }
 
+if($message == $tovname and $city == 1 and $cat == 2)
+{
+	mysqli_query($connect, "UPDATE `users` SET `tovid` = '2' WHERE `users`.`botid` = $botid");
+	$msg = "Вы выбрали "  . $tovname . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but10 . urlencode("\nКАТЕГОРИЯ: ") . $cat1 . urlencode("\nТОВАР: ") . $tovname . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
+	sendMessage($token, $id, $msg);
+
+}
+
+if($message == $tovname and $city == 1 and $cat == 3)
+{
+	mysqli_query($connect, "UPDATE `users` SET `tovid` = '3' WHERE `users`.`botid` = $botid");
+	$msg = "Вы выбрали "  . $tovname . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but10 . urlencode("\nКАТЕГОРИЯ: ") . $cat1 . urlencode("\nТОВАР: ") . $tovname . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
+	sendMessage($token, $id, $msg);
+
+}
+
+if($message == $tovname and $city == 1 and $cat == 4)
+{
+	mysqli_query($connect, "UPDATE `users` SET `tovid` = '4' WHERE `users`.`botid` = $botid");
+	$msg = "Вы выбрали "  . $tovname . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but10 . urlencode("\nКАТЕГОРИЯ: ") . $cat1 . urlencode("\nТОВАР: ") . $tovname . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
+	sendMessage($token, $id, $msg);
+
+}
+
+if($message == $tovname and $city == 1 and $cat == 5)
+{
+	mysqli_query($connect, "UPDATE `users` SET `tovid` = '5' WHERE `users`.`botid` = $botid");
+	$msg = "Вы выбрали "  . $tovname . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but10 . urlencode("\nКАТЕГОРИЯ: ") . $cat1 . urlencode("\nТОВАР: ") . $tovname . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
+	sendMessage($token, $id, $msg);
+
+}
+
 
 
 
