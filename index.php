@@ -2247,9 +2247,6 @@ if($message == $tovname5 and $categ > 0)
 
 
 
-if()
-
-
 
 file_put_contents("logs.txt",$connection);
 
