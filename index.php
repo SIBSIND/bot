@@ -2200,26 +2200,17 @@ if($message == $tovname1 and $categ > 0)
 	$row = mysqli_num_rows($query);
 	$rowp = mysqli_fetch_assoc($query);
 	$price = $rowp['price'];
-	if($row)
-	{
-		$fas1 = $fas1 . " гр. за" . $price . " руб.";
-	}else 
-	{
-		$fas1 = "";
-	}
+	if($row){$fas1 = $fas1 . " г за " . $price . " руб";}else {$fas1 = "";}
 	
 	$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = '$botid' and `fasid` = 2");
 	$assoc = mysqli_fetch_assoc($query);
 	$fas2 = $assoc['fas'];
 	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `fas` = '$fas2'");
 	$row = mysqli_num_rows($query);
+	$rowp = mysqli_fetch_assoc($query);
+	$price = $rowp['price'];
 	if($row)
-	{
-		$fas2 = $fas2;
-	}else 
-	{
-		$fas2 = "";
-	}
+	{$fas2 = $fas2 . " г за " . $price . " руб";}else {$fas2 = "";}
 	
 	
 	$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = '$botid' and `fasid` = 3");
@@ -2227,13 +2218,9 @@ if($message == $tovname1 and $categ > 0)
 	$fas3 = $assoc['fas'];
 	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `fas` = '$fas3'");
 	$row = mysqli_num_rows($query);
-	if($row)
-	{
-		$fas3 = $fas3;
-	}else 
-	{
-		$fas3 = "";
-	}
+	$rowp = mysqli_fetch_assoc($query);
+	$price = $rowp['price'];
+	if($row){$fas3 = $fas3 . " г за " . $price . " руб";}else {$fas3 = "";}
 	
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '1' WHERE `users`.`botid` = $botid");
 	$msg = "Вы выбрали "  . $tovname1 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovname1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
@@ -2241,6 +2228,33 @@ if($message == $tovname1 and $categ > 0)
 }
 if($message == $tovname2 and $categ > 0)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = '$botid' and `fasid` = 1");
+	$assoc = mysqli_fetch_assoc($query);
+	$fas1 = $assoc['fas'];
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `fas` = '$fas1'");
+	$row = mysqli_num_rows($query);
+	$rowp = mysqli_fetch_assoc($query);
+	$price = $rowp['price'];
+	if($row){$fas1 = $fas1 . " г за " . $price . " руб";}else {$fas1 = "";}
+	
+	$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = '$botid' and `fasid` = 2");
+	$assoc = mysqli_fetch_assoc($query);
+	$fas2 = $assoc['fas'];
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `fas` = '$fas2'");
+	$row = mysqli_num_rows($query);
+	$rowp = mysqli_fetch_assoc($query);
+	$price = $rowp['price'];
+	if($row){$fas2 = $fas2 . " г за " . $price . " руб";}else {$fas2 = "";}
+	
+	$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = '$botid' and `fasid` = 3");
+	$assoc = mysqli_fetch_assoc($query);
+	$fas3 = $assoc['fas'];
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `fas` = '$fas3'");
+	$row = mysqli_num_rows($query);
+	$rowp = mysqli_fetch_assoc($query);
+	$price = $rowp['price'];
+	if($row){$fas3 = $fas3 . " г за " . $price . " руб";;}else {$fas3 = "";}
+	
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '2' WHERE `users`.`botid` = $botid");
 	$msg = "Вы выбрали "  . $tovname2 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovname2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
 	sendMessage($token, $id, $msg);
