@@ -50,7 +50,8 @@ if( $message == "/start" or $message == "В главное меню")
 	$row = mysqli_num_rows($queryc);
 	if(!$row)
 	{
-		mysqli_query($connect, "INSERT INTO `users` (`botid`, `chatid`, `city`, `cat`) VALUES ('$botid', '$id', '0', '0')");
+		$comment = rand(1000, 9999);
+		mysqli_query($connect, "INSERT INTO `users` (`botid`, `chatid`, `comment` `city`, `cat`, `tovid`, `fas`) VALUES ('$botid', '$id', '$comment', '0', '0', '0', '0')");
 		$msg = $welcome . urlencode("\n\nОтзывы покупателей (нажмите 👉 /otzivi)\nОставить отзыв (нажмите 👉 /otziv)\n\nДля покупки нажмите на свой город внизу:");
 		sendMessage($token, $id, $msg.KeyboardMenu($but1,$but2,$but3,$but4,$but5,$but6,$but7,$but8,$but9,$but10,$but11,$but12,$but13));
 	}else
