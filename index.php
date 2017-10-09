@@ -111,6 +111,8 @@ if($message == "Проверить 🔄")
 }
 
 
+sendMessage($token, $id, $message);
+
 
 file_put_contents("logs.txt",$connection);
 
