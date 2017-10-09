@@ -2257,25 +2257,25 @@ if($message == $tovname2 and $categ > 0)
 	
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '2' WHERE `users`.`botid` = $botid");
 	$msg = "Вы выбрали "  . $tovname2 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovname2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
-	sendMessage($token, $id, $msg);
+	sendMessage($token, $id, $msg.KeyboardMenuFas($fas1, $fas2, $fas3, $but11, $but12, $but13));
 }
 if($message == $tovname3 and $categ > 0)
 {
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '3' WHERE `users`.`botid` = $botid");
 	$msg = "Вы выбрали "  . $tovname3 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovname3 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
-	sendMessage($token, $id, $msg);
+	sendMessage($token, $id, $msg.KeyboardMenuFas($fas1, $fas2, $fas3, $but11, $but12, $but13));
 }
 if($message == $tovname4 and $categ > 0)
 {
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '4' WHERE `users`.`botid` = $botid");
 	$msg = "Вы выбрали "  . $tovname4 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovname4 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
-	sendMessage($token, $id, $msg);
+	sendMessage($token, $id, $msg.KeyboardMenuFas($fas1, $fas2, $fas3, $but11, $but12, $but13));
 }
 if($message == $tovname5 and $categ > 0)
 {
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '5' WHERE `users`.`botid` = $botid");
 	$msg = "Вы выбрали "  . $tovname5 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovname5 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
-	sendMessage($token, $id, $msg);
+	sendMessage($token, $id, $msg.KeyboardMenuFas($fas1, $fas2, $fas3, $but11, $but12, $but13));
 }
 
 
