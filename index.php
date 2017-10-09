@@ -2121,114 +2121,101 @@ $rows = mysqli_fetch_assoc($query);
 $tovname5 = $rows['name'];
 
 
+if($city == 1)
+{
+	$city == $but1;
+}
+else if($city == 2)
+{
+	$city == $but2;
+}
+else if($city == 3)
+{
+	$city == $but3;
+}
+else if($city == 4)
+{
+	$city == $but4;
+}
+else if($city == 5)
+{
+	$city == $but5;
+}
+else if($city == 6)
+{
+	$city == $but6;
+}
+else if($city == 7)
+{
+	$city == $but7;
+}
+else if($city == 8)
+{
+	$city == $but8;
+}
+else if($city == 9)
+{
+	$city == $but9;
+}
+else if($city == 10)
+{
+	$city == $but10;
+}
 
-if($message == $tovname1 and $city == 1 and $cat == 1)
+if($cat == 1)
+{
+	$cat == $cat1;
+}
+else if($cat == 2)
+{
+	$cat == $cat2;
+}
+else if($cat == 3)
+{
+	$cat == $cat3;
+}
+
+else if($cat == 4)
+{
+	$cat == $cat4;
+}
+
+else if($cat == 5)
+{
+	$cat == $cat5;
+}
+
+
+
+
+if($message == $tovname1)
 {
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '1' WHERE `users`.`botid` = $botid");
-	$msg = "Вы выбрали "  . $tovname1 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat1 . urlencode("\nТОВАР: ") . $tovname1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
+	$msg = "Вы выбрали "  . $tovname2 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovname1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
 	sendMessage($token, $id, $msg);
 }
-
-else if($message == $tovname2 and $city == 1 and $cat == 1)
+if($message == $tovname2)
 {
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '2' WHERE `users`.`botid` = $botid");
-	$msg = "Вы выбрали "  . $tovname2 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat1 . urlencode("\nТОВАР: ") . $tovname2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
+	$msg = "Вы выбрали "  . $tovname3 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovname2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
 	sendMessage($token, $id, $msg);
 }
-
-else if($message == $tovname3 and $city == 1 and $cat == 1)
+if($message == $tovname3)
 {
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '3' WHERE `users`.`botid` = $botid");
-	$msg = "Вы выбрали "  . $tovname3 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat1 . urlencode("\nТОВАР: ") . $tovname3 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
+	$msg = "Вы выбрали "  . $tovname1 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovname3 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
 	sendMessage($token, $id, $msg);
 }
-
-else if($message == $tovname4 and $city == 1 and $cat == 1)
+if($message == $tovname4)
 {
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '4' WHERE `users`.`botid` = $botid");
-	$msg = "Вы выбрали "  . $tovname4 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat1 . urlencode("\nТОВАР: ") . $tovname4 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
+	$msg = "Вы выбрали "  . $tovname4 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovname4 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
 	sendMessage($token, $id, $msg);
 }
-
-else if($message == $tovname5 and $city == 1 and $cat == 1)
+if($message == $tovname5)
 {
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '5' WHERE `users`.`botid` = $botid");
-	$msg = "Вы выбрали "  . $tovname5 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat1 . urlencode("\nТОВАР: ") . $tovname5 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
-	sendMessage($token, $id, $msg);
-}
-
-
-
-
-if($message == $tovname1 and $city == 1 and $cat == 2)
-{
-	mysqli_query($connect, "UPDATE `users` SET `tovid` = '1' WHERE `users`.`botid` = $botid");
-	$msg = "Вы выбрали "  . $tovname1 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat2 . urlencode("\nТОВАР: ") . $tovname1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
-	sendMessage($token, $id, $msg);
-}
-
-else if($message == $tovname2 and $city == 1 and $cat == 2)
-{
-	mysqli_query($connect, "UPDATE `users` SET `tovid` = '2' WHERE `users`.`botid` = $botid");
-	$msg = "Вы выбрали "  . $tovname2 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat2 . urlencode("\nТОВАР: ") . $tovname2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
-	sendMessage($token, $id, $msg);
-}
-
-else if($message == $tovname3 and $city == 1 and $cat == 2)
-{
-	mysqli_query($connect, "UPDATE `users` SET `tovid` = '3' WHERE `users`.`botid` = $botid");
-	$msg = "Вы выбрали "  . $tovname3 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat2 . urlencode("\nТОВАР: ") . $tovname3 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
-	sendMessage($token, $id, $msg);
-}
-
-else if($message == $tovname4 and $city == 1 and $cat == 2)
-{
-	mysqli_query($connect, "UPDATE `users` SET `tovid` = '4' WHERE `users`.`botid` = $botid");
-	$msg = "Вы выбрали "  . $tovname4 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat2 . urlencode("\nТОВАР: ") . $tovname4 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
-	sendMessage($token, $id, $msg);
-}
-
-else if($message == $tovname5 and $city == 1 and $cat == 2)
-{
-	mysqli_query($connect, "UPDATE `users` SET `tovid` = '5' WHERE `users`.`botid` = $botid");
-	$msg = "Вы выбрали "  . $tovname5 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat2 . urlencode("\nТОВАР: ") . $tovname5 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
-	sendMessage($token, $id, $msg);
-}
-
-
-
-if($message == $tovname1 and $city == 1 and $cat == 3)
-{
-	mysqli_query($connect, "UPDATE `users` SET `tovid` = '1' WHERE `users`.`botid` = $botid");
-	$msg = "Вы выбрали "  . $tovname1 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat3 . urlencode("\nТОВАР: ") . $tovname1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
-	sendMessage($token, $id, $msg);
-}
-
-else if($message == $tovname2 and $city == 1 and $cat == 3)
-{
-	mysqli_query($connect, "UPDATE `users` SET `tovid` = '2' WHERE `users`.`botid` = $botid");
-	$msg = "Вы выбрали "  . $tovname2 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat3 . urlencode("\nТОВАР: ") . $tovname2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
-	sendMessage($token, $id, $msg);
-}
-
-else if($message == $tovname3 and $city == 1 and $cat == 3)
-{
-	mysqli_query($connect, "UPDATE `users` SET `tovid` = '3' WHERE `users`.`botid` = $botid");
-	$msg = "Вы выбрали "  . $tovname3 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat3 . urlencode("\nТОВАР: ") . $tovname3 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
-	sendMessage($token, $id, $msg);
-}
-
-else if($message == $tovname4 and $city == 1 and $cat == 3)
-{
-	mysqli_query($connect, "UPDATE `users` SET `tovid` = '4' WHERE `users`.`botid` = $botid");
-	$msg = "Вы выбрали "  . $tovname4 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat3 . urlencode("\nТОВАР: ") . $tovname4 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
-	sendMessage($token, $id, $msg);
-}
-
-else if($message == $tovname5 and $city == 1 and $cat == 3)
-{
-	mysqli_query($connect, "UPDATE `users` SET `tovid` = '5' WHERE `users`.`botid` = $botid");
-	$msg = "Вы выбрали "  . $tovname5 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat3 . urlencode("\nТОВАР: ") . $tovname5 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
+	$msg = "Вы выбрали "  . $tovname5 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovname5 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
 	sendMessage($token, $id, $msg);
 }
 
