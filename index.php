@@ -2103,7 +2103,7 @@ $queryuser = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id"
 $rowuser = mysqli_fetch_assoc($queryuser);
 $city = $rowuser['city'];
 $cat = $rowuser['cat'];
-$tovid = $rowuser['tovid']
+$tovid = $rowuser['tovid'];
 $categ = $rowuser['cat'];
 $fas = $rowuser['fas'];
 
@@ -2161,7 +2161,7 @@ if($message == $tovname1 and $categ > 0)
 	$query1 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `tovid` = '$tovid' and `botid` = '$botid' and `fas` = '$fasname1'");
 	$row1 = mysqli_num_rows($query1);
 	$fetch1 = mysqli_fetch_assoc($query1);
-	if($row1){$fas1 = '$fasname1'}else {$fas1 = ""}
+	if($row1){$fas1 = $fasname1;}else {$fas1 = "";}
 	$fas2="";
 	$fas3="";
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '1' WHERE `users`.`botid` = $botid");
