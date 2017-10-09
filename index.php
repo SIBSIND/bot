@@ -2176,24 +2176,76 @@ if($message == $tovname1 and $categ > 0)
 }
 if($message == $tovname2 and $categ > 0)
 {	
+	$query1 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `name` = '$tovname2' and `botid` = '$botid' and `fas` = '$fasname1'");
+	$row1 = mysqli_num_rows($query1);
+	if($row1){$fas1 = $fasname1;}else {$fas1 = "";}
+	
+	$query2 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `name` = '$tovname2' and `botid` = '$botid' and `fas` = '$fasname2'");
+	$row2 = mysqli_num_rows($query2);
+	if($row2){$fas2 = $fasname2;}else {$fas2 = "";}
+
+	$query3 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `name` = '$tovname2' and `botid` = '$botid' and `fas` = '$fasname3'");
+	$row3 = mysqli_num_rows($query3);
+	if($row3){$fas3 = $fasname3;}else {$fas3="";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '2' WHERE `users`.`botid` = $botid");
 	$msg = "Вы выбрали "  . $tovname2 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovname2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
 	sendMessage($token, $id, $msg.KeyboardMenuFas($fas1, $fas2, $fas3, $but11, $but12, $but13));
 }
 if($message == $tovname3 and $categ > 0)
 {
+	$query1 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `name` = '$tovname3' and `botid` = '$botid' and `fas` = '$fasname1'");
+	$row1 = mysqli_num_rows($query1);
+	if($row1){$fas1 = $fasname1;}else {$fas1 = "";}
+	
+	$query2 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `name` = '$tovname3' and `botid` = '$botid' and `fas` = '$fasname2'");
+	$row2 = mysqli_num_rows($query2);
+	if($row2){$fas2 = $fasname2;}else {$fas2 = "";}
+
+	$query3 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `name` = '$tovname3' and `botid` = '$botid' and `fas` = '$fasname3'");
+	$row3 = mysqli_num_rows($query3);
+	if($row3){$fas3 = $fasname3;}else {$fas3="";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '3' WHERE `users`.`botid` = $botid");
 	$msg = "Вы выбрали "  . $tovname3 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovname3 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
 	sendMessage($token, $id, $msg.KeyboardMenuFas($fas1, $fas2, $fas3, $but11, $but12, $but13));
 }
 if($message == $tovname4 and $categ > 0)
 {
+	$query1 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `name` = '$tovname4' and `botid` = '$botid' and `fas` = '$fasname1'");
+	$row1 = mysqli_num_rows($query1);
+	if($row1){$fas1 = $fasname1;}else {$fas1 = "";}
+	
+	$query2 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `name` = '$tovname4' and `botid` = '$botid' and `fas` = '$fasname2'");
+	$row2 = mysqli_num_rows($query2);
+	if($row2){$fas2 = $fasname2;}else {$fas2 = "";}
+
+	$query3 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `name` = '$tovname4' and `botid` = '$botid' and `fas` = '$fasname3'");
+	$row3 = mysqli_num_rows($query3);
+	if($row3){$fas3 = $fasname3;}else {$fas3="";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '4' WHERE `users`.`botid` = $botid");
 	$msg = "Вы выбрали "  . $tovname4 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovname4 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
 	sendMessage($token, $id, $msg.KeyboardMenuFas($fas1, $fas2, $fas3, $but11, $but12, $but13));
 }
 if($message == $tovname5 and $categ > 0)
 {
+	$query1 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `name` = '$tovname5' and `botid` = '$botid' and `fas` = '$fasname1'");
+	$row1 = mysqli_num_rows($query1);
+	if($row1){$fas1 = $fasname1;}else {$fas1 = "";}
+	
+	$query2 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `name` = '$tovname5' and `botid` = '$botid' and `fas` = '$fasname2'");
+	$row2 = mysqli_num_rows($query2);
+	if($row2){$fas2 = $fasname2;}else {$fas2 = "";}
+
+	$query3 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `name` = '$tovname5' and `botid` = '$botid' and `fas` = '$fasname3'");
+	$row3 = mysqli_num_rows($query3);
+	if($row3){$fas3 = $fasname3;}else {$fas3="";}
+	
+	
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '5' WHERE `users`.`botid` = $botid");
 	$msg = "Вы выбрали "  . $tovname5 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovname5 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
 	sendMessage($token, $id, $msg.KeyboardMenuFas($fas1, $fas2, $fas3, $but11, $but12, $but13));
