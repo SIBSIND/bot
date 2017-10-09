@@ -2130,7 +2130,7 @@ if($message == $tovname1 and $city == 1 and $cat == 1)
 
 }
 
-if($message == $tovname2 and $city == 1 and $cat == 1)
+else if($message == $tovname2 and $city == 1 and $cat == 1)
 {
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '2' WHERE `users`.`botid` = $botid");
 	$msg = "Вы выбрали "  . $tovname2 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat1 . urlencode("\nТОВАР: ") . $tovname2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
@@ -2138,7 +2138,7 @@ if($message == $tovname2 and $city == 1 and $cat == 1)
 
 }
 
-if($message == $tovname3 and $city == 1 and $cat == 1)
+else if($message == $tovname3 and $city == 1 and $cat == 1)
 {
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '3' WHERE `users`.`botid` = $botid");
 	$msg = "Вы выбрали "  . $tovname3 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat1 . urlencode("\nТОВАР: ") . $tovname3 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
@@ -2146,7 +2146,7 @@ if($message == $tovname3 and $city == 1 and $cat == 1)
 
 }
 
-if($message == $tovname4 and $city == 1 and $cat == 1)
+else if($message == $tovname4 and $city == 1 and $cat == 1)
 {
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '4' WHERE `users`.`botid` = $botid");
 	$msg = "Вы выбрали "  . $tovname4 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat1 . urlencode("\nТОВАР: ") . $tovname4 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
@@ -2154,7 +2154,7 @@ if($message == $tovname4 and $city == 1 and $cat == 1)
 
 }
 
-if($message == $tovname5 and $city == 1 and $cat == 1)
+else if($message == $tovname5 and $city == 1 and $cat == 1)
 {
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '5' WHERE `users`.`botid` = $botid");
 	$msg = "Вы выбрали "  . $tovname5 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat1 . urlencode("\nТОВАР: ") . $tovname5 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
@@ -2163,6 +2163,47 @@ if($message == $tovname5 and $city == 1 and $cat == 1)
 }
 
 
+
+
+if($message == $tovname1 and $city == 1 and $cat == 2)
+{
+	mysqli_query($connect, "UPDATE `users` SET `tovid` = '1' WHERE `users`.`botid` = $botid");
+	$msg = "Вы выбрали "  . $tovname1 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat2 . urlencode("\nТОВАР: ") . $tovname1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
+	sendMessage($token, $id, $msg);
+
+}
+
+else if($message == $tovname2 and $city == 1 and $cat == 2)
+{
+	mysqli_query($connect, "UPDATE `users` SET `tovid` = '2' WHERE `users`.`botid` = $botid");
+	$msg = "Вы выбрали "  . $tovname2 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat2 . urlencode("\nТОВАР: ") . $tovname2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
+	sendMessage($token, $id, $msg);
+
+}
+
+else if($message == $tovname3 and $city == 1 and $cat == 2)
+{
+	mysqli_query($connect, "UPDATE `users` SET `tovid` = '3' WHERE `users`.`botid` = $botid");
+	$msg = "Вы выбрали "  . $tovname3 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat2 . urlencode("\nТОВАР: ") . $tovname3 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
+	sendMessage($token, $id, $msg);
+
+}
+
+else if($message == $tovname4 and $city == 1 and $cat == 2)
+{
+	mysqli_query($connect, "UPDATE `users` SET `tovid` = '4' WHERE `users`.`botid` = $botid");
+	$msg = "Вы выбрали "  . $tovname4 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat2 . urlencode("\nТОВАР: ") . $tovname4 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
+	sendMessage($token, $id, $msg);
+
+}
+
+else if($message == $tovname5 and $city == 1 and $cat == 2)
+{
+	mysqli_query($connect, "UPDATE `users` SET `tovid` = '5' WHERE `users`.`botid` = $botid");
+	$msg = "Вы выбрали "  . $tovname5 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat2 . urlencode("\nТОВАР: ") . $tovname5 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
+	sendMessage($token, $id, $msg);
+
+}
 
 
 
