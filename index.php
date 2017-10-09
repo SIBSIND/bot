@@ -2109,15 +2109,19 @@ $categ = $rowuser['cat'];
 $query = mysqli_query($connect, "SELECT * FROM `tovname` WHERE `tovid` = '1' and `botid` = '$botid'");
 $rows = mysqli_fetch_assoc($query);
 $tovname1 = $rows['name'];
+
 $query = mysqli_query($connect, "SELECT * FROM `tovname` WHERE `tovid` = '2' and `botid` = '$botid'");
 $rows = mysqli_fetch_assoc($query);
 $tovname2 = $rows['name'];
+
 $query = mysqli_query($connect, "SELECT * FROM `tovname` WHERE `tovid` = '3' and `botid` = '$botid'");
 $rows = mysqli_fetch_assoc($query);
 $tovname3 = $rows['name'];
+
 $query = mysqli_query($connect, "SELECT * FROM `tovname` WHERE `tovid` = '4' and `botid` = '$botid'");
 $rows = mysqli_fetch_assoc($query);
 $tovname4 = $rows['name'];
+
 $query = mysqli_query($connect, "SELECT * FROM `tovname` WHERE `tovid` = '5' and `botid` = '$botid'");
 $rows = mysqli_fetch_assoc($query);
 $tovname5 = $rows['name'];
@@ -2186,14 +2190,6 @@ else if($cat == 5)
 {
 	$cat = $cat5;
 }
-
-$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `fasid` = 1");
-$fas1 = $query['fas'];
-$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `fasid` = 2");
-$fas2 = $query['fas'];
-$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `fasid` = 3");
-$fas3 = $query['fas'];
-
 
 if($message == $tovname1 and $categ > 0)
 {
