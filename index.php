@@ -2198,9 +2198,11 @@ if($message == $tovname1 and $categ > 0)
 	$fas1 = $assoc['fas'];
 	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `fas` = '$fas1'");
 	$row = mysqli_num_rows($query);
+	$rowp = mysqli_fetch_assoc($query);
+	$price = $rowp['price'];
 	if($row)
 	{
-		$fas1 = $fas1;
+		$fas1 = $fas1 . " гр. за" . $price . " руб.";
 	}else 
 	{
 		$fas1 = "";
