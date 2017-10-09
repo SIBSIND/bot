@@ -2158,9 +2158,8 @@ else if($cat == 5){$cat = $cat5;}
 
 if($message == $tovname1 and $categ > 0)
 {
-	$query1 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `tovid` = '$tovid' and `botid` = '$botid' and `fas` = '$fasname1'");
+	$query1 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `name` = '$tovname1' and `botid` = '$botid' and `fas` = '$fasname1'");
 	$row1 = mysqli_num_rows($query1);
-	$fetch1 = mysqli_fetch_assoc($query1);
 	if($row1){$fas1 = $fasname1;}else {$fas1 = "";}
 	$fas2="";
 	$fas3="";
