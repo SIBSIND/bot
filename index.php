@@ -2198,24 +2198,7 @@ $fas3 = $query['fas'];
 
 if($message == $tovname1 and $categ > 0)
 {
-	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `fas` = '$fas1' and `name` = '$tovname1'");
-	$row = mysqli_num_rows($query);
-	$fetch = mysqli_fetch_assoc($query);
-	if($row){
-		$fas1 = $row['fas'];
-	}
-	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `fas` = '$fas2' and `name` = '$tovname1'");
-	$row = mysqli_num_rows($query);
-	$fetch = mysqli_fetch_assoc($query);
-	if($row){
-		$fas2 = $row['fas'];
-	}
-	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `fas` = '$fas3' and `name` = '$tovname1'");
-	$row = mysqli_num_rows($query);
-	$fetch = mysqli_fetch_assoc($query);
-	if($row){
-		$fas3 = $row['fas'];
-	}
+
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '1' WHERE `users`.`botid` = $botid");
 	$msg = "Вы выбрали "  . $tovname1 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovname1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
 	sendMessage($token, $id, $msg.KeyboardMenuFas($fas1, $fas2, $fas3, $but11, $but12, $but13));
