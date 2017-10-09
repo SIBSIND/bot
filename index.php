@@ -2187,10 +2187,34 @@ else if($cat == 5)
 	$cat = $cat5;
 }
 
+$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `fasid` = 1");
+$fas1 = $query['fas'];
+$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `fasid` = 2");
+$fas2 = $query['fas'];
+$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `fasid` = 3");
+$fas3 = $query['fas'];
+
 
 if($message == $tovname1 and $categ > 0)
 {
-
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `fas` = '$fas1' and `name` = '$tovname1'");
+	$row = mysqli_num_rows($query);
+	$fetch = mysqli_fetch_assoc($query);
+	if($row){
+		$fas1 = $row['fas'];
+	}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `fas` = '$fas2' and `name` = '$tovname1'");
+	$row = mysqli_num_rows($query);
+	$fetch = mysqli_fetch_assoc($query);
+	if($row){
+		$fas2 = $row['fas'];
+	}
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `fas` = '$fas3' and `name` = '$tovname1'");
+	$row = mysqli_num_rows($query);
+	$fetch = mysqli_fetch_assoc($query);
+	if($row){
+		$fas3 = $row['fas'];
+	}
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '1' WHERE `users`.`botid` = $botid");
 	$msg = "Вы выбрали "  . $tovname1 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovname1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
 	sendMessage($token, $id, $msg);
