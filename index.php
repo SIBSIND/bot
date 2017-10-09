@@ -2103,8 +2103,9 @@ $queryuser = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id"
 $rowuser = mysqli_fetch_assoc($queryuser);
 $city = $rowuser['city'];
 $cat = $rowuser['cat'];
+$tovid = $rowuser['tovid']
 $categ = $rowuser['cat'];
-
+$fas = $rowuser['fas'];
 
 $query = mysqli_query($connect, "SELECT * FROM `tovname` WHERE `tovid` = '1' and `botid` = '$botid'");
 $rows = mysqli_fetch_assoc($query);
@@ -2126,135 +2127,49 @@ $query = mysqli_query($connect, "SELECT * FROM `tovname` WHERE `tovid` = '5' and
 $rows = mysqli_fetch_assoc($query);
 $tovname5 = $rows['name'];
 
+$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `fasid` = '1'");
+$row = mysqli_fetch_assoc($query);
+$fasname1 = $row['fas'];
+$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `fasid` = '2'");
+$row = mysqli_fetch_assoc($query);
+$fasname2 = $row['fas'];
+$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `fasid` = '3'");
+$row = mysqli_fetch_assoc($query);
+$fasname3 = $row['fas'];
 
-if($city == 1)
-{
-	$city = $but1;
-}
-else if($city == 2)
-{
-	$city = $but2;
-}
-else if($city == 3)
-{
-	$city = $but3;
-}
-else if($city == 4)
-{
-	$city = $but4;
-}
-else if($city == 5)
-{
-	$city = $but5;
-}
-else if($city == 6)
-{
-	$city = $but6;
-}
-else if($city == 7)
-{
-	$city = $but7;
-}
-else if($city == 8)
-{
-	$city = $but8;
-}
-else if($city == 9)
-{
-	$city = $but9;
-}
-else if($city == 10)
-{
-	$city = $but10;
-}
+if($city == 1){$city = $but1;}
+else if($city == 2){$city = $but2;}
+else if($city == 3){$city = $but3;}
+else if($city == 4){$city = $but4;}
+else if($city == 5){$city = $but5;}
+else if($city == 6){$city = $but6;}
+else if($city == 7){$city = $but7;}
+else if($city == 8){$city = $but8;}
+else if($city == 9){$city = $but9;}
+else if($city == 10){$city = $but10;}
 
-if($cat == 1)
-{
-	$cat = $cat1;
-}
-else if($cat == 2)
-{
-	$cat = $cat2;
-}
-else if($cat == 3)
-{
-	$cat = $cat3;
-}
+if($cat == 1){$cat = $cat1;}
+else if($cat == 2){$cat = $cat2;}
+else if($cat == 3){$cat = $cat3;}
+else if($cat == 4){$cat = $cat4;}
+else if($cat == 5){$cat = $cat5;}
 
-else if($cat == 4)
-{
-	$cat = $cat4;
-}
 
-else if($cat == 5)
-{
-	$cat = $cat5;
-}
 
 if($message == $tovname1 and $categ > 0)
 {
-	$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = '$botid' and `fasid` = 1");
-	$assoc = mysqli_fetch_assoc($query);
-	$fas1 = $assoc['fas'];
-	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `fas` = '$fas1' and `name` = '$tovname1'");
-	$row = mysqli_num_rows($query);
-	$rowp = mysqli_fetch_assoc($query);
-	$price = $rowp['price'];
-	if($row){$fas1 = $fas1 . " г за " . $price . " руб";}else {$fas1 = "";}
-	
-	$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = '$botid' and `fasid` = 2");
-	$assoc = mysqli_fetch_assoc($query);
-	$fas2 = $assoc['fas'];
-	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `fas` = '$fas2' and `name` = '$tovname1'");
-	$row = mysqli_num_rows($query);
-	$rowp = mysqli_fetch_assoc($query);
-	$price = $rowp['price'];
-	if($row)
-	{$fas2 = $fas2 . " г за " . $price . " руб";}else {$fas2 = "";}
-	
-	
-	$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = '$botid' and `fasid` = 3");
-	$assoc = mysqli_fetch_assoc($query);
-	$fas3 = $assoc['fas'];
-	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `fas` = '$fas3' and `name` = '$tovname1'");
-	$row = mysqli_num_rows($query);
-	$rowp = mysqli_fetch_assoc($query);
-	$price = $rowp['price'];
-	if($row){$fas3 = $fas3 . " г за " . $price . " руб";}else {$fas3 = "";}
-	
+	$query1 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `tovid` = '$tovid' and `botid` = '$botid' and `fas` = '$fasname1'");
+	$row1 = mysqli_num_rows($query1);
+	$fetch1 = mysqli_fetch_assoc($query1);
+	if($row1){$fas1 = '$fasname1'}else {$fas1 = ""}
+	$fas2="";
+	$fas3="";
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '1' WHERE `users`.`botid` = $botid");
 	$msg = "Вы выбрали "  . $tovname1 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovname1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
 	sendMessage($token, $id, $msg.KeyboardMenuFas($fas1, $fas2, $fas3, $but11, $but12, $but13));
 }
 if($message == $tovname2 and $categ > 0)
-{
-	$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = '$botid' and `fasid` = 1");
-	$assoc = mysqli_fetch_assoc($query);
-	$fas1 = $assoc['fas'];
-	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `fas` = '$fas1' and `name` = '$tovname2'");
-	$row = mysqli_num_rows($query);
-	$rowp = mysqli_fetch_assoc($query);
-	$price = $rowp['price'];
-	if($row){$fas1 = $fas1 . " г за " . $price . " руб";}else {$fas1 = "";}
-	
-	$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = '$botid' and `fasid` = 2");
-	$assoc = mysqli_fetch_assoc($query);
-	$fas2 = $assoc['fas'];
-	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `fas` = '$fas2' and `name` = '$tovname2'");
-	$row = mysqli_num_rows($query);
-	$rowp = mysqli_fetch_assoc($query);
-	$price = $rowp['price'];
-	if($row){$fas2 = $fas2 . " г за " . $price . " руб";}else {$fas2 = "";}
-	
-	$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = '$botid' and `fasid` = 3");
-	$assoc = mysqli_fetch_assoc($query);
-	$fas3 = $assoc['fas'];
-	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `fas` = '$fas3' and `name` = '$tovname2'");
-	$row = mysqli_num_rows($query);
-	$rowp = mysqli_fetch_assoc($query);
-	$price = $rowp['price'];
-	if($row){$fas3 = $fas3 . " г за " . $price . " руб";;}else {$fas3 = "";}
-	
+{	
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '2' WHERE `users`.`botid` = $botid");
 	$msg = "Вы выбрали "  . $tovname2 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovname2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
 	sendMessage($token, $id, $msg.KeyboardMenuFas($fas1, $fas2, $fas3, $but11, $but12, $but13));
