@@ -2223,6 +2223,9 @@ if($message == $tovname5 and $categ > 0)
 
 
 
+
+
+
 file_put_contents("logs.txt",$connection);
 
 
@@ -2250,6 +2253,17 @@ function KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but
 
 function KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13){
 	$buttons = [[$tov1],[$tov2],[$tov3],[$tov4],[$tov5],[$but11],[$but12],[$but13]];
+	$keyboard = json_encode($keyboard = ['keyboard' => $buttons,
+        'resize_keyboard' => true,
+        'one_time_keyboard' => false,
+        'selective' => true]);
+    $reply_markup = '&reply_markup=' . $keyboard . '';
+
+    return $reply_markup;
+}
+
+function KeyboardMenuFas($fas1, $fas2, $fas3, $but11, $but12, $but13){
+	$buttons = [[$fas1],[$fas2],[$fas3],[$but11],[$but12],[$but13]];
 	$keyboard = json_encode($keyboard = ['keyboard' => $buttons,
         'resize_keyboard' => true,
         'one_time_keyboard' => false,
