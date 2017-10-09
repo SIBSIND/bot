@@ -2160,15 +2160,21 @@ if($message == $tovname1 and $categ > 0)
 {
 	$query1 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `name` = '$tovname1' and `botid` = '$botid' and `fas` = '$fasname1'");
 	$row1 = mysqli_num_rows($query1);
-	if($row1){$fas1 = $fasname1;}else {$fas1 = "";}
+	$fetch1 = mysqli_fetch_assoc($query1);
+	$price = $fetch1['price'];
+	if($row1){$fas1 = $fasname1 . " г за " . $price . " руб";}else {$fas1 = "";}
 	
 	$query2 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `name` = '$tovname1' and `botid` = '$botid' and `fas` = '$fasname2'");
 	$row2 = mysqli_num_rows($query2);
-	if($row2){$fas2 = $fasname2;}else {$fas2 = "";}
+	$fetch2 = mysqli_fetch_assoc($query2);
+	$price = $fetch2['price'];
+	if($row2){$fas2 = $fasname2 . " г за " . $price . " руб";}else {$fas2 = "";}
 
 	$query3 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `name` = '$tovname1' and `botid` = '$botid' and `fas` = '$fasname3'");
 	$row3 = mysqli_num_rows($query3);
-	if($row3){$fas3 = $fasname3;}else {$fas3="";}
+	$fetch3 = mysqli_fetch_assoc($query3);
+	$price = $fetch3['price'];
+	if($row3){$fas3 = $fasname3 . " г за " . $price . " руб";}else {$fas3="";}
 	
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '1' WHERE `users`.`botid` = $botid");
 	$msg = "Вы выбрали "  . $tovname1 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovname1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
@@ -2178,15 +2184,21 @@ if($message == $tovname2 and $categ > 0)
 {	
 	$query1 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `name` = '$tovname2' and `botid` = '$botid' and `fas` = '$fasname1'");
 	$row1 = mysqli_num_rows($query1);
-	if($row1){$fas1 = $fasname1;}else {$fas1 = "";}
+	$fetch1 = mysqli_fetch_assoc($query1);
+	$price = $fetch1['price'];
+	if($row1){$fas1 = $fasname1 . " г за " . $price . " руб";}else {$fas1 = "";}
 	
 	$query2 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `name` = '$tovname2' and `botid` = '$botid' and `fas` = '$fasname2'");
 	$row2 = mysqli_num_rows($query2);
-	if($row2){$fas2 = $fasname2;}else {$fas2 = "";}
+	$fetch2 = mysqli_fetch_assoc($query2);
+	$price = $fetch2['price'];
+	if($row2){$fas2 = $fasname2 . " г за " . $price . " руб";}else {$fas2 = "";}
 
 	$query3 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `name` = '$tovname2' and `botid` = '$botid' and `fas` = '$fasname3'");
 	$row3 = mysqli_num_rows($query3);
-	if($row3){$fas3 = $fasname3;}else {$fas3="";}
+	$fetch3 = mysqli_fetch_assoc($query3);
+	$price = $fetch3['price'];
+	if($row3){$fas3 = $fasname3 . " г за " . $price . " руб";}else {$fas3="";}
 	
 	
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '2' WHERE `users`.`botid` = $botid");
@@ -2197,15 +2209,21 @@ if($message == $tovname3 and $categ > 0)
 {
 	$query1 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `name` = '$tovname3' and `botid` = '$botid' and `fas` = '$fasname1'");
 	$row1 = mysqli_num_rows($query1);
-	if($row1){$fas1 = $fasname1;}else {$fas1 = "";}
+	$fetch1 = mysqli_fetch_assoc($query1);
+	$price = $fetch1['price'];
+	if($row1){$fas1 = $fasname1 . " г за " . $price . " руб";}else {$fas1 = "";}
 	
 	$query2 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `name` = '$tovname3' and `botid` = '$botid' and `fas` = '$fasname2'");
 	$row2 = mysqli_num_rows($query2);
-	if($row2){$fas2 = $fasname2;}else {$fas2 = "";}
+	$fetch2 = mysqli_fetch_assoc($query2);
+	$price = $fetch2['price'];
+	if($row2){$fas2 = $fasname2 . " г за " . $price . " руб";}else {$fas2 = "";}
 
 	$query3 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `name` = '$tovname3' and `botid` = '$botid' and `fas` = '$fasname3'");
 	$row3 = mysqli_num_rows($query3);
-	if($row3){$fas3 = $fasname3;}else {$fas3="";}
+	$fetch3 = mysqli_fetch_assoc($query3);
+	$price = $fetch3['price'];
+	if($row3){$fas3 = $fasname3 . " г за " . $price . " руб";}else {$fas3="";}
 	
 	
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '3' WHERE `users`.`botid` = $botid");
@@ -2216,15 +2234,21 @@ if($message == $tovname4 and $categ > 0)
 {
 	$query1 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `name` = '$tovname4' and `botid` = '$botid' and `fas` = '$fasname1'");
 	$row1 = mysqli_num_rows($query1);
-	if($row1){$fas1 = $fasname1;}else {$fas1 = "";}
+	$fetch1 = mysqli_fetch_assoc($query1);
+	$price = $fetch1['price'];
+	if($row1){$fas1 = $fasname1 . " г за " . $price . " руб" . "г за " . "";}else {$fas1 = "";}
 	
 	$query2 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `name` = '$tovname4' and `botid` = '$botid' and `fas` = '$fasname2'");
 	$row2 = mysqli_num_rows($query2);
-	if($row2){$fas2 = $fasname2;}else {$fas2 = "";}
+	$fetch2 = mysqli_fetch_assoc($query2);
+	$price = $fetch2['price'];
+	if($row2){$fas2 = $fasname2 . " г за " . $price . " руб";}else {$fas2 = "";}
 
 	$query3 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `name` = '$tovname4' and `botid` = '$botid' and `fas` = '$fasname3'");
 	$row3 = mysqli_num_rows($query3);
-	if($row3){$fas3 = $fasname3;}else {$fas3="";}
+	$fetch3 = mysqli_fetch_assoc($query3);
+	$price = $fetch3['price'];
+	if($row3){$fas3 = $fasname3 . " г за " . $price . " руб";}else {$fas3="";}
 	
 	
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '4' WHERE `users`.`botid` = $botid");
@@ -2235,15 +2259,21 @@ if($message == $tovname5 and $categ > 0)
 {
 	$query1 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `name` = '$tovname5' and `botid` = '$botid' and `fas` = '$fasname1'");
 	$row1 = mysqli_num_rows($query1);
-	if($row1){$fas1 = $fasname1;}else {$fas1 = "";}
+	$fetch1 = mysqli_fetch_assoc($query1);
+	$price = $fetch1['price'];
+	if($row1){$fas1 = $fasname1 . " г за " . $price . " руб";}else {$fas1 = "";}
 	
 	$query2 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `name` = '$tovname5' and `botid` = '$botid' and `fas` = '$fasname2'");
 	$row2 = mysqli_num_rows($query2);
-	if($row2){$fas2 = $fasname2;}else {$fas2 = "";}
+	$fetch2 = mysqli_fetch_assoc($query2);
+	$price = $fetch2['price'];
+	if($row2){$fas2 = $fasname2 . " г за " . $price . " руб";}else {$fas2 = "";}
 
 	$query3 = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `city` = '$city' and `cat` = '$cat' and `name` = '$tovname5' and `botid` = '$botid' and `fas` = '$fasname3'");
 	$row3 = mysqli_num_rows($query3);
-	if($row3){$fas3 = $fasname3;}else {$fas3="";}
+	$fetch3 = mysqli_fetch_assoc($query3);
+	$price = $fetch3['price'];
+	if($row3){$fas3 = $fasname3 . " г за " . $price . " руб";}else {$fas3="";}
 	
 	
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '5' WHERE `users`.`botid` = $botid");
