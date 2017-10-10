@@ -2281,6 +2281,27 @@ if($message == $tovname5 and $categ > 0)
 	sendMessage($token, $id, $msg.KeyboardMenuFas($fas1, $fas2, $fas3, $but11, $but12, $but13));
 }
 
+if($message = $fasname1 . " г за " . $price . " руб" and $tovid > 0 )
+{
+mysqli_query($connect, "UPDATE `users` SET `fas` = '1' WHERE `users`.`chatid` = $id");	
+}
+else if($message = $fasname2 . " г за " . $price . " руб" and $tovid > 0)
+{
+mysqli_query($connect, "UPDATE `users` SET `fas` = '2' WHERE `users`.`chatid` = $id");	
+}
+else if($message = $fasname3 . " г за " . $price . " руб" and $tovid > 0)
+{
+mysqli_query($connect, "UPDATE `users` SET `fas` = '3' WHERE `users`.`chatid` = $id");	
+}
+else if($message = $fasname4 . " г за " . $price . " руб" and $tovid > 0)
+{
+mysqli_query($connect, "UPDATE `users` SET `fas` = '4' WHERE `users`.`chatid` = $id");	
+}
+else if($message = $fasname5 . " г за " . $price . " руб" and $tovid > 0)
+{
+mysqli_query($connect, "UPDATE `users` SET `fas` = '5' WHERE `users`.`chatid` = $id");	
+}
+
 
 
 
