@@ -85,6 +85,24 @@ foreach($allcity as $city )
 {
 	if($city == $message)
 	{
+		
+		foreach($allcat as $cat)
+		{
+			$querycatcity = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = $botid and `city` = '$city' and `cat` = '$cat'");
+			if(mysqli_num_rows($querytovcity))
+			{
+				while ($fetchcatcity = mysqli_fetch_assoc($querycatcity))
+				{
+					$cat1 = $fetchcatcity['cat'];
+					$cat2 = $fetchcatcity['cat'];
+					$cat3 = $fetchcatcity['cat'];
+					$cat4 = $fetchcatcity['cat'];
+					$cat5 = $fetchcatcity['cat'];
+				}
+			}
+		}
+		
+		
 		$msg = "Вы выбрали "  . "$city" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
 		mysqli_query($connect, "UPDATE `users` SET `city` = '$city' WHERE `users`.`chatid` = $id");
 		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5,$menu, $price, $help, $jobs));
@@ -93,21 +111,7 @@ foreach($allcity as $city )
 
 
 
-foreach($allcat as $cat)
-{
-	$querycatcity = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = $botid and `city` = '$city' and `cat` = '$cat'");
-	if(mysqli_num_rows($querytovcity))
-	{
-		while ($fetchcatcity = mysqli_fetch_assoc($querycatcity))
-		{
-			$cat1 = $fetchcatcity['cat'];
-			$cat2 = $fetchcatcity['cat'];
-			$cat3 = $fetchcatcity['cat'];
-			$cat4 = $fetchcatcity['cat'];
-			$cat5 = $fetchcatcity['cat'];
-		}
-	}
-}
+
 
 
 
