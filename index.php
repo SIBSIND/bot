@@ -91,14 +91,11 @@ foreach($allcity as $city )
 			$querycatcity = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = $botid and `city` = '$city' and `cat` = '$cat'");
 			if(mysqli_num_rows($querytovcity))
 			{
-				while ($fetchcatcity = mysqli_fetch_assoc($querycatcity))
-				{
-					$cat1 = $fetchcatcity['cat'];
-					$cat2 = $fetchcatcity['cat'];
-					$cat3 = $fetchcatcity['cat'];
-					$cat4 = $fetchcatcity['cat'];
-					$cat5 = $fetchcatcity['cat'];
-				}
+				$cat1 = $fetchcatcity['cat'];
+				$cat2 = $fetchcatcity['cat'];
+				$cat3 = $fetchcatcity['cat'];
+				$cat4 = $fetchcatcity['cat'];
+				$cat5 = $fetchcatcity['cat'];
 			}
 		}
 		
