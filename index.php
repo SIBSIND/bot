@@ -50,12 +50,12 @@ if( $message == "/start" or $message == "В главное меню")
 	{
 		mysqli_query($connect, "INSERT INTO `users` (`botid`, `chatid`, `comment`, `city`, `cat`, `tovid`,`region` , `fas`) VALUES ('$botid', '$id', '$comment', '0', '0', '0', '0', '0')");
 		$msg = $welcome . urlencode("\n\nОтзывы покупателей (нажмите 👉 /otzivi)\nОставить отзыв (нажмите 👉 /otziv)\n\nДля покупки нажмите на свой город внизу:");
-		sendMessage($token, $id, $msg.KeyboardMenu($but1,$but2,$but3,$but4,$but5,$but6,$but7,$but8,$but9,$but10,$menu,$price,$help,$jobs));
+		sendMessage($token, $id, $msg.KeyboardMenu($city1,$city2,$city3,$city4,$city5,$city6,$city7,$city8,$city9,$city10,$menu,$price,$help,$jobs));
 	}else
 	{				
 		mysqli_query($connect, "UPDATE `users` SET `cat` = '0', `tovid` = '0', `city` = '0' WHERE `users`.`chatid` = $id");
 		$msg = $welcome . urlencode("\n\nОтзывы покупателей (нажмите 👉 /otzivi)\nОставить отзыв (нажмите 👉 /otziv)\n\nДля покупки нажмите на свой город внизу:");
-		sendMessage($token, $id, $msg.KeyboardMenu($but1,$but2,$but3,$but4,$but5,$but6,$but7,$but8,$but9,$but10,$menu,$price,$help,$jobs));
+		sendMessage($token, $id, $msg.KeyboardMenu($city1,$city2,$city3,$city4,$city5,$city6,$city7,$city8,$city9,$city10,$menu,$price,$help,$jobs));
 	}
 }
 
@@ -65,13 +65,13 @@ if( $message == "/start" or $message == "В главное меню")
 
 
 
-function KeyboardMenu($but1,$but2,$but3,$but4,$but5,$but6,$but7,$but8,$but9,$but10,$menu,$price,$help,$jobs){
+function KeyboardMenu($city1,$city2,$city3,$city4,$city5,$city6,$city7,$city8,$city9,$city10,$menu,$price,$help,$jobs){
 	$buttons = [
-		   [$but1, $but2],
-		   [$but3, $but4],
-		   [$but5, $but6],
-		   [$but7, $but8],
-		   [$but9, $but10],
+		   [$city1, $city2],
+		   [$city3, $city4],
+		   [$city5, $city6],
+		   [$city7, $city8],
+		   [$city9, $city10],
 	   [$menu , $price, $help],
 	    	   [$jobs]
 		   ];
