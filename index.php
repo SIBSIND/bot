@@ -93,32 +93,21 @@ foreach($allcity as $city )
 
 
 
-
-$querytovcity = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = $botid and `city` = '$city'");
-$rowtovcity = mysqli_num_rows($querytovcity);
-$fetchtovcit = mysqli_fetch_assoc($querytovcity);
-if($rowtovcity)
+foreach($allcat as $cat)
 {
-	foreach($rowtovar as $tovar)
+	$querycatcity = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = $botid and `city` = '$city' and `cat` = '$cat'");
+	if(mysqli_num_rows($querytovcity))
 	{
-		foreach($allcat as $cat)
+		while ($fetchcatcity = mysqli_fetch_assoc($querycatcity))
 		{
-			if($fetchtovar['cat'] == $cat)
-			{
-				$msg = "Вы выбрали "  . "$cat" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
-				mysqli_query($connect, "UPDATE `users` SET `city` = '$city', `cat` = '$cat' WHERE `users`.`chatid` = $id");
-				sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5,$menu, $price, $help, $jobs));
-			}
+			$cat1 = $fetchcatcity['cat'];
+			$cat2 = $fetchcatcity['cat'];
+			$cat3 = $fetchcatcity['cat'];
+			$cat4 = $fetchcatcity['cat'];
+			$cat5 = $fetchcatcity['cat'];
 		}
 	}
-}else
-	$cat1 = "";
-	$cat2 = "";
-	$cat3 = "";
-	$cat4 = "";
-	$cat5 = "";
-	sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5,$menu, $price, $help, $jobs));
-}	
+}
 
 
 
