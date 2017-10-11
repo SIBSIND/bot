@@ -65,8 +65,9 @@ foreach($allcity as $city )
 {
 	if($city == $message)
 	{
-		$msg = "Пидор";
-		sendMessage($token, $id, $msg);
+		$msg = "Вы выбрали "  . "$city" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
+		mysqli_query($connect, "UPDATE `users` SET `city` = '$city' WHERE `users`.`chatid` = $id");
+		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5,$city10,$menu,$price,$help,$jobs));
 	}
 }
 
@@ -75,15 +76,7 @@ foreach($allcity as $city )
 
 
 function KeyboardMenu($city1,$city2,$city3,$city4,$city5,$city6,$city7,$city8,$city9,$city10,$menu,$price,$help,$jobs){
-	$buttons = [
-		   [$city1, $city2],
-		   [$city3, $city4],
-		   [$city5, $city6],
-		   [$city7, $city8],
-		   [$city9, $city10],
-	   [$menu , $price, $help],
-	    	   [$jobs]
-		   ];
+	$buttons = [[$city1, $city2],[$city3, $city4],[$city5, $city6],[$city7, $city8],[$city9, $city10],[$menu , $price, $help],[$jobs]];
 	$keyboard = json_encode($keyboard = ['keyboard' => $buttons,
         'resize_keyboard' => true,
         'one_time_keyboard' => false,
@@ -93,8 +86,8 @@ function KeyboardMenu($city1,$city2,$city3,$city4,$city5,$city6,$city7,$city8,$c
     return $reply_markup;
 }
 
-function KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13){
-	$buttons = [[$cat1],[$cat2],[$cat3],[$cat4],[$cat5],[$but11],[$but12],[$but13]];
+function KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5,$city10,$menu,$price,$help,$jobs){
+	$buttons = [[$cat1, $cat2],[$cat3, $cat4],[$cat5],[$menu, $price, $help],[$jobs]];
 	$keyboard = json_encode($keyboard = ['keyboard' => $buttons,
         'resize_keyboard' => true,
         'one_time_keyboard' => false,
