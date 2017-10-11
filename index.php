@@ -5,7 +5,7 @@ $botid = 1;
 $output = json_decode(file_get_contents('php://input'),true);
 $id = $output['message']['chat']['id'];
 $message = $output['message']['text'];
-$token = "332809777:AAHjqELf5LmeTgrqxWIp5BxtsTIi9upLsl4";
+$token = "353692369:AAG8oKq8id2URz9Xzr8RFGlYOAWFA30A0LI";
 
 function sendMessage($token, $id, $message)
 {
