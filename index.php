@@ -28,6 +28,8 @@ function sendMessage($token, $id, $message)
 	$city9 = $rowcity['but9'];
 	$city10 = $rowcity['but10'];
 
+	$allcity = array($city1, $city2, $city3, $city4, $city5, $city6, $city7, $city8, $city9, $city10);
+
 	$querysettings = mysqli_query($connect, "SELECT * FROM `settings` WHERE `botid` = $botid");  //ЗАПРОС ПРИВЕТСТВИЯ 
 	$rowsettings = mysqli_fetch_assoc($querysettings);
 	$welcome = $rowsettings['welcome'];
@@ -59,7 +61,14 @@ if( $message == "/start" or $message == "В главное меню")
 	}
 }
 
-
+foreach($allcity as $city )
+{
+	if($city == $message)
+	{
+		$msg = "Пидор";
+		sendMessage($token, $id, $msg);
+	}
+}
 
 
 
