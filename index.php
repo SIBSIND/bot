@@ -2309,14 +2309,7 @@ file_put_contents("logs.txt",$message);
 
 
 function KeyboardMenu($but1,$but2,$but3,$but4,$but5,$but6,$but7,$but8,$but9,$but10,$but11,$but12,$but13){
-	$buttons = [
-		   ['$but1', '$but2'],
-		   ['$but3', '$but4'],
-		   ['$but5', '$but6'],
-		   ['$but7','$but8'],
-		   ['$but9','$but10'],
-	     ['$but11' , '$but12', '$but13']
-		   ];
+	$buttons = [['$but1', '$but2'],['$but3', '$but4'],['$but5', '$but6'],['$but7','$but8'],['$but9','$but10'],['$but11' , '$but12', '$but13']];
 	$keyboard = json_encode($keyboard = ['keyboard' => $buttons,
         'resize_keyboard' => true,
         'one_time_keyboard' => false,
@@ -2327,7 +2320,7 @@ function KeyboardMenu($but1,$but2,$but3,$but4,$but5,$but6,$but7,$but8,$but9,$but
 }
 
 function KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13){
-	$buttons = [[$cat1],[$cat2],[$cat3],[$cat4],[$cat5],[$but11],[$but12],[$but13]];
+	$buttons = [[$cat1,$cat2],[$cat3,$cat4],[$cat5],[$but11,$but12,$but13]];
 	$keyboard = json_encode($keyboard = ['keyboard' => $buttons,
         'resize_keyboard' => true,
         'one_time_keyboard' => false,
@@ -2338,7 +2331,7 @@ function KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but
 }
 
 function KeyboardMenuTov($tov1, $tov2, $tov3, $tov4, $tov5, $but11, $but12, $but13){
-	$buttons = [[$tov1],[$tov2],[$tov3],[$tov4],[$tov5],[$but11],[$but12],[$but13]];
+	$buttons = [[$tov1,$tov2],[$tov3,$tov4],[$tov5],[$but11],[$but12],[$but13]];
 	$keyboard = json_encode($keyboard = ['keyboard' => $buttons,
         'resize_keyboard' => true,
         'one_time_keyboard' => false,
