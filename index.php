@@ -2308,15 +2308,14 @@ mysqli_query($connect, "UPDATE `users` SET `fas` = '5' WHERE `users`.`chatid` = 
 file_put_contents("logs.txt",$message);
 
 
-function KeyboardMenu($but1,
-		      $but2,$but3,$but4,$but5,$but6,$but7,$but8,$but9,$but10,$but11,$but12,$but13){
+function KeyboardMenu($but1,$but2,$but3,$but4,$but5,$but6,$but7,$but8,$but9,$but10,$but11,$but12,$but13){
 	$buttons = [
 		   ['$but1', '$but2'],
 		   ['$but3', '$but4'],
 		   ['$but5', '$but6'],
 		   ['$but7','$but8'],
 		   ['$but9','$but10'],
-	     ['$but11' , '$but12', '$but13]
+	     ['$but11' , '$but12', '$but13']
 		   ];
 	$keyboard = json_encode($keyboard = ['keyboard' => $buttons,
         'resize_keyboard' => true,
