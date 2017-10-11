@@ -55,9 +55,9 @@ if( $message == "/start" or $message == "В главное меню")
 		sendMessage($token, $id, $msg.KeyboardMenu($city1,$city2,$city3,$city4,$city5,$city6,$city7,$city8,$city9,$city10,$menu,$price,$help,$jobs));
 	}else
 	{	
-		sendMessage($token, $id, $msg.KeyboardMenu($city1,$city2,$city3,$city4,$city5,$city6,$city7,$city8,$city9,$city10,$menu,$price,$help,$jobs));
+		mysqli_query($connect, "UPDATE `users` SET `cat` = '0', `tovid` = '0', `city` = '0', `region` = '0', `fas` = '0' WHERE `users`.`chatid` = $id");
 		$msg = $welcome . urlencode("\n\nОтзывы покупателей (нажмите 👉 /otzivi)\nОставить отзыв (нажмите 👉 /otziv)\n\nДля покупки нажмите на свой город внизу:");
-		mysqli_query($connect, "UPDATE `users` SET `cat` = '0', `tovid` = '0', `city` = '0' WHERE `users`.`chatid` = $id");
+		sendMessage($token, $id, $msg.KeyboardMenu($city1,$city2,$city3,$city4,$city5,$city6,$city7,$city8,$city9,$city10,$menu,$price,$help,$jobs));
 	}
 }
 
