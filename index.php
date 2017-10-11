@@ -36,7 +36,7 @@ function sendMessage($token, $id, $message)
 	$rowusers = mysqli_num_rows($queryusers);
 
 	$querycat = mysqli_query($connect, "SELECT * FROM `cat` WHERE `botid` = $botid"); //Запрос категорий
-	$rowcat = mysqli_num_rows($querycat);
+	$rowcat = mysqli_fetch_assoc($querycat);
 	$cat1 = $rowcat['cat1'];
 	$cat2 = $rowcat['cat2'];
 	$cat3 = $rowcat['cat3'];
@@ -76,7 +76,7 @@ foreach($allcity as $city )
 	{
 		$msg = "Вы выбрали "  . "$city" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
 		mysqli_query($connect, "UPDATE `users` SET `city` = '$city' WHERE `users`.`chatid` = $id");
-		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5,$menu,$price,$help,$jobs));
+		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5,$menu, $price, $help, $jobs));
 	}
 }
 
