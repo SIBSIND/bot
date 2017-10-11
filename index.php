@@ -17,18 +17,20 @@ function sendMessage($token, $id, $message)
 	//ЗАПРОСЫ//
 	$querycity = mysqli_query($connect, "SELECT * FROM `city` WHERE `botid` = $botid"); //ЗАПРОС ГОРОДОВ
 	$rowcity = mysqli_fetch_assoc($querycity);
-	$welcome = $fetch['welcome'];
-	$city1 = $fetchs['but1'];
-	$city2 = $fetchs['but2'];
-	$city3 = $fetchs['but3'];
-	$city4 = $fetchs['but4'];
-	$city5 = $fetchs['but5'];
-	$city6 = $fetchs['but6'];
-	$city7 = $fetchs['but7'];
-	$city8 = $fetchs['but8'];
-	$city9 = $fetchs['but9'];
-	$city10 = $fetchs['but10'];
+	$city1 = $rowcity['but1'];
+	$city2 = $rowcity['but2'];
+	$city3 = $rowcity['but3'];
+	$city4 = $rowcity['but4'];
+	$city5 = $rowcity['but5'];
+	$city6 = $rowcity['but6'];
+	$city7 = $rowcity['but7'];
+	$city8 = $rowcity['but8'];
+	$city9 = $rowcity['but9'];
+	$city10 = $rowcity['but10'];
 
+	$querysettings = mysqli_query($connect, "SELECT * FROM `settings` WHERE `botid` = $botid");  //ЗАПРОС ПРИВЕТСТВИЯ 
+	$rowsettings = mysqli_fetch_assoc($querysettings);
+	$welcome = $rowsettings['welcome'];
 
 	$queryusers = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id"); //ЗАПРОС ЮЗЕРА
 	$rowusers = mysqli_num_rows($queryusers);
@@ -46,12 +48,14 @@ if( $message == "/start" or $message == "В главное меню")
 {
 	if(!$rowusers)
 	{
-		mysqli_query($connect, "INSERT INTO `users` (`botid`, `chatid`, `comment`, `city`, `cat`, `tovid`, `fas`) VALUES ('$botid', '$id', '$comment', '0', '0', '0', '0', '0')");
+		mysqli_query($connect, "INSERT INTO `users` (`botid`, `chatid`, `comment`, `city`, `cat`, `tovid`,`region` , `fas`) VALUES ('$botid', '$id', '$comment', '0', '0', '0', '0', '0')");
 		$msg = $welcome . urlencode("\n\nОтзывы покупателей (нажмите 👉 /otzivi)\nОставить отзыв (нажмите 👉 /otziv)\n\nДля покупки нажмите на свой город внизу:");
+		sendMessage($token, $id, $msg);
 	}else
 	{				
 		mysqli_query($connect, "UPDATE `users` SET `cat` = '0', `tovid` = '0', `city` = '0' WHERE `users`.`chatid` = $id");
 		$msg = $welcome . urlencode("\n\nОтзывы покупателей (нажмите 👉 /otzivi)\nОставить отзыв (нажмите 👉 /otziv)\n\nДля покупки нажмите на свой город внизу:");
+		sendMessage($token, $id, $msg);
 	}
 }
 
