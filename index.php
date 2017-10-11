@@ -28,14 +28,21 @@ function sendMessage($token, $id, $message)
 	$city9 = $rowcity['but9'];
 	$city10 = $rowcity['but10'];
 
-	$allcity = array($city1, $city2, $city3, $city4, $city5, $city6, $city7, $city8, $city9, $city10);
-
 	$querysettings = mysqli_query($connect, "SELECT * FROM `settings` WHERE `botid` = $botid");  //ЗАПРОС ПРИВЕТСТВИЯ 
 	$rowsettings = mysqli_fetch_assoc($querysettings);
 	$welcome = $rowsettings['welcome'];
 
 	$queryusers = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id"); //ЗАПРОС ЮЗЕРА
 	$rowusers = mysqli_num_rows($queryusers);
+
+	$querycat = mysqli_query($connect, "SELECT * FROM `cat` WHERE `botid` = $botid"); //Запрос категорий
+	$rowcat = mysqli_num_rows($querycat);
+	$cat1 = $rowcat['cat1'];
+	$cat2 = $rowcat['cat2'];
+	$cat3 = $rowcat['cat3'];
+	$cat4 = $rowcat['cat4'];
+	$cat5 = $rowcat['cat5'];
+	
 
 	//КНОПКИ СЛУЖЕБНЫЕ//
 	$menu = "В главное меню";
@@ -44,7 +51,9 @@ function sendMessage($token, $id, $message)
 	$jobs = "Работа";
 
 	//ДОП. ПЕРЕМЕННЫЕ//
-	$comment = rand(1000, 9999);
+	$comment = rand(1000, 9999);  //Рандом комментария к оплате
+	$allcity = array($city1, $city2, $city3, $city4, $city5, $city6, $city7, $city8, $city9, $city10); //Массив городов
+	$allcat = array($cat1,);
 
 if( $message == "/start" or $message == "В главное меню")
 {
@@ -67,9 +76,10 @@ foreach($allcity as $city )
 	{
 		$msg = "Вы выбрали "  . "$city" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
 		mysqli_query($connect, "UPDATE `users` SET `city` = '$city' WHERE `users`.`chatid` = $id");
-		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5,$city10,$menu,$price,$help,$jobs));
+		sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5,$menu,$price,$help,$jobs));
 	}
 }
+
 
 
 
@@ -86,7 +96,7 @@ function KeyboardMenu($city1,$city2,$city3,$city4,$city5,$city6,$city7,$city8,$c
     return $reply_markup;
 }
 
-function KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5,$city10,$menu,$price,$help,$jobs){
+function KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5,$menu,$price,$help,$jobs){
 	$buttons = [[$cat1, $cat2],[$cat3, $cat4],[$cat5],[$menu, $price, $help],[$jobs]];
 	$keyboard = json_encode($keyboard = ['keyboard' => $buttons,
         'resize_keyboard' => true,
