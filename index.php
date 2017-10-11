@@ -14,8 +14,10 @@ function sendMessage($token, $id, $message)
     file_get_contents("https://api.telegram.org/bot" . $token . "/sendMessage?chat_id=" . $id . "&text=" . $message);
 }
 
-	//ЗАПРОСЫ//
-	$querycity = mysqli_query($connect, "SELECT * FROM `city` WHERE `botid` = $botid");  //ЗАПРОС ГОРОДОВ
+	/////////////////////////ЗАПРОСЫ/////////////////////////
+
+	//ЗАПРОС ГОРОДОВ//
+	$querycity = mysqli_query($connect, "SELECT * FROM `city` WHERE `botid` = $botid");  
 	$rowcity = mysqli_fetch_assoc($querycity);
 	$city1 = $rowcity['but1'];
 	$city2 = $rowcity['but2'];
@@ -28,13 +30,17 @@ function sendMessage($token, $id, $message)
 	$city9 = $rowcity['but9'];
 	$city10 = $rowcity['but10'];
 
-	$querysettings = mysqli_query($connect, "SELECT * FROM `settings` WHERE `botid` = $botid");  //ЗАПРОС ПРИВЕТСТВИЯ 
+	//ЗАПРОС ПРИВЕТСТВИЯ//
+	$querysettings = mysqli_query($connect, "SELECT * FROM `settings` WHERE `botid` = $botid");  
 	$rowsettings = mysqli_fetch_assoc($querysettings);
 	$welcome = $rowsettings['welcome'];
-
-	$queryusers = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id"); //ЗАПРОС ЮЗЕРА
+	
+	//ЗАПРОС ЮЗЕРА//
+	$queryusers = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id"); 
 	$rowusers = mysqli_num_rows($queryusers);
 
+
+	//ЗАПРОС КАТЕГОРИЙ//
 	$querycat = mysqli_query($connect, "SELECT * FROM `cat` WHERE `botid` = $botid"); //Запрос категорий
 	$rowcat = mysqli_fetch_assoc($querycat);
 	$cat1 = $rowcat['cat1'];
@@ -42,6 +48,11 @@ function sendMessage($token, $id, $message)
 	$cat3 = $rowcat['cat3'];
 	$cat4 = $rowcat['cat4'];
 	$cat5 = $rowcat['cat5'];
+
+	//ЗАПРОС ТОВАРОВ//
+	$querytovar = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = $botid");
+	$rowtovar = mysqli_num_rows($querytovar);
+	$fetchtovar = mysqli_fetch_assoc($querytovar);
 	
 
 	//КНОПКИ СЛУЖЕБНЫЕ//
@@ -53,7 +64,7 @@ function sendMessage($token, $id, $message)
 	//ДОП. ПЕРЕМЕННЫЕ//
 	$comment = rand(1000, 9999);  //Рандом комментария к оплате
 	$allcity = array($city1, $city2, $city3, $city4, $city5, $city6, $city7, $city8, $city9, $city10); //Массив городов
-	$allcat = array($cat1,);
+	$allcat = array($cat1, $cat2, $cat3, $cat4, $cat5);
 
 if( $message == "/start" or $message == "В главное меню")
 {
@@ -81,6 +92,33 @@ foreach($allcity as $city )
 }
 
 
+
+
+$querytovcity = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = $botid and `city` = '$city'");
+$rowtovcity = mysqli_num_rows($querytovcity);
+$fetchtovcit = mysqli_fetch_assoc($querytovcity);
+if($rowtovcity)
+{
+	foreach($rowtovar as $tovar)
+	{
+		foreach($allcat as $cat)
+		{
+			if($fetchtovar['cat'] == $cat)
+			{
+				$msg = "Вы выбрали "  . "$cat" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите товар:");
+				mysqli_query($connect, "UPDATE `users` SET `city` = '$city', `cat` = '$cat' WHERE `users`.`chatid` = $id");
+				sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5,$menu, $price, $help, $jobs));
+			}
+		}
+	}
+}else
+	$cat1 = "";
+	$cat2 = "";
+	$cat3 = "";
+	$cat4 = "";
+	$cat5 = "";
+	sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5,$menu, $price, $help, $jobs));
+}	
 
 
 
