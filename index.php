@@ -65,7 +65,6 @@ function sendMessage($token, $id, $message)
 	$comment = rand(1000, 9999);  //Рандом комментария к оплате
 	$allcity = array($city1, $city2, $city3, $city4, $city5, $city6, $city7, $city8, $city9, $city10); //Массив городов
 	$allcat = array($cat1, $cat2, $cat3, $cat4, $cat5);
-	$percat = array("aaaaa", "bbbbb", "ccccc", "eeeee", "fffff");
 
 if( $message == "/start" or $message == "В главное меню")
 {
@@ -86,27 +85,45 @@ foreach($allcity as $city )
 {
 	if($city == $message)
 	{
-		
-		foreach($allcat as $cat)
+		$querycatcity = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = $botid and `city` = '$city'");
+		if(mysqli_num_rows($querycatcity))
 		{
-			foreach($percat as $per)
+			foreach($allcat as $cat)
 			{
-				$querycatcity = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = $botid and `city` = '$city' and `cat` = '$cat' limit 1");
-				$rowcatcity = mysqli_num_rows($querycatcity);
-				if($rowcatcity)
-				{
-					$per = $cat;
-				} else 
-				{
-					$per = "";
-				}
+				if($cat1 == $cat){
+					$querycatcity = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = $botid and `city` = '$city' and `cat` = '$cat1' limit 1");
+					$rowcatcity = mysqli_num_rows($querycatcity);
+					if($rowcatcity){$cat1 = $cat} else {$per = ""}}
+				if($cat2 == $cat){
+					$querycatcity = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = $botid and `city` = '$city' and `cat` = '$cat2' limit 1");
+					$rowcatcity = mysqli_num_rows($querycatcity);
+					if($rowcatcity){$cat2 = $cat} else {$per = ""}}
+				if($cat3 == $cat){
+					$querycatcity = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = $botid and `city` = '$city' and `cat` = '$cat3' limit 1");
+					$rowcatcity = mysqli_num_rows($querycatcity);
+					if($rowcatcity){$cat3 = $cat} else {$per = ""}}
+				if($cat4 == $cat){
+					$querycatcity = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = $botid and `city` = '$city' and `cat` = '$cat4' limit 1");
+					$rowcatcity = mysqli_num_rows($querycatcity);
+					if($rowcatcity){$cat4 = $cat} else {$per = ""}}
+				if($cat5 == $cat){
+					$querycatcity = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = $botid and `city` = '$city' and `cat` = '$cat5' limit 1");
+					$rowcatcity = mysqli_num_rows($querycatcity);
+					if($rowcatcity){$cat5 = $cat} else {$per = ""}}
 
-
-
+					$msg = "Вы выбрали "  . "$city" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
+					mysqli_query($connect, "UPDATE `users` SET `city` = '$city' WHERE `users`.`chatid` = $id");
+					sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5,$menu, $price, $help, $jobs));
 			}
-				$msg = "Вы выбрали "  . "$city" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
-				mysqli_query($connect, "UPDATE `users` SET `city` = '$city' WHERE `users`.`chatid` = $id");
-				sendMessage($token, $id, $msg.KeyboardMenuCat("$" . $per, "$" . $per, "$" . $per, "$" . $per, "$" . $per,$menu, $price, $help, $jobs));
+		}else
+		{
+			$cat1 = "";
+			$cat2 = "";
+			$cat3 = "";
+			$cat4 = "";
+			$cat5 = "";
+			$msg = "В выбранном городе закончились товары, приходите чуть позже.";
+			sendMessage($token, $id, $msg.KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $menu, $price, $help, $jobs));
 		}
 	}
 }
@@ -129,8 +146,8 @@ function KeyboardMenu($city1,$city2,$city3,$city4,$city5,$city6,$city7,$city8,$c
     return $reply_markup;
 }
 
-function KeyboardMenuCat($aaaaa, $bbbbb, $ccccc, $eeeee, $fffff,$menu,$price,$help,$jobs){
-	$buttons = [[$aaaaa, $bbbbb],[$ccccc, $eeeee],[$fffff],[$menu, $price, $help],[$jobs]];
+function KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5,$menu,$price,$help,$jobs){
+	$buttons = [[$cat1, $cat2],[$cat3, $cat4],[$cat5],[$menu, $price, $help],[$jobs]];
 	$keyboard = json_encode($keyboard = ['keyboard' => $buttons,
         'resize_keyboard' => true,
         'one_time_keyboard' => false,
