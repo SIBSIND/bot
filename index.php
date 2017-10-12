@@ -2318,7 +2318,60 @@ $msg = "Фас 3";
 mysqli_query($connect, "UPDATE `users` SET `fas` = '3' WHERE `users`.`chatid` = $id");	
 sendMessage($token, $id, $msg);
 }
-
+else if($message = $buytovar4 and $tovid > 0 )
+{
+$msg = "Фас 4";	
+mysqli_query($connect, "UPDATE `users` SET `fas` = '1' WHERE `users`.`chatid` = $id");
+sendMessage($token, $id, $msg);
+}
+else if($message = $buytovar5 and $tovid > 0)
+{
+$msg = "Фас 5";	
+mysqli_query($connect, "UPDATE `users` SET `fas` = '2' WHERE `users`.`chatid` = $id");	
+sendMessage($token, $id, $msg);
+}
+else if($message = $buytovar6 and $tovid > 0)
+{
+$msg = "Фас 6";	
+mysqli_query($connect, "UPDATE `users` SET `fas` = '3' WHERE `users`.`chatid` = $id");	
+sendMessage($token, $id, $msg);
+}
+else if($message = $buytovar7 and $tovid > 0 )
+{
+$msg = "Фас 7";	
+mysqli_query($connect, "UPDATE `users` SET `fas` = '1' WHERE `users`.`chatid` = $id");
+sendMessage($token, $id, $msg);
+}
+else if($message = $buytovar8 and $tovid > 0)
+{
+$msg = "Фас 8";	
+mysqli_query($connect, "UPDATE `users` SET `fas` = '2' WHERE `users`.`chatid` = $id");	
+sendMessage($token, $id, $msg);
+}
+else if($message = $buytovar9 and $tovid > 0)
+{
+$msg = "Фас 9";	
+mysqli_query($connect, "UPDATE `users` SET `fas` = '3' WHERE `users`.`chatid` = $id");	
+sendMessage($token, $id, $msg);
+}
+if($message = $buytovar10 and $tovid > 0 )
+{
+$msg = "Фас 10";	
+mysqli_query($connect, "UPDATE `users` SET `fas` = '1' WHERE `users`.`chatid` = $id");
+sendMessage($token, $id, $msg);
+}
+else if($message = $buytovar11 and $tovid > 0)
+{
+$msg = "Фас 11";	
+mysqli_query($connect, "UPDATE `users` SET `fas` = '2' WHERE `users`.`chatid` = $id");	
+sendMessage($token, $id, $msg);
+}
+else if($message = $buytovar12 and $tovid > 0)
+{
+$msg = "Фас 12";	
+mysqli_query($connect, "UPDATE `users` SET `fas` = '3' WHERE `users`.`chatid` = $id");	
+sendMessage($token, $id, $msg);
+}
 
 
 
