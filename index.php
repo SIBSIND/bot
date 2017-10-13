@@ -2297,24 +2297,7 @@ if($message == $tovname5 and $categ > 0)
 }
 
 
-if(preg_match('/^\w+/i', $message) = $fasname1 and $tovid > 0 )
-{
-$msg = "Фас 1";	
-mysqli_query($connect, "UPDATE `users` SET `fas` = '1' WHERE `users`.`chatid` = $id");
-sendMessage($token, $id, $msg);
-}
-else if(preg_match('/^\w+/i', $message) = $fasname2 and $tovid > 0)
-{
-$msg = "Фас 2";	
-mysqli_query($connect, "UPDATE `users` SET `fas` = '2' WHERE `users`.`chatid` = $id");	
-sendMessage($token, $id, $msg);
-}
-else if(preg_match('/^\w+/i', $message) = $fasname3 and $tovid > 0)
-{
-$msg = "Фас 3";	
-mysqli_query($connect, "UPDATE `users` SET `fas` = '3' WHERE `users`.`chatid` = $id");	
-sendMessage($token, $id, $msg);
-}dxv
+
 
 
 file_put_contents("logs.txt",$message);
