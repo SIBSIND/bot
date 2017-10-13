@@ -2294,19 +2294,19 @@ $mes = (float)$message;
 
 if($mes == $fas1 and $tovid > 0 )
 {
-$msg = $msgpreg;	
+$msg = $mes;	
 mysqli_query($connect, "UPDATE `users` SET `fas` = '1' WHERE `users`.`chatid` = $id");
 sendMessage($token, $id, $msg);
 }
 else if($mes == $fas2 and $tovid > 0)
 {
-$msg = $msgpreg;	
+$msg = $mes;	
 mysqli_query($connect, "UPDATE `users` SET `fas` = '2' WHERE `users`.`chatid` = $id");	
 sendMessage($token, $id, $msg);
 }
 else if($mes == $fas3 and $tovid > 0)
 {
-$msg = $msgpreg;	
+$msg = $mes;	
 mysqli_query($connect, "UPDATE `users` SET `fas` = '3' WHERE `users`.`chatid` = $id");	
 sendMessage($token, $id, $msg);
 }
