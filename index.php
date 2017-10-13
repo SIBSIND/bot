@@ -2313,12 +2313,11 @@ $query = mysqli_query($connect, "SELECT * `reg` WHERE `botid` = 1 and `regid` = 
 $row = mysqli_fetch_assoc($query);
 $regname1 = $row['reg'];
 
-{$reg1 = "$regname1";}else {$reg1 = ""}
-	
-	
+$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `region` = '$regname1' and `city` = '$city' and `fas` = '$fasname1' and `tovid` = '$tov' and `cat` = '$cat'");	
+if($query){$reg1 = $regname1;}else {$reg1 = "";}
 	
 mysqli_query($connect, "UPDATE `users` SET `fas` = '1' WHERE `users`.`chatid` = $id");
-sendMessage($token, $id, $reg1);
+sendMessage($token, $id, $msg);
 }
 else if($mes == $fasname2 and $tovid > 0)
 {
