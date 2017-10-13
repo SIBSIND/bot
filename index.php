@@ -2296,84 +2296,25 @@ if($message == $tovname5 and $categ > 0)
 	sendMessage($token, $id, $msg.KeyboardMenuFas($fas1, $fas2, $fas3, $but11, $but12, $but13));
 }
 
-$fasad1 = $fasname1 . " г за " . $price1 . " руб";
-$fasad2 = $fasname2 . " г за " . $price2 . " руб";
-$fasad3 = $fasname3 . " г за " . $price2 . " руб";
 
-if($message = $buytovar1 and $tovid > 0 )
+if(preg_match('/^\w+/i', $message) = $fasname1 and $tovid > 0 )
 {
 $msg = "Фас 1";	
 mysqli_query($connect, "UPDATE `users` SET `fas` = '1' WHERE `users`.`chatid` = $id");
 sendMessage($token, $id, $msg);
 }
-else if($message = $buytovar2 and $tovid > 0)
+else if(preg_match('/^\w+/i', $message) = $fasname2 and $tovid > 0)
 {
 $msg = "Фас 2";	
 mysqli_query($connect, "UPDATE `users` SET `fas` = '2' WHERE `users`.`chatid` = $id");	
 sendMessage($token, $id, $msg);
 }
-else if($message = $buytovar3 and $tovid > 0)
+else if(preg_match('/^\w+/i', $message) = $fasname3 and $tovid > 0)
 {
 $msg = "Фас 3";	
 mysqli_query($connect, "UPDATE `users` SET `fas` = '3' WHERE `users`.`chatid` = $id");	
 sendMessage($token, $id, $msg);
-}
-else if($message = $buytovar4 and $tovid > 0 )
-{
-$msg = "Фас 4";	
-mysqli_query($connect, "UPDATE `users` SET `fas` = '1' WHERE `users`.`chatid` = $id");
-sendMessage($token, $id, $msg);
-}
-else if($message = $buytovar5 and $tovid > 0)
-{
-$msg = "Фас 5";	
-mysqli_query($connect, "UPDATE `users` SET `fas` = '2' WHERE `users`.`chatid` = $id");	
-sendMessage($token, $id, $msg);
-}
-else if($message = $buytovar6 and $tovid > 0)
-{
-$msg = "Фас 6";	
-mysqli_query($connect, "UPDATE `users` SET `fas` = '3' WHERE `users`.`chatid` = $id");	
-sendMessage($token, $id, $msg);
-}
-else if($message = $buytovar7 and $tovid > 0 )
-{
-$msg = "Фас 7";	
-mysqli_query($connect, "UPDATE `users` SET `fas` = '1' WHERE `users`.`chatid` = $id");
-sendMessage($token, $id, $msg);
-}
-else if($message = $buytovar8 and $tovid > 0)
-{
-$msg = "Фас 8";	
-mysqli_query($connect, "UPDATE `users` SET `fas` = '2' WHERE `users`.`chatid` = $id");	
-sendMessage($token, $id, $msg);
-}
-else if($message = $buytovar9 and $tovid > 0)
-{
-$msg = "Фас 9";	
-mysqli_query($connect, "UPDATE `users` SET `fas` = '3' WHERE `users`.`chatid` = $id");	
-sendMessage($token, $id, $msg);
-}
-if($message = $buytovar10 and $tovid > 0 )
-{
-$msg = "Фас 10";	
-mysqli_query($connect, "UPDATE `users` SET `fas` = '1' WHERE `users`.`chatid` = $id");
-sendMessage($token, $id, $msg);
-}
-else if($message = $buytovar11 and $tovid > 0)
-{
-$msg = "Фас 11";	
-mysqli_query($connect, "UPDATE `users` SET `fas` = '2' WHERE `users`.`chatid` = $id");	
-sendMessage($token, $id, $msg);
-}
-else if($message = $buytovar12 and $tovid > 0)
-{
-$msg = "Фас 12";	
-mysqli_query($connect, "UPDATE `users` SET `fas` = '3' WHERE `users`.`chatid` = $id");	
-sendMessage($token, $id, $msg);
-}
-
-
+}dxv
 
 
 file_put_contents("logs.txt",$message);
