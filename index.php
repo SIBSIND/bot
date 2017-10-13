@@ -2299,19 +2299,19 @@ if($message == $tovname5 and $categ > 0)
 
 $msgpreg = preg_match('/^\w+/i', $message);
 
-if($msgpreg = 1 and $tovid > 0 )
+if($msgpreg == $fasname1 and $tovid > 0 )
 {
 $msg = "Фас 1";	
 mysqli_query($connect, "UPDATE `users` SET `fas` = '1' WHERE `users`.`chatid` = $id");
 sendMessage($token, $id, $msg);
 }
-else if($msgpreg = 2 and $tovid > 0)
+else if($msgpreg == $fasname2 and $tovid > 0)
 {
 $msg = "Фас 2";	
 mysqli_query($connect, "UPDATE `users` SET `fas` = '2' WHERE `users`.`chatid` = $id");	
 sendMessage($token, $id, $msg);
 }
-else if($msgpreg = 3 and $tovid > 0)
+else if($msgpreg == $fasname3 and $tovid > 0)
 {
 $msg = "Фас 3";	
 mysqli_query($connect, "UPDATE `users` SET `fas` = '3' WHERE `users`.`chatid` = $id");	
