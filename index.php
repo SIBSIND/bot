@@ -2292,33 +2292,7 @@ if($message == $tovname5 and $categ > 0)
 
 $mes = (float)$message;
 
-$query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
-$row = mysqli_fetch_assoc($query);
-$gorod = $row['city'];
-if($gorod==1){$cityselect = $but1}
-else if($gorod==2){$cityselect = $but2}
-else if($gorod==3){$cityselect = $but3}
-else if($gorod==4){$cityselect = $but4}
-else if($gorod==5){$cityselect = $but5}
-else if($gorod==6){$cityselect = $but6}
-else if($gorod==7){$cityselect = $but7}
-else if($gorod==8){$cityselect = $but8}
-else if($gorod==9){$cityselect = $but9}
-else if($gorod==10){$cityselect = $but10}
 
-$categ = $row['cat'];
-if($categ==1){$catselect = $cat1}
-else if($categ==2){$catselect = $cat2}
-else if($categ==3){$catselect = $cat3}
-else if($categ==4){$catselect = $cat4}
-else if($categ==5){$catselect = $cat5}
-
-$tovarname = $row['tovid'];
-if($tovarname==1){$tovselect = $tovname1}
-else if($tovarname==2){$tovselect = $tovname2}
-else if($tovarname==3){$tovselect = $tovname3}
-else if($tovarname==4){$tovselect = $tovname4}
-else if($tovarname==5){$tovselect = $tovname5}
 
 
 if($mes == $fasname1 and $tovid > 0 )
