@@ -2296,31 +2296,22 @@ if($message == $tovname5 and $categ > 0)
 	sendMessage($token, $id, $msg.KeyboardMenuFas($fas1, $fas2, $fas3, $but11, $but12, $but13));
 }
 
-$query1 = mysqli_query($connect, "SELECT * FROM `fas` WHERE `fasid` = 1 and `botid` = $botid");
-$row = mysqli_fetch_assoc($query1);
-$fasname1 = $row['fas'];
-$query2 = mysqli_query($connect, "SELECT * FROM `fas` WHERE `fasid` = 2 and `botid` = $botid");
-$row = mysqli_fetch_assoc($query2);
-$fasname2 = $row['fas'];
-$query3 = mysqli_query($connect, "SELECT * FROM `fas` WHERE `fasid` = 3 and `botid` = $botid");
-$row = mysqli_fetch_assoc($query3);
-$fasname3 = $row['fas'];
 
 $msgpreg = preg_match('/^\w+/i', $message);
 
-if($msgpreg = $fasname1 and $tovid > 0 )
+if($msgpreg = 1 and $tovid > 0 )
 {
 $msg = "Фас 1";	
 mysqli_query($connect, "UPDATE `users` SET `fas` = '1' WHERE `users`.`chatid` = $id");
 sendMessage($token, $id, $msg);
 }
-else if($msgpreg = $fasname2 and $tovid > 0)
+else if($msgpreg = 2 and $tovid > 0)
 {
 $msg = "Фас 2";	
 mysqli_query($connect, "UPDATE `users` SET `fas` = '2' WHERE `users`.`chatid` = $id");	
 sendMessage($token, $id, $msg);
 }
-else if($msgpreg = $fasname3 and $tovid > 0)
+else if($msgpreg = 3 and $tovid > 0)
 {
 $msg = "Фас 3";	
 mysqli_query($connect, "UPDATE `users` SET `fas` = '3' WHERE `users`.`chatid` = $id");	
