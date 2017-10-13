@@ -2304,13 +2304,15 @@ else if($gorod==6){$cityselect = $but6}
 else if($gorod==7){$cityselect = $but7}
 else if($gorod==8){$cityselect = $but8}
 else if($gorod==9){$cityselect = $but9}
-else if($gorod==10){$cityselect = "$but10"}
+else if($gorod==10){$cityselect = $but10}
+
 $categ = $row['cat'];
 if($categ==1){$catselect = $cat1}
 else if($categ==2){$catselect = $cat2}
 else if($categ==3){$catselect = $cat3}
 else if($categ==4){$catselect = $cat4}
 else if($categ==5){$catselect = $cat5}
+
 $tovarname = $row['tovid'];
 if($tovarname==1){$tovselect = $tovname1}
 else if($tovarname==2){$tovselect = $tovname2}
@@ -2321,19 +2323,19 @@ else if($tovarname==5){$tovselect = $tovname5}
 
 if($mes == $fasname1 and $tovid > 0 )
 {
-$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $cityselect . urlencode("\nКАТЕГОРИЯ: ") . $catselect . urlencode("\nТОВАР: ") . $tovselect . urlencode("\nФасовка: ") . "$message" . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите район:");
+$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $cityselect . urlencode("\nКАТЕГОРИЯ: ") . $catselect . urlencode("\nТОВАР: ") . $tovselect . urlencode("\nФасовка: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите район:");
 mysqli_query($connect, "UPDATE `users` SET `fas` = '1' WHERE `users`.`chatid` = $id");
 sendMessage($token, $id, $msg);
 }
 else if($mes == $fasname2 and $tovid > 0)
 {
-$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $cityselect . urlencode("\nКАТЕГОРИЯ: ") . $catselect . urlencode("\nТОВАР: ") . $tovselect . urlencode("\nФасовка: ") . "$message" . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите район:");	
+$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $cityselect . urlencode("\nКАТЕГОРИЯ: ") . $catselect . urlencode("\nТОВАР: ") . $tovselect . urlencode("\nФасовка: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите район:");	
 mysqli_query($connect, "UPDATE `users` SET `fas` = '2' WHERE `users`.`chatid` = $id");	
 sendMessage($token, $id, $msg);
 }
 else if($mes == $fasname3 and $tovid > 0)
 {
-$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $cityselect . urlencode("\nКАТЕГОРИЯ: ") . $catselect . urlencode("\nТОВАР: ") . $tovselect . urlencode("\nФасовка: ") . "$message" . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите район:");	
+$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $cityselect . urlencode("\nКАТЕГОРИЯ: ") . $catselect . urlencode("\nТОВАР: ") . $tovselect . urlencode("\nФасовка: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите район:");	
 mysqli_query($connect, "UPDATE `users` SET `fas` = '3' WHERE `users`.`chatid` = $id");	
 sendMessage($token, $id, $msg);
 }
