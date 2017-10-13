@@ -2315,9 +2315,13 @@ $regname1 = $row['reg'];
 
 $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `region` = '$regname1' and `city` = '$city' and `fas` = '$fasname1' and `tovid` = '$tov' and `cat` = '$cat'");	
 if($query){$reg1 = $regname1;}else {$reg1 = "";}
+$reg2 = "";
+$reg3 = "";
+$reg4 = "";
+$reg5 = "";
 	
 mysqli_query($connect, "UPDATE `users` SET `fas` = '1' WHERE `users`.`chatid` = $id");
-sendMessage($token, $id, $msg);
+sendMessage($token, $id, $msg.KeyboardMenuReg($reg1, $reg2, $reg3, $reg4, $reg5, $but11, $but12, $but13));
 }
 else if($mes == $fasname2 and $tovid > 0)
 {
@@ -2366,6 +2370,17 @@ function KeyboardMenu($but1,$but2,$but3,$but4,$but5,$but6,$but7,$but8,$but9,$but
 
 function KeyboardMenuCat($cat1, $cat2, $cat3, $cat4, $cat5, $but11, $but12, $but13){
 	$buttons = [[$cat1,$cat2],[$cat3,$cat4],[$cat5],[$but11,$but12,$but13]];
+	$keyboard = json_encode($keyboard = ['keyboard' => $buttons,
+        'resize_keyboard' => true,
+        'one_time_keyboard' => false,
+        'selective' => true]);
+    $reply_markup = '&reply_markup=' . $keyboard . '';
+
+    return $reply_markup;
+}
+
+function KeyboardMenuReg($reg1, $reg2, $reg3, $reg4, $reg5, $but11, $but12, $but13){
+	$buttons = [[$reg1,$reg2],[$reg3,$reg4],[$reg5],[$but11,$but12,$but13]];
 	$keyboard = json_encode($keyboard = ['keyboard' => $buttons,
         'resize_keyboard' => true,
         'one_time_keyboard' => false,
