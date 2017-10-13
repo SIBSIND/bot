@@ -2309,11 +2309,10 @@ else if($tovid == 5){$tov = $tovname5;}
 $msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите район:");
 	
 	
-$query = mysqli_query($connect,"SELECT * `reg` WHERE `botid` = 1 and `regid` = 1");
+$query = mysqli_query($connect, "SELECT * `reg` WHERE `botid` = 1 and `regid` = 1");
 $row = mysqli_fetch_assoc($query);
 $regname1 = $row['reg'];
-$query = mysqli_query($connect,"SELECT * FROM `tovar` WHERE `region` = '$regname1' and `city` = '$city' and `fas` = '$fasname1' and `tovid` = '$tov' and `cat` = '$cat'");	
-if($query)
+
 {$reg1 = "$regname1";}else {$reg1 = ""}
 	
 	
