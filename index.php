@@ -2127,14 +2127,14 @@ $query = mysqli_query($connect, "SELECT * FROM `tovname` WHERE `tovid` = '5' and
 $rows = mysqli_fetch_assoc($query);
 $tovname5 = $rows['name'];
 
-$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `fasid` = '1'");
-$row = mysqli_fetch_assoc($query);
+$query1 = mysqli_query($connect, "SELECT * FROM `fas` WHERE `fasid` = 1 and `botid` = $botid");
+$row = mysqli_fetch_assoc($query1);
 $fasname1 = $row['fas'];
-$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `fasid` = '2'");
-$row = mysqli_fetch_assoc($query);
+$query2 = mysqli_query($connect, "SELECT * FROM `fas` WHERE `fasid` = 2 and `botid` = $botid");
+$row = mysqli_fetch_assoc($query2);
 $fasname2 = $row['fas'];
-$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `fasid` = '3'");
-$row = mysqli_fetch_assoc($query);
+$query3 = mysqli_query($connect, "SELECT * FROM `fas` WHERE `fasid` = 3 and `botid` = $botid");
+$row = mysqli_fetch_assoc($query3);
 $fasname3 = $row['fas'];
 
 if($city == 1){$city = $but1;}
@@ -2295,6 +2295,16 @@ if($message == $tovname5 and $categ > 0)
 	$buytovar15 = $fas3;
 	sendMessage($token, $id, $msg.KeyboardMenuFas($fas1, $fas2, $fas3, $but11, $but12, $but13));
 }
+
+$query1 = mysqli_query($connect, "SELECT * FROM `fas` WHERE `fasid` = 1 and `botid` = $botid");
+$row = mysqli_fetch_assoc($query1);
+$fasname1 = $row['fas'];
+$query2 = mysqli_query($connect, "SELECT * FROM `fas` WHERE `fasid` = 2 and `botid` = $botid");
+$row = mysqli_fetch_assoc($query2);
+$fasname2 = $row['fas'];
+$query3 = mysqli_query($connect, "SELECT * FROM `fas` WHERE `fasid` = 3 and `botid` = $botid");
+$row = mysqli_fetch_assoc($query3);
+$fasname3 = $row['fas'];
 
 $msgpreg = preg_match('/^\w+/i', $message);
 
