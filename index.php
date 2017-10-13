@@ -2294,7 +2294,7 @@ $mes = (float)$message;
 
 if($mes == $fasname1 and $tovid > 0 )
 {
-$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . "ГОР" . urlencode("\nКАТЕГОРИЯ: ") . $catselect . urlencode("\nТОВАР: ") . $tovselect . urlencode("\nФасовка: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите район:");
+$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovarname1 . urlencode("\nФасовка: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите район:");
 mysqli_query($connect, "UPDATE `users` SET `fas` = '1' WHERE `users`.`chatid` = $id");
 sendMessage($token, $id, $msg);
 }
