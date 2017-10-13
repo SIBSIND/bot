@@ -62,6 +62,7 @@ if( $message == "/start" or $message == "В главное меню")
 	}
 }
 
+$cityselet = $message;
 
 if($message == $but1)
 {
@@ -2292,9 +2293,17 @@ if($message == $tovname5 and $categ > 0)
 
 $mes = (float)$message;
 
+$query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
+$row = mysqli_fetch_assoc($query);
+$gorod = $row['city'];
+$categ = $row['cat'];
+$tovarname = $row['tovid'];
+
+
+
 if($mes == $fasname1 and $tovid > 0 )
 {
-$msg = $mes;	
+$msg = "Вы выбрали "  . $tovname5 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $cityselet . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovname5 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
 mysqli_query($connect, "UPDATE `users` SET `fas` = '1' WHERE `users`.`chatid` = $id");
 sendMessage($token, $id, $msg);
 }
