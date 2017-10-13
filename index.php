@@ -2314,24 +2314,12 @@ $row = mysqli_fetch_assoc($query);
 $regname1 = $row['reg'];
 $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `region` = '$regname1' and `city` = '$city' and `fas` = '$fasname1' and `tovid` = '$tov' and `cat` = '$cat'");	
 if($query){$reg1 = $regname1;}else {$reg1 = "";}
-$query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 2");
-$row = mysqli_fetch_assoc($query);
-$regname2 = $row['reg'];	
 $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `region` = '$regname2' and `city` = '$city' and `fas` = '$fasname1' and `tovid` = '$tov' and `cat` = '$cat'");	
 else if($query){$reg2 = $regname2;}else {$reg2 = "";}
-$query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 3");
-$row = mysqli_fetch_assoc($query);
-$regname3 = $row['reg'];
 $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `region` = '$regname3' and `city` = '$city' and `fas` = '$fasname1' and `tovid` = '$tov' and `cat` = '$cat'");	
 else if($query){$reg3 = $regname3;}else {$reg3 = "";}
-$query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 4");
-$row = mysqli_fetch_assoc($query);
-$regname4 = $row['reg'];
 $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `region` = '$regname4' and `city` = '$city' and `fas` = '$fasname1' and `tovid` = '$tov' and `cat` = '$cat'");	
 else if($query){$reg4 = $regname4;}else {$reg4 = "";}
-$query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 5");
-$row = mysqli_fetch_assoc($query);
-$regname5 = $row['reg'];
 $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `region` = '$regname5' and `city` = '$city' and `fas` = '$fasname1' and `tovid` = '$tov' and `cat` = '$cat'");	
 else if($query){$reg5 = $regname5;}else {$reg5 = "";}
 	
@@ -2349,10 +2337,8 @@ else if($tovid == 3){$tov = $tovname3;}
 else if($tovid == 4){$tov = $tovname4;}
 else if($tovid == 5){$tov = $tovname5;}
 $msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите район:");	
-
-
 mysqli_query($connect, "UPDATE `users` SET `fas` = '2' WHERE `users`.`chatid` = $id");	
-sendMessage($token, $id, $msg.KeyboardMenuReg($reg1, $reg2, $reg3, $reg4, $reg5, $but11, $but12, $but13));
+sendMessage($token, $id, $msg);
 }
 else if($mes == $fasname3 and $tovid > 0)
 {
