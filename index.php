@@ -2292,21 +2292,6 @@ if($message == $tovname5 and $categ > 0)
 
 $mes = (float)$message;
 
-$categ = $row['cat'];
-if($categ==1){$catselect = $cat1}
-else if($categ==2){$catselect = $cat2}
-else if($categ==3){$catselect = $cat3}
-else if($categ==4){$catselect = $cat4}
-else if($categ==5){$catselect = $cat5}
-
-$tovarname = $row['tovid'];
-if($tovarname==1){$tovselect = $tovname1}
-else if($tovarname==2){$tovselect = $tovname2}
-else if($tovarname==3){$tovselect = $tovname3}
-else if($tovarname==4){$tovselect = $tovname4}
-else if($tovarname==5){$tovselect = $tovname5}
-
-
 if($mes == $fasname1 and $tovid > 0 )
 {
 $msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . "ГОР" . urlencode("\nКАТЕГОРИЯ: ") . $catselect . urlencode("\nТОВАР: ") . $tovselect . urlencode("\nФасовка: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите район:");
