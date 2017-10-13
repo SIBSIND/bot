@@ -2293,30 +2293,47 @@ if($message == $tovname5 and $categ > 0)
 $mes = (float)$message;
 
 
-$query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
-$row = mysqli_fetch_assoc($query);
-$tovid = $row['tovid'];
-if($tovid == 1){$tov = $tovname1}
-else if($tovid == 2){$tov = $tovname2}
-else if($tovid == 3){$tov = $tovname3}
-else if($tovid == 4){$tov = $tovname4}
-else if($tovid == 5){$tov = $tovname5}
+
 
 
 if($mes == $fasname1 and $tovid > 0 )
 {	
+	$queryqq = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
+$rowqq = mysqli_fetch_assoc($queryqq);
+$tovid = $rowqq['tovid'];
+if($tovid == 1){$tov = $tovname1;}
+else if($tovid == 2){$tov = $tovname2;}
+else if($tovid == 3){$tov = $tovname3;}
+else if($tovid == 4){$tov = $tovname4;}
+else if($tovid == 5){$tov = $tovname5;}
 $msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите район:");
 mysqli_query($connect, "UPDATE `users` SET `fas` = '1' WHERE `users`.`chatid` = $id");
 sendMessage($token, $id, $msg);
 }
 else if($mes == $fasname2 and $tovid > 0)
 {
+	$queryqq = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
+$rowqq = mysqli_fetch_assoc($queryqq);
+$tovid = $rowqq['tovid'];
+if($tovid == 1){$tov = $tovname1;}
+else if($tovid == 2){$tov = $tovname2;}
+else if($tovid == 3){$tov = $tovname3;}
+else if($tovid == 4){$tov = $tovname4;}
+else if($tovid == 5){$tov = $tovname5;}
 $msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите район:");	
 mysqli_query($connect, "UPDATE `users` SET `fas` = '2' WHERE `users`.`chatid` = $id");	
 sendMessage($token, $id, $msg);
 }
 else if($mes == $fasname3 and $tovid > 0)
 {
+	$queryqq = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
+$rowqq = mysqli_fetch_assoc($queryqq);
+$tovid = $rowqq['tovid'];
+if($tovid == 1){$tov = $tovname1;}
+else if($tovid == 2){$tov = $tovname2;}
+else if($tovid == 3){$tov = $tovname3;}
+else if($tovid == 4){$tov = $tovname4;}
+else if($tovid == 5){$tov = $tovname5;}
 $msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите район:");	
 mysqli_query($connect, "UPDATE `users` SET `fas` = '3' WHERE `users`.`chatid` = $id");	
 sendMessage($token, $id, $msg);
