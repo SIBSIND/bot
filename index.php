@@ -2234,9 +2234,7 @@ if($message == $tovname3 and $categ > 0)
 	
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '3' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . $tovname3 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovname3 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
-	$buytovar7 = $fas1;
-	$buytovar8 = $fas2;
-	$buytovar9 = $fas3;
+
 	sendMessage($token, $id, $msg.KeyboardMenuFas($fas1, $fas2, $fas3, $but11, $but12, $but13));
 }
 if($message == $tovname4 and $categ > 0)
@@ -2262,9 +2260,7 @@ if($message == $tovname4 and $categ > 0)
 	
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '4' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . $tovname4 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovname4 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
-	$buytovar10 = $fas1;
-	$buytovar11 = $fas2;
-	$buytovar12 = $fas3;
+
 	sendMessage($token, $id, $msg.KeyboardMenuFas($fas1, $fas2, $fas3, $but11, $but12, $but13));
 }
 if($message == $tovname5 and $categ > 0)
@@ -2290,28 +2286,25 @@ if($message == $tovname5 and $categ > 0)
 	
 	mysqli_query($connect, "UPDATE `users` SET `tovid` = '5' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . $tovname5 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovname5 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
-	$buytovar13 = $fas1;
-	$buytovar14 = $fas2;
-	$buytovar15 = $fas3;
+
 	sendMessage($token, $id, $msg.KeyboardMenuFas($fas1, $fas2, $fas3, $but11, $but12, $but13));
 }
 
 
-$msgpreg = preg_match_all('~\d+(?:\.\d+)?~', $message);
 
-if($msgpreg == $fasname1 and $tovid > 0 )
+if($message == $fas1 and $tovid > 0 )
 {
 $msg = $msgpreg;	
 mysqli_query($connect, "UPDATE `users` SET `fas` = '1' WHERE `users`.`chatid` = $id");
 sendMessage($token, $id, $msg);
 }
-else if($msgpreg == $fasname2 and $tovid > 0)
+else if($message == $fas2 and $tovid > 0)
 {
 $msg = $msgpreg;	
 mysqli_query($connect, "UPDATE `users` SET `fas` = '2' WHERE `users`.`chatid` = $id");	
 sendMessage($token, $id, $msg);
 }
-else if($msgpreg == $fasname3 and $tovid > 0)
+else if($message == $fas3 and $tovid > 0)
 {
 $msg = $msgpreg;	
 mysqli_query($connect, "UPDATE `users` SET `fas` = '3' WHERE `users`.`chatid` = $id");	
