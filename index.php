@@ -2294,11 +2294,12 @@ $mes = (float)$message;
 $query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
 $row = mysqli_fetch_assoc($query);
 $tovid = $row['tovid'];
-if($tovid == 1)($tov = $tovname1;)
-else if($tovid == 2)($tov = $tovname2;)
-else if($tovid == 3)($tov = $tovname3;)
-else if($tovid == 4)($tov = $tovname4;)
-else if($tovid == 5)($tov = $tovname5;)
+
+     if($tovid == 1)($tov = 123)
+else if($tovid == 2)($tov = 123)
+else if($tovid == 3)($tov = 123)
+else if($tovid == 4)($tov = 123)
+else if($tovid == 5)($tov = 123)
 
 if($mes == $fasname1 and $tovid > 0 )
 {
