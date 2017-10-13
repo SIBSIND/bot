@@ -2176,7 +2176,7 @@ if($message == $tovname1 and $categ > 0)
 	$price3 = $fetch3['price'];
 	if($row3){$fas3 = $fasname3 . " г за " . $price3 . " руб";}else {$fas3="";}
 	
-	mysqli_query($connect, "UPDATE `users` SET `tovid` = '1' WHERE `users`.`botid` = $botid");
+	mysqli_query($connect, "UPDATE `users` SET `tovid` = '1' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . $tovname1 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovname1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
 	$buytovar1 = $fas1;
 	$buytovar2 = $fas2;
@@ -2204,7 +2204,7 @@ if($message == $tovname2 and $categ > 0)
 	if($row3){$fas3 = $fasname3 . " г за " . $price3 . " руб";}else {$fas3="";}
 	
 	
-	mysqli_query($connect, "UPDATE `users` SET `tovid` = '2' WHERE `users`.`botid` = $botid");
+	mysqli_query($connect, "UPDATE `users` SET `tovid` = '2' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . $tovname2 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovname2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
 	$buytovar4 = $fas1;
 	$buytovar5 = $fas2;
@@ -2232,7 +2232,7 @@ if($message == $tovname3 and $categ > 0)
 	if($row3){$fas3 = $fasname3 . " г за " . $price3 . " руб";}else {$fas3="";}
 	
 	
-	mysqli_query($connect, "UPDATE `users` SET `tovid` = '3' WHERE `users`.`botid` = $botid");
+	mysqli_query($connect, "UPDATE `users` SET `tovid` = '3' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . $tovname3 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovname3 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
 	$buytovar7 = $fas1;
 	$buytovar8 = $fas2;
@@ -2260,7 +2260,7 @@ if($message == $tovname4 and $categ > 0)
 	if($row3){$fas3 = $fasname3 . " г за " . $price3 . " руб";}else {$fas3="";}
 	
 	
-	mysqli_query($connect, "UPDATE `users` SET `tovid` = '4' WHERE `users`.`botid` = $botid");
+	mysqli_query($connect, "UPDATE `users` SET `tovid` = '4' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . $tovname4 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovname4 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
 	$buytovar10 = $fas1;
 	$buytovar11 = $fas2;
@@ -2288,7 +2288,7 @@ if($message == $tovname5 and $categ > 0)
 	if($row3){$fas3 = $fasname3 . " г за " . $price3 . " руб";}else {$fas3="";}
 	
 	
-	mysqli_query($connect, "UPDATE `users` SET `tovid` = '5' WHERE `users`.`botid` = $botid");
+	mysqli_query($connect, "UPDATE `users` SET `tovid` = '5' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . $tovname5 . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovname5 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите фасовку:");
 	$buytovar13 = $fas1;
 	$buytovar14 = $fas2;
