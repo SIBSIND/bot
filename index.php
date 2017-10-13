@@ -2301,19 +2301,19 @@ $msgpreg = preg_match('/^\w+/i', $message);
 
 if($msgpreg == $fasname1 and $tovid > 0 )
 {
-$msg = "Фас 1";	
+$msg = "$message";	
 mysqli_query($connect, "UPDATE `users` SET `fas` = '1' WHERE `users`.`chatid` = $id");
 sendMessage($token, $id, $msg);
 }
 else if($msgpreg == $fasname2 and $tovid > 0)
 {
-$msg = "Фас 2";	
+$msg = "$message";	
 mysqli_query($connect, "UPDATE `users` SET `fas` = '2' WHERE `users`.`chatid` = $id");	
 sendMessage($token, $id, $msg);
 }
 else if($msgpreg == $fasname3 and $tovid > 0)
 {
-$msg = "Фас 3";	
+$msg = "$message";	
 mysqli_query($connect, "UPDATE `users` SET `fas` = '3' WHERE `users`.`chatid` = $id");	
 sendMessage($token, $id, $msg);
 }
