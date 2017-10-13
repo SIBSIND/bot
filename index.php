@@ -2297,7 +2297,7 @@ if($message == $tovname5 and $categ > 0)
 }
 
 
-$msgpreg = preg_match('/^\w+/i', $message);
+$msgpreg = preg_match_all('~\d+(?:\.\d+)?~', $message);
 
 if($msgpreg == $fasname1 and $tovid > 0 )
 {
