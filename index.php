@@ -2296,19 +2296,21 @@ if($message == $tovname5 and $categ > 0)
 	sendMessage($token, $id, $msg.KeyboardMenuFas($fas1, $fas2, $fas3, $but11, $but12, $but13));
 }
 
-if(preg_match('/^\w+/i', $message) = $fasname1 and $tovid > 0 )
+$msgpreg = preg_match('/^\w+/i', $message);
+
+if($msgpreg = $fasname1 and $tovid > 0 )
 {
 $msg = "Фас 1";	
 mysqli_query($connect, "UPDATE `users` SET `fas` = '1' WHERE `users`.`chatid` = $id");
 sendMessage($token, $id, $msg);
 }
-else if(preg_match('/^\w+/i', $message) = $fasname2 and $tovid > 0)
+else if($msgpreg = $fasname2 and $tovid > 0)
 {
 $msg = "Фас 2";	
 mysqli_query($connect, "UPDATE `users` SET `fas` = '2' WHERE `users`.`chatid` = $id");	
 sendMessage($token, $id, $msg);
 }
-else if(preg_match('/^\w+/i', $message) = $fasname3 and $tovid > 0)
+else if($msgpreg = $fasname3 and $tovid > 0)
 {
 $msg = "Фас 3";	
 mysqli_query($connect, "UPDATE `users` SET `fas` = '3' WHERE `users`.`chatid` = $id");	
