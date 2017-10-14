@@ -2312,7 +2312,7 @@ $msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪
 $query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 1");
 $row = mysqli_fetch_assoc($query);
 $regname1 = $row['reg'];
-$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `region` = 'Район 1' and `city` = '$city' and `fas` = '$fasname1' and `tovid` = '1' and `cat` = 'Категория 1' limit 1");	
+$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `region` = '$regname1' and `city` = '$city' and `fas` = '$fasname1' and `tovid` = '1' and `cat` = 'Категория 1' limit 1");	
 $row = mysqli_num_rows($query);
 if($row){$reg1 = $regname1;}else {$reg1 = "";}
 	
