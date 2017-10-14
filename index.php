@@ -2301,13 +2301,13 @@ $queryqq = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
 $rowqq = mysqli_fetch_assoc($queryqq);
 $tovid = $rowqq['tovid'];
 
-$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovid . urlencode("\nФАСОВКА: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите район:");
+$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите район:");
 	
 	
 $query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 1");
 $row = mysqli_fetch_assoc($query);
 $regname1 = $row['reg'];
-$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `region` = '$regname1' and `city` = '$city' and `fas` = '$fasname1' and `tovid` = '$tov' and `cat` = '$cat' limit 1");	
+$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `region` = '$regname1' and `city` = '$city' and `fas` = '$fasname1' and `tovid` = '$tovid' and `cat` = '$cat' limit 1");	
 $row = mysqli_num_rows($query);
 if($row){$reg1 = $regname1;}else {$reg1 = "";}
 	
