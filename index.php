@@ -2293,33 +2293,15 @@ if($message == $tovname5 and $categ > 0)
 $mes = (float)$message;
 
 
-$query = mysqli_query($connect, "SELECT * FROM `tovname` WHERE `botid` = $botid and `tovid` = 1");
-$row = mysqli_fetch_assoc($query);
-$tovname1 = $row['name'];
-$query = mysqli_query($connect, "SELECT * FROM `tovname` WHERE `botid` = $botid and `tovid` = 2");
-$row = mysqli_fetch_assoc($query);
-$tovname2 = $row['name'];
-$query = mysqli_query($connect, "SELECT * FROM `tovname` WHERE `botid` = $botid and `tovid` = 3");
-$row = mysqli_fetch_assoc($query);
-$tovname3 = $row['name'];
-$query = mysqli_query($connect, "SELECT * FROM `tovname` WHERE `botid` = $botid and `tovid` = 4");
-$row = mysqli_fetch_assoc($query);
-$tovname4 = $row['name'];
-$query = mysqli_query($connect, "SELECT * FROM `tovname` WHERE `botid` = $botid and `tovid` = 5");
-$row = mysqli_fetch_assoc($query);
-$tovname5 = $row['name'];
+
 
 if($mes == $fasname1 and $tovid > 0 )
 {	
 $queryqq = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
 $rowqq = mysqli_fetch_assoc($queryqq);
 $tovid = $rowqq['tovid'];
-if($tovid == 1){$tov = $tovname1;}
-else if($tovid == 2){$tov = $tovname2;}
-else if($tovid == 3){$tov = $tovname3;}
-else if($tovid == 4){$tov = $tovname4;}
-else if($tovid == 5){$tov = $tovname5;}
-$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите район:");
+
+$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tovid . urlencode("\nФАСОВКА: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите район:");
 	
 	
 $query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 1");
