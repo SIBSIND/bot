@@ -2316,7 +2316,12 @@ $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `region` = '$regnam
 $row = mysqli_num_rows($query);
 if($row){$reg1 = $regname1;}else {$reg1 = "";}
 	
-$reg2 = "";
+$query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 2");
+$row = mysqli_fetch_assoc($query);
+$regname2 = $row['reg'];
+$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `region` = '$regname2' and `city` = '$city' and `fas` = '$fasname1' and `tovid` = '$tovid' and `cat` = '$cat' limit 1");	
+$row = mysqli_num_rows($query);
+if($row){$reg2 = $regname2;}else {$reg2 = "";}
 $reg3 = "";
 $reg4 = "";
 $reg5 = "";
