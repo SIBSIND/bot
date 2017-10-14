@@ -2323,26 +2323,9 @@ $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `region` = '$regnam
 $row = mysqli_num_rows($query);
 if($row){$reg2 = $regname3;}else {$reg2 = "";}
 
-$query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 3");
-$row = mysqli_fetch_assoc($query);
-$regname3 = $row['reg'];
-$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `region` = '$regname3' and `city` = '$city' and `fas` = '$fasname1' and `tovid` = '$tovid' and `cat` = '$cat' limit 1");	
-$row = mysqli_num_rows($query);
-if($row){$reg3 = $regname3;}else {$reg3 = "";}
-
-$query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 4");
-$row = mysqli_fetch_assoc($query);
-$regname4 = $row['reg'];
-$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `region` = '$regname4' and `city` = '$city' and `fas` = '$fasname1' and `tovid` = '$tovid' and `cat` = '$cat' limit 1");	
-$row = mysqli_num_rows($query);
-if($row){$reg4 = $regname4;}else {$reg4 = "";}
-
-$query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 5");
-$row = mysqli_fetch_assoc($query);
-$regname5 = $row['reg'];
-$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `region` = '$regname5' and `city` = '$city' and `fas` = '$fasname1' and `tovid` = '$tovid' and `cat` = '$cat' limit 1");	
-$row = mysqli_num_rows($query);
-if($row){$reg5 = $regname5;}else {$reg5 = "";}
+$reg3 = "";
+$reg4 = "";
+$reg5 = "";
 	
 mysqli_query($connect, "UPDATE `users` SET `fas` = '1' WHERE `users`.`chatid` = $id");
 sendMessage($token, $id, $msg.KeyboardMenuReg($reg1, $reg2, $reg3, $reg4, $reg5, $but11, $but12, $but13));
