@@ -2397,7 +2397,7 @@ $row = mysqli_num_rows($query);
 if($row){$reg5 = $regname5;}else {$reg5 = "";}	
 
 mysqli_query($connect, "UPDATE `users` SET `fas` = '2' WHERE `users`.`chatid` = $id");	
-sendMessage($token, $id, $msg);
+sendMessage($token, $id, $msg.KeyboardMenuReg($reg1, $reg2, $reg3, $reg4, $reg5, $but11, $but12, $but13));
 }
 else if($mes == $fasname3 and $tovid > 0)
 {
