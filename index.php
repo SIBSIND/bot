@@ -2293,8 +2293,21 @@ if($message == $tovname5 and $categ > 0)
 $mes = (float)$message;
 
 
-
-
+$query = mysqli_query($connect, "SELECT * FROM `tovname` WHERE `botid` = $botid and `tovid` = 1");
+$row = mysqli_fetch_assoc($query);
+$tovname1 = $row['name'];
+$query = mysqli_query($connect, "SELECT * FROM `tovname` WHERE `botid` = $botid and `tovid` = 2");
+$row = mysqli_fetch_assoc($query);
+$tovname2 = $row['name'];
+$query = mysqli_query($connect, "SELECT * FROM `tovname` WHERE `botid` = $botid and `tovid` = 3");
+$row = mysqli_fetch_assoc($query);
+$tovname3 = $row['name'];
+$query = mysqli_query($connect, "SELECT * FROM `tovname` WHERE `botid` = $botid and `tovid` = 4");
+$row = mysqli_fetch_assoc($query);
+$tovname4 = $row['name'];
+$query = mysqli_query($connect, "SELECT * FROM `tovname` WHERE `botid` = $botid and `tovid` = 5");
+$row = mysqli_fetch_assoc($query);
+$tovname5 = $row['name'];
 
 if($mes == $fasname1 and $tovid > 0 )
 {	
