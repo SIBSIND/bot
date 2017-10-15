@@ -2468,13 +2468,35 @@ $regname4 = $row['reg'];
 $query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 5");
 $row = mysqli_fetch_assoc($query);
 $regname5 = $row['reg'];
+
 $queryqq = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
 $rowqq = mysqli_fetch_assoc($queryqq);
 $tovid = $rowqq['tovid'];
+if($tovid == 1){$tov = $tovname1;}
+else if($tovid == 2){$tov = $tovname2;}
+else if($tovid == 3){$tov = $tovname3;}
+else if($tovid == 4){$tov = $tovname4;}
+else if($tovid == 5){$tov = $tovname5;}
 if($message == $regname1 and $tovid > 0)
 {
 	mysqli_query($connect, "UPDATE `users` SET `region` = '$message' WHERE `users`.`chatid` = $id");
-	$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $seletfas1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nРАЙОН: ") . $regname1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите способ оплаты: ");	
+	$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $selectfas1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nРАЙОН: ") . $regname1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите способ оплаты: ");	
+	$wall1 = "QIWI";
+	$wall2 = "";
+	sendMessage($token, $id, $msg.KeyboardMenuWall($wall1, $wall2, $but11, $but12, $but13));
+}
+if($message == $regname2 and $tovid > 0)
+{
+	mysqli_query($connect, "UPDATE `users` SET `region` = '$message' WHERE `users`.`chatid` = $id");
+	$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $selectfas1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nРАЙОН: ") . $regname1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите способ оплаты: ");	
+	$wall1 = "QIWI";
+	$wall2 = "";
+	sendMessage($token, $id, $msg.KeyboardMenuWall($wall1, $wall2, $but11, $but12, $but13));
+}
+if($message == $regname3 and $tovid > 0)
+{
+	mysqli_query($connect, "UPDATE `users` SET `region` = '$message' WHERE `users`.`chatid` = $id");
+	$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $selectfas1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nРАЙОН: ") . $regname1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите способ оплаты: ");	
 	$wall1 = "QIWI";
 	$wall2 = "";
 	sendMessage($token, $id, $msg.KeyboardMenuWall($wall1, $wall2, $but11, $but12, $but13));
