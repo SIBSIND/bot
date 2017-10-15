@@ -2,6 +2,7 @@
 $connect = mysqli_connect('a0160954.xsph.ru:3306','a0160954_bazis','Ghjcnjq2','a0160954_bazis');
 if(!$connect) exit();
 $botid = 1;
+$nomer1 = "+79832356445";
 $output = json_decode(file_get_contents('php://input'),true);
 $id = $output['message']['chat']['id'];
 $message = $output['message']['text'];
@@ -2479,7 +2480,7 @@ else if($tovid == 5){$tov = $tovname5;}
 
 
 
-if($message == $regname1 or $message == $regname2 or $message == $regname3 or $message == $regname4 or $message == $regname5)
+if($message == $regname1 and $tovid > 0)
 {
 	$query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
 	$row = mysqli_fetch_assoc($query);
@@ -2513,7 +2514,7 @@ if($message == $regname1 or $message == $regname2 or $message == $regname3 or $m
 
 
 
-if($message == $regname2)
+if($message == $regname2 and $tovid > 0)
 {
 	$query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
 	$row = mysqli_fetch_assoc($query);
@@ -2546,7 +2547,7 @@ if($message == $regname2)
 
 
 
-if($message == $regname3)
+if($message == $regname3  and $tovid > 0)
 {
 	$query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
 	$row = mysqli_fetch_assoc($query);
@@ -2579,7 +2580,7 @@ if($message == $regname3)
 
  
 
-if($message == $regname4)
+if($message == $regname4 and $tovid > 0)
 {
 	$query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
 	$row = mysqli_fetch_assoc($query);
@@ -2613,7 +2614,7 @@ if($message == $regname4)
 
 
 
-if($message == $regname5)
+if($message == $regname5 and $tovid > 0)
 {
 	$query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
 	$row = mysqli_fetch_assoc($query);
@@ -2641,6 +2642,53 @@ if($message == $regname5)
 	$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $selectfas . " г." . urlencode("\nРАЙОН: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите способ оплаты: ");	
 	$wall1 = "QIWI";
 	$wall2 = "";
+	sendMessage($token, $id, $msg.KeyboardMenuWall($wall1, $wall2, $but11, $but12, $but13));
+}
+
+if($message == "QIWI")
+{
+	$query = mysqli_query($connect, "SELECT * FROM `users` WHERE `botid` = $botid and `region` = 1");
+	$row = mysqli_fetch_assoc($query);
+	$region = $row['fas'];
+	
+	$query = mysqli_query($connect, "SELECT * FROM `region` WHERE `botid` = $botid and `regid` = 1");
+	$row = mysqli_fetch_assoc($query);
+	$selreg = $row['reg'];
+	$idreg = $row['regid'];
+	if($idreg == $region) {$selectreg = $selreg;}
+	
+	$query = mysqli_query($connect, "SELECT * FROM `region` WHERE `botid` = $botid and `regid` = 2");
+	$row = mysqli_fetch_assoc($query);
+	$selreg = $row['reg'];
+	$idreg = $row['regid'];
+	if($idreg == $region) {$selectreg = $selreg;}
+	
+	$query = mysqli_query($connect, "SELECT * FROM `region` WHERE `botid` = $botid and `regid` = 3");
+	$row = mysqli_fetch_assoc($query);
+	$selreg = $row['reg'];
+	$idreg = $row['regid'];
+	if($idreg == $region) {$selectreg = $selreg;}
+	
+	$query = mysqli_query($connect, "SELECT * FROM `region` WHERE `botid` = $botid and `regid` = 4");
+	$row = mysqli_fetch_assoc($query);
+	$selreg = $row['reg'];
+	$idreg = $row['regid'];
+	if($idreg == $region) {$selectreg = $selreg;}
+	
+	$query = mysqli_query($connect, "SELECT * FROM `region` WHERE `botid` = $botid and `regid` = 5");
+	$row = mysqli_fetch_assoc($query);
+	$selreg = $row['reg'];
+	$idreg = $row['regid'];
+	if($idreg == $region) {$selectreg = $selreg;}
+	
+	
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = $botid and `city` = '$city' and `cat` = '$cat' and `tovid` = '$tov' `region` = '$selectreg' and `fas` = '$selectfas' limit 1");
+	$row = $mysqli_fetch_assoc($query);
+	$tovname = $row['name'];
+	
+	$msg = "Список поступивших платежей обновляется раз в пять минут, пожалуйста, подождите..."  . $message . urlencode("\nПереведите на QIWI в течение 24 часов\n▪▪▪▪▪▪▪▪▪▪\nКОШЕЛЕК: ") . $nomer1 . urlencode("\nСУММА: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $selectfas . " г." . urlencode("\nРАЙОН: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите способ оплаты: ");	
+	$wall1 = "$tovname";
+	$wall2 = "$tovname";
 	sendMessage($token, $id, $msg.KeyboardMenuWall($wall1, $wall2, $but11, $but12, $but13));
 }
 
