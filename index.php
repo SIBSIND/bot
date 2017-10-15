@@ -2453,8 +2453,25 @@ $selectfas3 = $message;
 sendMessage($token, $id, $msg.KeyboardMenuReg($reg1, $reg2, $reg3, $reg4, $reg5, $but11, $but12, $but13));
 }
 
-
-if($message == $regname1)
+$query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 1");
+$row = mysqli_fetch_assoc($query);
+$regname1 = $row['reg'];
+$query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 2");
+$row = mysqli_fetch_assoc($query);
+$regname2 = $row['reg'];
+$query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 3");
+$row = mysqli_fetch_assoc($query);
+$regname3 = $row['reg'];
+$query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 4");
+$row = mysqli_fetch_assoc($query);
+$regname4 = $row['reg'];
+$query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 5");
+$row = mysqli_fetch_assoc($query);
+$regname5 = $row['reg'];
+$queryqq = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
+$rowqq = mysqli_fetch_assoc($queryqq);
+$tovid = $rowqq['tovid'];
+if($message == $regname1 and $tovid > 0)
 {
 	mysqli_query($connect, "UPDATE `users` SET `region` = '$message' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $seletfas1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nРАЙОН: ") . $regname1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите способ оплаты: ");	
