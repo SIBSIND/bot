@@ -2503,8 +2503,8 @@ if($message == $regname1 or $message == $regname2 or $message == $regname3 or $m
 	$idfas = $row['fasid'];
 	if($idfas == $fas) {$selectfas = $idfas;}
 
-	mysqli_query($connect, "UPDATE `users` SET `region` = '$message' WHERE `users`.`chatid` = $id");
-	$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $selectfas . urlencode("\nРАЙОН: ") . $regname1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите способ оплаты: ");	
+	mysqli_query($connect, "UPDATE `users` SET `region` = '1' WHERE `users`.`chatid` = $id");
+	$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $selectfas . " г." . urlencode("\nРАЙОН: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите способ оплаты: ");	
 	$wall1 = "QIWI";
 	$wall2 = "";
 	sendMessage($token, $id, $msg.KeyboardMenuWall($wall1, $wall2, $but11, $but12, $but13));
@@ -2512,7 +2512,140 @@ if($message == $regname1 or $message == $regname2 or $message == $regname3 or $m
 
 
 
+
+if($message == $regname2)
+{
+	$query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
+	$row = mysqli_fetch_assoc($query);
+	$fas = $row['fas'];
+	
+	$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = $botid and `fasid` = 1");
+	$row = mysqli_fetch_assoc($query);
+	$selfas = $row['fas'];
+	$idfas = $row['fasid'];
+	if($idfas == $fas) {$selectfas = $idfas;}
+	
+	$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = $botid and `fasid` = 2");
+	$row = mysqli_fetch_assoc($query);
+	$selfas = $row['fas'];
+	$idfas = $row['fasid'];
+	if($idfas == $fas) {$selectfas = $idfas;}
+	
+	$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = $botid and `fasid` = 3");
+	$row = mysqli_fetch_assoc($query);
+	$selfas = $row['fas'];
+	$idfas = $row['fasid'];
+	if($idfas == $fas) {$selectfas = $idfas;}
+
+	mysqli_query($connect, "UPDATE `users` SET `region` = '2' WHERE `users`.`chatid` = $id");
+	$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $selectfas . " г." . urlencode("\nРАЙОН: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите способ оплаты: ");	
+	$wall1 = "QIWI";
+	$wall2 = "";
+	sendMessage($token, $id, $msg.KeyboardMenuWall($wall1, $wall2, $but11, $but12, $but13));
+}
+
+
+
+if($message == $regname3)
+{
+	$query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
+	$row = mysqli_fetch_assoc($query);
+	$fas = $row['fas'];
+	
+	$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = $botid and `fasid` = 1");
+	$row = mysqli_fetch_assoc($query);
+	$selfas = $row['fas'];
+	$idfas = $row['fasid'];
+	if($idfas == $fas) {$selectfas = $idfas;}
+	
+	$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = $botid and `fasid` = 2");
+	$row = mysqli_fetch_assoc($query);
+	$selfas = $row['fas'];
+	$idfas = $row['fasid'];
+	if($idfas == $fas) {$selectfas = $idfas;}
+	
+	$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = $botid and `fasid` = 3");
+	$row = mysqli_fetch_assoc($query);
+	$selfas = $row['fas'];
+	$idfas = $row['fasid'];
+	if($idfas == $fas) {$selectfas = $idfas;}
+
+	mysqli_query($connect, "UPDATE `users` SET `region` = '3' WHERE `users`.`chatid` = $id");
+	$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $selectfas . " г." . urlencode("\nРАЙОН: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите способ оплаты: ");	
+	$wall1 = "QIWI";
+	$wall2 = "";
+	sendMessage($token, $id, $msg.KeyboardMenuWall($wall1, $wall2, $but11, $but12, $but13));
+}
+
  
+
+if($message == $regname4)
+{
+	$query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
+	$row = mysqli_fetch_assoc($query);
+	$fas = $row['fas'];
+	
+	$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = $botid and `fasid` = 1");
+	$row = mysqli_fetch_assoc($query);
+	$selfas = $row['fas'];
+	$idfas = $row['fasid'];
+	if($idfas == $fas) {$selectfas = $idfas;}
+	
+	$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = $botid and `fasid` = 2");
+	$row = mysqli_fetch_assoc($query);
+	$selfas = $row['fas'];
+	$idfas = $row['fasid'];
+	if($idfas == $fas) {$selectfas = $idfas;}
+	
+	$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = $botid and `fasid` = 3");
+	$row = mysqli_fetch_assoc($query);
+	$selfas = $row['fas'];
+	$idfas = $row['fasid'];
+	if($idfas == $fas) {$selectfas = $idfas;}
+
+	mysqli_query($connect, "UPDATE `users` SET `region` = '4' WHERE `users`.`chatid` = $id");
+	$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $selectfas . " г." . urlencode("\nРАЙОН: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите способ оплаты: ");	
+	$wall1 = "QIWI";
+	$wall2 = "";
+	sendMessage($token, $id, $msg.KeyboardMenuWall($wall1, $wall2, $but11, $but12, $but13));
+}
+
+
+
+
+if($message == $regname5)
+{
+	$query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
+	$row = mysqli_fetch_assoc($query);
+	$fas = $row['fas'];
+	
+	$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = $botid and `fasid` = 1");
+	$row = mysqli_fetch_assoc($query);
+	$selfas = $row['fas'];
+	$idfas = $row['fasid'];
+	if($idfas == $fas) {$selectfas = $idfas;}
+	
+	$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = $botid and `fasid` = 2");
+	$row = mysqli_fetch_assoc($query);
+	$selfas = $row['fas'];
+	$idfas = $row['fasid'];
+	if($idfas == $fas) {$selectfas = $idfas;}
+	
+	$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = $botid and `fasid` = 3");
+	$row = mysqli_fetch_assoc($query);
+	$selfas = $row['fas'];
+	$idfas = $row['fasid'];
+	if($idfas == $fas) {$selectfas = $idfas;}
+
+	mysqli_query($connect, "UPDATE `users` SET `region` = '5' WHERE `users`.`chatid` = $id");
+	$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $selectfas . " г." . urlencode("\nРАЙОН: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите способ оплаты: ");	
+	$wall1 = "QIWI";
+	$wall2 = "";
+	sendMessage($token, $id, $msg.KeyboardMenuWall($wall1, $wall2, $but11, $but12, $but13));
+}
+
+
+
 
 file_put_contents("logs.txt",$message);
 
