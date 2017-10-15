@@ -2345,7 +2345,7 @@ $row = mysqli_num_rows($query);
 if($row){$reg5 = $regname5;}else {$reg5 = "";}
 	
 mysqli_query($connect, "UPDATE `users` SET `fas` = '1' WHERE `users`.`chatid` = $id");
-$seletfas1 = $message;
+$selectfas1 = $message;
 sendMessage($token, $id, $msg.KeyboardMenuReg($reg1, $reg2, $reg3, $reg4, $reg5, $but11, $but12, $but13));
 }
 else if($mes == $fasname2 and $tovid > 0)
@@ -2398,7 +2398,7 @@ $row = mysqli_num_rows($query);
 if($row){$reg5 = $regname5;}else {$reg5 = "";}	
 
 mysqli_query($connect, "UPDATE `users` SET `fas` = '2' WHERE `users`.`chatid` = $id");	
-$seletfas2 = $message;
+$selectfas2 = $message;
 sendMessage($token, $id, $msg.KeyboardMenuReg($reg1, $reg2, $reg3, $reg4, $reg5, $but11, $but12, $but13));
 }
 else if($mes == $fasname3 and $tovid > 0)
@@ -2449,12 +2449,12 @@ $row = mysqli_num_rows($query);
 if($row){$reg5 = $regname5;}else {$reg5 = "";}		
 
 mysqli_query($connect, "UPDATE `users` SET `fas` = '3' WHERE `users`.`chatid` = $id");	
-$seletfas3 = $message;
+$selectfas3 = $message;
 sendMessage($token, $id, $msg.KeyboardMenuReg($reg1, $reg2, $reg3, $reg4, $reg5, $but11, $but12, $but13));
 }
 
 
-if($regname1 == $message and $tovid > 0)
+if($message == $regname1)
 {
 	mysqli_query($connect, "UPDATE `users` SET `region` = '$message' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $seletfas1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nРАЙОН: ") . $regname1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите способ оплаты: ");	
