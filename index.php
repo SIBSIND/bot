@@ -2479,7 +2479,7 @@ else if($tovid == 5){$tov = $tovname5;}
 
 
 
-if($message == $regname1 or $message == $regname2 or $message == $regname3 or $message == $regname4 or $message == $regname5 and $tovid > 0)
+if($message == $regname1 or $message == $regname2 or $message == $regname3 or $message == $regname4 or $message == $regname5)
 {
 	$query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
 	$row = mysqli_fetch_assoc($query);
