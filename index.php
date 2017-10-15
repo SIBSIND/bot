@@ -2478,14 +2478,23 @@ else if($tovid == 4){$tov = $tovname4;}
 else if($tovid == 5){$tov = $tovname5;}
 
 
+
 if($message == $regname1 and $tovid > 0)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = $botid and `fasid` = 1");
+	$row = mysqli_fetch_assoc($query);
+	$selfas = $row['fas'];
+	$idfas = $row['fasid'];
+	
+	
 	$query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
 	$row = mysqli_fetch_assoc($query);
 	$fas = $row['fas'];
-	if($fasname1 == $fas){$selectfas = $fas}
-	if($fasname2 == $fas){$selectfas = $fas}
-	if($fasname3 == $fas){$selectfas = $fas}
+	
+	if($idfas == $fas) {$selectfas = $idfas;}
+	if($idfas == $fas) {$selectfas = $idfas;}
+	if($idfas == $fas) {$selectfas = $idfas;}
+	
 
 	mysqli_query($connect, "UPDATE `users` SET `region` = '$message' WHERE `users`.`chatid` = $id");
 	$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $selectfas . urlencode("\nРАЙОН: ") . $regname1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите способ оплаты: ");	
