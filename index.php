@@ -2654,7 +2654,24 @@ if($message == "QIWI")
 	$tovid = $row['tovid'];
 	
 		// ФАСОВКА РЕИОНА //
-	$regid = $row['regon'];
+	$query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 1");
+	$row = mysqli_fetch_assoc($query);
+	$regname1 = $row['reg'];
+	$query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 2");
+	$row = mysqli_fetch_assoc($query);
+	$regname2 = $row['reg'];
+	$query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 3");
+	$row = mysqli_fetch_assoc($query);
+	$regname3 = $row['reg'];
+	$query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 4");
+	$row = mysqli_fetch_assoc($query);
+	$regname4 = $row['reg'];
+	$query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 5");
+	$row = mysqli_fetch_assoc($query);
+	$regname5 = $row['reg'];
+	
+	
+	$regid = $row['region'];
 	
 	if($regid == $regname1){$reg = $regid;}
 	else if($regid == $regname2){$reg = $regid;}
