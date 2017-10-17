@@ -2654,7 +2654,7 @@ if($message == "QIWI")
 	$tovid = $row['tovid'];
 	$regid = $row['region'];
 	$cat = $row['cat'];
-	$fas = $row['fas'];
+	$fasid = $row['fas'];
 	
 		// ФАСОВКА РЕИОНА //
 	$query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 1");
@@ -2705,9 +2705,9 @@ if($message == "QIWI")
 	$row = mysqli_fetch_assoc($query);
 	$fasname3 = $row['fas'];
 	
-	if($fas == 1){$fas = $fasname1;}
-	else if($fas == 2){$cat = $fasname2;}
-	else if($fas == 3){$cat = $fasname3;}
+	if($fasid == 1){$fas = $fasname1;}
+	else if($fasid == 2){$fas = $fasname2;}
+	else if($fasid == 3){$fas = $fasname3;}
 	
 		// ЗАПРОС К ТОВАРУ //
 	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `tovid` = '$tovid' and `city` = '$city' and `region` = '$reg' and `cat` = '$cat' and `fas` = '$fas' limit 1");
