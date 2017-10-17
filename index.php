@@ -2653,7 +2653,7 @@ if($message == "QIWI")
 	$row = mysqli_fetch_assoc($query);
 	$tovid = $row['tovid'];
 	$regid = $row['region'];
-	
+	$cat = $row['cat'];
 		// ФАСОВКА РЕИОНА //
 	$query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 1");
 	$row = mysqli_fetch_assoc($query);
@@ -2677,8 +2677,23 @@ if($message == "QIWI")
 	else if($regid == 4){$reg = $regname4;}
 	else if($regid == 5){$reg = $regname5;}
 	
+		// КАТЕГОРИИ //
+	$query = mysqli_query($connect, "SELECT * FROM `cat` WHERE `botid` = $botid");
+	$row = mysqli_fetch_assoc($query);
+	$cat1 = $row['cat1'];
+	$cat2 = $row['cat2'];
+	$cat3 = $row['cat3'];
+	$cat4 = $row['cat4'];
+	$cat5 = $row['cat5'];
+	
+	if($cat == 1){$cat = $cat1;}
+	else if($cat == 2){$cat = $cat2;}
+	else if($cat == 3){$cat = $cat3;}
+	else if($cat == 4){$cat = $cat4;}
+	else if($cat == 5){$cat = $cat5;}
+	
 		// ЗАПРОС К ТОВАРУ //
-	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `tovid` = '$tovid' and `city` = '$city' and `region` = '$reg' limit 1");
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `tovid` = '$tovid' and `city` = '$city' and `region` = '$reg' and `cat` = '$cat' limit 1");
 	$row = mysqli_fetch_assoc($query);
 	$tovcena = $row['region'];
 	
