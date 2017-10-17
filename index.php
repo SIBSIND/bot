@@ -2655,6 +2655,7 @@ if($message == "QIWI")
 	$regid = $row['region'];
 	$cat = $row['cat'];
 	$fasid = $row['fas'];
+	$comment = $row['comment'];
 	
 		// ФАСОВКА РЕИОНА //
 	$query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 1");
@@ -2712,10 +2713,10 @@ if($message == "QIWI")
 		// ЗАПРОС К ТОВАРУ //
 	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `tovid` = '$tovid' and `city` = '$city' and `region` = '$reg' and `cat` = '$cat' and `fas` = '$fas' limit 1");
 	$row = mysqli_fetch_assoc($query);
-	$tovcena = $row['region'];
+	$price = $row['price'];
 	
-	$msg = $tovcena;
-	sendMessage($token, $id, $msg);
+	$msg = "Переведите на QIWI в течение 24 часов"  . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nКОШЕЛЕК: ") . $nomer1 . urlencode("\nСУММА: ") . $price . urlencode("\nКОММЕНТАРИЙ: ") . $comment . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nБЕЗ КОММЕНТАРИЯ ДЕНЬГИ НЕ ЗАЧИСЛЯЮТСЯ! ");	
+	sendMessage($token, $id, $msg.KeyboardMenuMenu($but11, $but12, $but13));
 	
 }
 
@@ -2737,6 +2738,17 @@ function KeyboardMenu($but1,$but2,$but3,$but4,$but5,$but6,$but7,$but8,$but9,$but
 
 function KeyboardMenuWall($wall1, $wall2, $but11, $but12, $but13){
 	$buttons = [[$wall1,$wall2],[$but11,$but12,$but13]];
+	$keyboard = json_encode($keyboard = ['keyboard' => $buttons,
+        'resize_keyboard' => true,
+        'one_time_keyboard' => false,
+        'selective' => true]);
+    $reply_markup = '&reply_markup=' . $keyboard . '';
+
+    return $reply_markup;
+}
+
+function KeyboardMenuMenu($but11, $but12, $but13){
+	$buttons = [[$but11,$but12,$but13]];
 	$keyboard = json_encode($keyboard = ['keyboard' => $buttons,
         'resize_keyboard' => true,
         'one_time_keyboard' => false,
