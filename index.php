@@ -2673,11 +2673,11 @@ if($message == "QIWI")
 	
 	$regid = $row['region'];
 	
-	if($regid == $regname1){$reg = $regname1;}
-	else if($regid == $regname2){$reg = $regname2;}
-	else if($regid == $regname3){$reg = $regname3;}
-	else if($regid == $regname4){$reg = $regname4;}
-	else if($regid == $regname5){$reg = $regname5;}
+	if($regid == 1){$reg = $regname1;}
+	else if($regid == 2){$reg = $regname2;}
+	else if($regid == 3){$reg = $regname3;}
+	else if($regid == 4){$reg = $regname4;}
+	else if($regid == 5){$reg = $regname5;}
 	
 		// ЗАПРОС К ТОВАРУ //
 	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `tovid` = '$tovid' and `city` = '$city' and `region` = '$reg' limit 1");
