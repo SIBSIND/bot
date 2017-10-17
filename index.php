@@ -2678,7 +2678,7 @@ if($message == "QIWI")
 	else if($regid == 5){$reg = $regname5;}
 	
 		// ЗАПРОС К ТОВАРУ //
-	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `tovid` = '$tovid' and `city` = '$city' and `region` = '$reg' and `cat` = '$cat' limit 1");
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `tovid` = '$tovid' and `city` = '$city' and `region` = '$reg' limit 1");
 	$row = mysqli_fetch_assoc($query);
 	$tovcena = $row['region'];
 	
