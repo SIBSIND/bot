@@ -2652,6 +2652,7 @@ if($message == "QIWI")
 	$query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = '$id'");
 	$row = mysqli_fetch_assoc($query);
 	$tovid = $row['tovid'];
+	$regid = $row['region'];
 	
 		// ФАСОВКА РЕИОНА //
 	$query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 1");
@@ -2670,9 +2671,6 @@ if($message == "QIWI")
 	$row = mysqli_fetch_assoc($query);
 	$regname5 = $row['reg'];
 	
-	
-	$regid = $row['region'];
-	
 	if($regid == 1){$reg = $regname1;}
 	else if($regid == 2){$reg = $regname2;}
 	else if($regid == 3){$reg = $regname3;}
@@ -2680,7 +2678,7 @@ if($message == "QIWI")
 	else if($regid == 5){$reg = $regname5;}
 	
 		// ЗАПРОС К ТОВАРУ //
-	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `tovid` = '$tovid' and `city` = '$city' and `region` = '$reg' limit 1");
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `tovid` = '$tovid' and `city` = '$city' and `region` = '$reg' and `cat` = '$cat' limit 1");
 	$row = mysqli_fetch_assoc($query);
 	$tovcena = $row['region'];
 	
