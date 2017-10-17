@@ -2715,7 +2715,7 @@ if($message == "QIWI")
 	$row = mysqli_fetch_assoc($query);
 	$price = $row['price'];
 	
-	$msg = "Переведите на QIWI в течение 24 часов"  . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nКОШЕЛЕК: ") . "+7" . $nomer1 . urlencode("\nСУММА: ") . $price . urlencode("\nКОММЕНТАРИЙ: ") . $comment . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nБЕЗ КОММЕНТАРИЯ ДЕНЬГИ НЕ ЗАЧИСЛЯЮТСЯ! ");	
+	$msg = "Переведите на QIWI в течение 24 часов"  . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nКОШЕЛЕК: ") . urlencode("+7") . $nomer1 . urlencode("\nСУММА: ") . $price . " рублей" . urlencode("\nКОММЕНТАРИЙ: ") . $comment . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nБЕЗ КОММЕНТАРИЯ ДЕНЬГИ НЕ ЗАЧИСЛЯЮТСЯ! ");	
 	$check = "Проверить оплату";
 	sendMessage($token, $id, $msg.KeyboardMenuMenu($check, $but11, $but12, $but13));
 	
