@@ -2646,7 +2646,20 @@ if($message == $regname5 and $tovid > 0)
 }
 
 
-
+if($message == "QIWI")
+{
+	$query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = '$id'");
+	$row = mysqli_fetch_assoc($query);
+	$tovid = $row['tovid'];
+	
+	$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `tovid` = '$tovid' and `city` = '$city' limit 1");
+	$row = mysqli_fetch_assoc($query);
+	$tovcena = $row['price'];
+	
+	$msg = $tovcena;
+	sendMessage($token, $id, $msg);
+	
+}
 
 
 
