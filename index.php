@@ -2,7 +2,7 @@
 $connect = mysqli_connect('a0160954.xsph.ru:3306','a0160954_bazis','Ghjcnjq2','a0160954_bazis');
 if(!$connect) exit();
 $botid = 1;
-$nomer1 = "+79832356445";
+$nomer1 = "79832356445";
 $output = json_decode(file_get_contents('php://input'),true);
 $id = $output['message']['chat']['id'];
 $message = $output['message']['text'];
@@ -2505,7 +2505,7 @@ if($message == $regname1 and $tovid > 0)
 	if($idfas == $fas) {$selectfas = $idfas;}
 
 	mysqli_query($connect, "UPDATE `users` SET `region` = '1' WHERE `users`.`chatid` = $id");
-	$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $selectfas . " г." . urlencode("\nРАЙОН: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите способ оплаты: ");	
+	$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $selectfas . " г" . urlencode("\nРАЙОН: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите способ оплаты: ");	
 	$wall1 = "QIWI";
 	$wall2 = "";
 	sendMessage($token, $id, $msg.KeyboardMenuWall($wall1, $wall2, $but11, $but12, $but13));
@@ -2539,7 +2539,7 @@ if($message == $regname2 and $tovid > 0)
 	if($idfas == $fas) {$selectfas = $idfas;}
 
 	mysqli_query($connect, "UPDATE `users` SET `region` = '2' WHERE `users`.`chatid` = $id");
-	$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $selectfas . " г." . urlencode("\nРАЙОН: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите способ оплаты: ");	
+	$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $selectfas . " г" . urlencode("\nРАЙОН: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите способ оплаты: ");	
 	$wall1 = "QIWI";
 	$wall2 = "";
 	sendMessage($token, $id, $msg.KeyboardMenuWall($wall1, $wall2, $but11, $but12, $but13));
@@ -2572,7 +2572,7 @@ if($message == $regname3  and $tovid > 0)
 	if($idfas == $fas) {$selectfas = $idfas;}
 
 	mysqli_query($connect, "UPDATE `users` SET `region` = '3' WHERE `users`.`chatid` = $id");
-	$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $selectfas . " г." . urlencode("\nРАЙОН: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите способ оплаты: ");	
+	$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $selectfas . " г" . urlencode("\nРАЙОН: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите способ оплаты: ");	
 	$wall1 = "QIWI";
 	$wall2 = "";
 	sendMessage($token, $id, $msg.KeyboardMenuWall($wall1, $wall2, $but11, $but12, $but13));
@@ -2605,7 +2605,7 @@ if($message == $regname4 and $tovid > 0)
 	if($idfas == $fas) {$selectfas = $idfas;}
 
 	mysqli_query($connect, "UPDATE `users` SET `region` = '4' WHERE `users`.`chatid` = $id");
-	$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $selectfas . " г." . urlencode("\nРАЙОН: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите способ оплаты: ");	
+	$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $selectfas . " г" . urlencode("\nРАЙОН: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите способ оплаты: ");	
 	$wall1 = "QIWI";
 	$wall2 = "";
 	sendMessage($token, $id, $msg.KeyboardMenuWall($wall1, $wall2, $but11, $but12, $but13));
@@ -2715,8 +2715,9 @@ if($message == "QIWI")
 	$row = mysqli_fetch_assoc($query);
 	$price = $row['price'];
 	
-	$msg = "Переведите на QIWI в течение 24 часов"  . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nКОШЕЛЕК: ") . $nomer1 . urlencode("\nСУММА: ") . $price . urlencode("\nКОММЕНТАРИЙ: ") . $comment . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nБЕЗ КОММЕНТАРИЯ ДЕНЬГИ НЕ ЗАЧИСЛЯЮТСЯ! ");	
-	sendMessage($token, $id, $msg.KeyboardMenuMenu($but11, $but12, $but13));
+	$msg = "Переведите на QIWI в течение 24 часов"  . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nКОШЕЛЕК: ") . "+7" . $nomer1 . urlencode("\nСУММА: ") . $price . urlencode("\nКОММЕНТАРИЙ: ") . $comment . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nБЕЗ КОММЕНТАРИЯ ДЕНЬГИ НЕ ЗАЧИСЛЯЮТСЯ! ");	
+	$check = "Проверить оплату";
+	sendMessage($token, $id, $msg.KeyboardMenuMenu($check, $but11, $but12, $but13));
 	
 }
 
@@ -2747,8 +2748,8 @@ function KeyboardMenuWall($wall1, $wall2, $but11, $but12, $but13){
     return $reply_markup;
 }
 
-function KeyboardMenuMenu($but11, $but12, $but13){
-	$buttons = [[$but11,$but12,$but13]];
+function KeyboardMenuMenu($check, $but11, $but12, $but13){
+	$buttons = [[$check],[$but11,$but12,$but13]];
 	$keyboard = json_encode($keyboard = ['keyboard' => $buttons,
         'resize_keyboard' => true,
         'one_time_keyboard' => false,
