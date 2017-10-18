@@ -2727,7 +2727,7 @@ if($message == "QIWI")
 
 if($message == "Проверить оплату" and $payid == 1)
 {
-	$query = mysqli_query($connect, "SELECT * FROM `user` WHERE `chatid` = $id");
+	$query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
 	$row = mysqli_fetch_assoc($query);
 	$price = $row['price'];
 	$query = file_get_contents('https://qiwigate.ru/api?key=ZKCYWVA1TD67N34PQHAIO8DPXL5LSE&method=qiwi.get.history&start=25.09.2017&finish=27.09.2019');
