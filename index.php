@@ -2743,17 +2743,17 @@ if($message == "Проверить оплату" and $payid == 1)
 	$comm3 = $json[2]['comment'];
 	$cash3 = preg_replace("/[^0-9]/", '', $cash1);
 
-	if($cash1 == 1 . 00 and $comm1 == $comm)
+	if($cash1 == 1 . "00" and $comm1 == $comm)
 	{
 		$pay = 1;
 	}
 	
-	else if($cash2 == 1 . 00 and $comm2 == $comm)
+	else if($cash2 == 1 . "00" and $comm2 == $comm)
 	{
 		$pay = 1;
 	}
 
-	else if($cash2 == 1 . 00 and $comm2 == $comm)
+	else if($cash2 == 1 . "00" and $comm2 == $comm)
 	{
 		$pay = 1;
 	}
