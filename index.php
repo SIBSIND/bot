@@ -2645,8 +2645,11 @@ if($message == $regname5 and $tovid > 0)
     sendMessage($token, $id, $msg.KeyboardMenuWall($wall1, $wall2, $but11, $but12, $but13));
 }
 
+    $query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = '$id'");
+    $row = mysqli_fetch_assoc($query);
+    $regid = $row['region'];
 
-if($message == "QIWI")
+if($message == "QIWI" and $regid >= 1)
 {
         // ДАННЫЕ ЮЗЕРА //
     $query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = '$id'");
@@ -2831,12 +2834,13 @@ if($message == "Проверить оплату" and $payid == 1)
 		$row = mysqli_fetch_assoc($query);
 		$about = $row['about'];
 		$url = $row['url'];
-		$msg = urlencode("Поздравляем с покупкой! Не забудь оставить отзыв /otziv\n\nОписание: ") . $about . urlencode("\n\nСсылки на фото: ") . $url;
+		$msg = urlencode("Поздравляем с покупкой! Не забудь оставить отзыв /otziv\n\nОписание: ") . $about . urlencode("\n\nСсылки на фото:\n") . $url;
+		$check = "";
 	}else
 	{
-		$msg = "Оплаты нет!";
+		$msg = urlencode("Получино 0 рублей\n\nСписок поступивших платежей обновляется раз в 5 минут, пожалуйста, подождите...);
+ 		$check = "Проверить оплату";
 	}
-    $check = "Проверить оплату";
     sendMessage($token, $id, $msg.KeyboardMenuMenu($check, $but11, $but12, $but13));
 }
 
