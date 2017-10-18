@@ -2725,7 +2725,7 @@ if($message == "QIWI")
     $payid = $row['pay'];
     $comm = $row['comment'];
 
-if($message = "Проверить оплату" and $payid == 1)
+if($message == "Проверить оплату" and $payid == 1)
 {
     $query = file_get_contents('https://qiwigate.ru/api?key=ZKCYWVA1TD67N34PQHAIO8DPXL5LSE&method=qiwi.get.history&start=25.09.2017&finish=27.09.2019');
 	$json = json_decode($query, true);
@@ -2738,6 +2738,9 @@ if($message = "Проверить оплату" and $payid == 1)
 	if($cash1 == 100 and $comm1 == $comm)
 	{
 		$msg = "Есть оплата!";
+	}else
+	{	
+		$msg = "Нет оплаты!";
 	}
     $check = "QIWI";
     sendMessage($token, $id, $msg.KeyboardMenuMenu($check, $but11, $but12, $but13));
