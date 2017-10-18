@@ -2723,10 +2723,26 @@ if($message == "QIWI")
     $query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = '$id'");
     $row = mysqli_fetch_assoc($query);
     $payid = $row['pay'];
+    $comm = $row['comment'];
 
 if($message = "Проверить оплату" and $payid == 1)
 {
-    $check = "ЕСТЬ";
+    $query = file_get_contents('https://qiwigate.ru/api?key=ZKCYWVA1TD67N34PQHAIO8DPXL5LSE&method=qiwi.get.history&start=25.09.2017&finish=27.09.2019');
+	$json = json_decode($query, true);
+	$json = $json['history'];
+
+	$cash1 = $json[0]['cash'];
+	$comm1 = $json[0]['comm'];
+	$cash1 = preg_replace("/[^0-9]/", '', $cash1);
+
+	if($cash1 == 1 and $comm1 == $comm)
+	{
+		$msg = "Есть оплата!";
+	}else
+    {
+        $msg = "Нет оплаты!";
+    }
+    $check = "Проверить оплату";
     sendMessage($token, $id, $msg.KeyboardMenuMenu($check, $but11, $but12, $but13));
 }
 
