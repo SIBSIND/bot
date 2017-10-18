@@ -2732,7 +2732,7 @@ if($message == "Проверить оплату" and $payid == 1)
 	$json = $json['history'];
 
 	$cash1 = $json[0]['cash'];
-	$comm1 = $json[0]['comm'];
+	$comm1 = $json[0]['comment'];
 	$cash1 = preg_replace("/[^0-9]/", '', $cash1);
 
 	if($cash1 == 100 and $comm1 == $comm)
