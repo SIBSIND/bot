@@ -2766,6 +2766,67 @@ if($message == "Проверить оплату" and $payid == 1)
 	
 	if($pay == 1)
 	{
+    $query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = '$id'");
+    $row = mysqli_fetch_assoc($query);
+    $tovid = $row['tovid'];
+    $regid = $row['region'];
+    $cat = $row['cat'];
+    $fasid = $row['fas'];
+    $comment = $row['comment'];
+    
+        // ФАСОВКА РЕИОНА //
+    $query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 1");
+    $row = mysqli_fetch_assoc($query);
+    $regname1 = $row['reg'];
+    $query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 2");
+    $row = mysqli_fetch_assoc($query);
+    $regname2 = $row['reg'];
+    $query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 3");
+    $row = mysqli_fetch_assoc($query);
+    $regname3 = $row['reg'];
+    $query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 4");
+    $row = mysqli_fetch_assoc($query);
+    $regname4 = $row['reg'];
+    $query = mysqli_query($connect, "SELECT * FROM `reg` WHERE `botid` = $botid and `regid` = 5");
+    $row = mysqli_fetch_assoc($query);
+    $regname5 = $row['reg'];
+    
+    if($regid == 1){$reg = $regname1;}
+    else if($regid == 2){$reg = $regname2;}
+    else if($regid == 3){$reg = $regname3;}
+    else if($regid == 4){$reg = $regname4;}
+    else if($regid == 5){$reg = $regname5;}
+    
+        // КАТЕГОРИИ //
+    $query = mysqli_query($connect, "SELECT * FROM `cat` WHERE `botid` = $botid");
+    $row = mysqli_fetch_assoc($query);
+    $cat1 = $row['cat1'];
+    $cat2 = $row['cat2'];
+    $cat3 = $row['cat3'];
+    $cat4 = $row['cat4'];
+    $cat5 = $row['cat5'];
+    
+    if($cat == 1){$cat = $cat1;}
+    else if($cat == 2){$cat = $cat2;}
+    else if($cat == 3){$cat = $cat3;}
+    else if($cat == 4){$cat = $cat4;}
+    else if($cat == 5){$cat = $cat5;}
+    
+        //ФАСОВКА//
+    $query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = $botid and `fasid` = 1");
+    $row = mysqli_fetch_assoc($query);
+    $fasname1 = $row['fas'];
+    $query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = $botid and `fasid` = 2");
+    $row = mysqli_fetch_assoc($query);
+    $fasname2 = $row['fas'];
+    $query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = $botid and `fasid` = 3");
+    $row = mysqli_fetch_assoc($query);
+    $fasname3 = $row['fas'];
+    
+    if($fasid == 1){$fas = $fasname1;}
+    else if($fasid == 2){$fas = $fasname2;}
+    else if($fasid == 3){$fas = $fasname3;}
+		
 		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `tovid` = '$tovid' and `city` = '$city' and `region` = '$reg' and `cat` = '$cat' and `fas` = '$fas' limit 1");
 		$row = mysqli_fetch_assoc($query);
 		$about = $row['about'];
