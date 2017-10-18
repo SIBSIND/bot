@@ -2735,7 +2735,7 @@ if($message = "Проверить оплату" and $payid == 1)
 	$comm1 = $json[0]['comm'];
 	$cash1 = preg_replace("/[^0-9]/", '', $cash1);
 
-	if($cash1 == 1 and $comm1 == $comm)
+	if($cash1 == 100 and $comm1 == $comm)
 	{
 		$msg = "Есть оплата!";
 	}
