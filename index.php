@@ -2479,41 +2479,6 @@ else if($tovid == 4){$tov = $tovname4;}
 else if($tovid == 5){$tov = $tovname5;}
 
 
-
-if($message == $regname1 and $tovid > 0)
-{
-	$query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
-	$row = mysqli_fetch_assoc($query);
-	$fas = $row['fas'];
-	
-	$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = $botid and `fasid` = 1");
-	$row = mysqli_fetch_assoc($query);
-	$selfas = $row['fas'];
-	$idfas = $row['fasid'];
-	if($idfas == $fas) {$selectfas = $idfas;}
-	
-	$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = $botid and `fasid` = 2");
-	$row = mysqli_fetch_assoc($query);
-	$selfas = $row['fas'];
-	$idfas = $row['fasid'];
-	if($idfas == $fas) {$selectfas = $idfas;}
-	
-	$query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = $botid and `fasid` = 3");
-	$row = mysqli_fetch_assoc($query);
-	$selfas = $row['fas'];
-	$idfas = $row['fasid'];
-	if($idfas == $fas) {$selectfas = $idfas;}
-
-	mysqli_query($connect, "UPDATE `users` SET `region` = '1' WHERE `users`.`chatid` = $id");
-	$msg = "Вы выбрали "  . $message . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $city . urlencode("\nКАТЕГОРИЯ: ") . $cat . urlencode("\nТОВАР: ") . $tov . urlencode("\nФАСОВКА: ") . $selectfas . " г" . urlencode("\nРАЙОН: ") . $message . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите способ оплаты: ");	
-	$wall1 = "QIWI";
-	$wall2 = "";
-	sendMessage($token, $id, $msg.KeyboardMenuWall($wall1, $wall2, $but11, $but12, $but13));
-}
-
-
-
-
 if($message == $regname2 and $tovid > 0)
 {
 	$query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
