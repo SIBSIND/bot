@@ -2738,11 +2738,8 @@ if($message = "Проверить оплату" and $payid == 1)
 	if($cash1 == 1 and $comm1 == $comm)
 	{
 		$msg = "Есть оплата!";
-	}else
-    {
-        $msg = "Нет оплаты!";
-    }
-    $check = "Проверить оплату";
+	}
+    $check = "QIWI";
     sendMessage($token, $id, $msg.KeyboardMenuMenu($check, $but11, $but12, $but13));
 }
 
