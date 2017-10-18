@@ -2714,7 +2714,7 @@ if($message == "QIWI")
     $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `tovid` = '$tovid' and `city` = '$city' and `region` = '$reg' and `cat` = '$cat' and `fas` = '$fas' limit 1");
     $row = mysqli_fetch_assoc($query);
     $price = $row['price'];
-     mysqli_query($connect, "UPDATE `users` SET `pay` = '1' WHERE `users`.`chatid` = $id");
+     mysqli_query($connect, "UPDATE `users` SET `pay` = '1', `price` = '$price' WHERE `users`.`chatid` = $id");
     $msg = "Переведите на QIWI в течение 24 часов"  . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nКОШЕЛЕК: ") . urlencode("+") . $nomer1 . urlencode("\nСУММА: ") . $price . " рублей" . urlencode("\nКОММЕНТАРИЙ: ") . $comment . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nБЕЗ КОММЕНТАРИЯ ДЕНЬГИ НЕ ЗАЧИСЛЯЮТСЯ! ");   
     $check = "Проверить оплату";
     sendMessage($token, $id, $msg.KeyboardMenuMenu($check, $but11, $but12, $but13));
@@ -2734,13 +2734,36 @@ if($message == "Проверить оплату" and $payid == 1)
 	$cash1 = $json[0]['cash'];
 	$comm1 = $json[0]['comment'];
 	$cash1 = preg_replace("/[^0-9]/", '', $cash1);
+	
+	$cash2 = $json[1]['cash'];
+	$comm2 = $json[1]['comment'];
+	$cash2 = preg_replace("/[^0-9]/", '', $cash1);
+	
+	$cash3 = $json[2]['cash'];
+	$comm3 = $json[2]['comment'];
+	$cash3 = preg_replace("/[^0-9]/", '', $cash1);
 
-	if($cash1 == 100 and $comm1 == $comm)
+	if($cash1 == 1 . 00 and $comm1 == $comm)
 	{
-		$msg = "Есть оплата!";
+		$pay = 1;
+	}
+	
+	else if($cash2 == 1 . 00 and $comm2 == $comm)
+	{
+		$pay = 1;
+	}
+
+	else if($cash2 == 1 . 00 and $comm2 == $comm)
+	{
+		$pay = 1;
+	}
+	
+	if($pay == 1)
+	{
+		$msg = "Оплата есть!";
 	}else
-	{	
-		$msg = "Нет оплаты!";
+	{
+		$msg = "Оплаты нет!";
 	}
     $check = "QIWI";
     sendMessage($token, $id, $msg.KeyboardMenuMenu($check, $but11, $but12, $but13));
