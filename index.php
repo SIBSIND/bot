@@ -2830,10 +2830,9 @@ if($message == "Проверить оплату" and $payid == 1)
 		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `tovid` = '$tovid' and `city` = '$city' and `region` = '$reg' and `cat` = '$cat' and `fas` = '$fas' limit 1");
      		$row = mysqli_fetch_assoc($query);
 		$idtovar = $row['id'];
-		mysqli_query($connect, "UPDATE `tovar` SET `sell` = 1 WHERE `tovar`.`id` = $idtovar");
-		$row = mysqli_fetch_assoc($query);
 		$about = $row['about'];
 		$url = $row['url'];
+		mysqli_query($connect, "UPDATE `tovar` SET `sell` = 1 WHERE `tovar`.`id` = $idtovar");
 		$commee = rand(1000,9999);
      		mysqli_query($connect, "UPDATE `users` SET `comment` = $commee WHERE `users`.`chatid` = $id");
 		$msg = urlencode("Поздравляем с покупкой! Не забудь оставить отзыв /otziv\n\nОписание: ") . $about . urlencode("\n\nСсылки на фото:\n") . $url;
