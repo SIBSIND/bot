@@ -2645,11 +2645,8 @@ if($message == $regname5 and $tovid > 0)
     sendMessage($token, $id, $msg.KeyboardMenuWall($wall1, $wall2, $but11, $but12, $but13));
 }
 
-    $query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = '$id'");
-    $row = mysqli_fetch_assoc($query);
-    $regid = $row['region'];
 
-if($message == "QIWI" and $regid >= 1)
+if($message == "QIWI")
 {
         // ДАННЫЕ ЮЗЕРА //
     $query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = '$id'");
