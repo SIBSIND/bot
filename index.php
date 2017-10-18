@@ -2766,12 +2766,16 @@ if($message == "Проверить оплату" and $payid == 1)
 	
 	if($pay == 1)
 	{
-		$msg = "Оплата есть!";
+		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `tovid` = '$tovid' and `city` = '$city' and `region` = '$reg' and `cat` = '$cat' and `fas` = '$fas' limit 1");
+		$row = mysqli_fetch_assoc($query);
+		$about = $row['about'];
+		$url = $row['url'];
+		$msg = $about . urlencode("\n\n") . $url;
 	}else
 	{
 		$msg = "Оплаты нет!";
 	}
-    $check = "QIWI";
+    $check = "Проверить оплату";
     sendMessage($token, $id, $msg.KeyboardMenuMenu($check, $but11, $but12, $but13));
 }
 
