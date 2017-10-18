@@ -57,7 +57,7 @@ if( $message == "/start" or $message == "В главное меню")
         sendMessage($token, $id, $msg.KeyboardMenu($but1,$but2,$but3,$but4,$but5,$but6,$but7,$but8,$but9,$but10,$but11,$but12,$but13));
     }else
     {               
-        mysqli_query($connect, "UPDATE `users` SET `cat` = '0', `tovid` = '0', `city` = '0',`region` = '0',`fas` = '0' WHERE `users`.`chatid` = $id");
+        mysqli_query($connect, "UPDATE `users` SET `cat` = '0', `tovid` = '0', `city` = '0',`region` = '0',`fas` = '0', `price` = '0', `pay` = '0' WHERE `users`.`chatid` = $id");
         $msg = $welcome . urlencode("\n\nОтзывы покупателей (нажмите 👉 /otzivi)\nОставить отзыв (нажмите 👉 /otziv)\n\nДля покупки нажмите на свой город внизу:");
         sendMessage($token, $id, $msg.KeyboardMenu($but1,$but2,$but3,$but4,$but5,$but6,$but7,$but8,$but9,$but10,$but11,$but12,$but13)); 
     }
@@ -2714,7 +2714,7 @@ if($message == "QIWI")
     $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `tovid` = '$tovid' and `city` = '$city' and `region` = '$reg' and `cat` = '$cat' and `fas` = '$fas' limit 1");
     $row = mysqli_fetch_assoc($query);
     $price = $row['price'];
-     mysqli_query($connect, "UPDATE `users` SET `pay` = '1', `price` = '$price' WHERE `users`.`chatid` = $id");
+    mysqli_query($connect, "UPDATE `users` SET `pay` = '1', `price` = '$price' WHERE `users`.`chatid` = $id");
     $msg = "Переведите на QIWI в течение 24 часов"  . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nКОШЕЛЕК: ") . urlencode("+") . $nomer1 . urlencode("\nСУММА: ") . $price . " рублей" . urlencode("\nКОММЕНТАРИЙ: ") . $comment . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nБЕЗ КОММЕНТАРИЯ ДЕНЬГИ НЕ ЗАЧИСЛЯЮТСЯ! ");   
     $check = "Проверить оплату";
     sendMessage($token, $id, $msg.KeyboardMenuMenu($check, $but11, $but12, $but13));
@@ -2828,9 +2828,14 @@ if($message == "Проверить оплату" and $payid == 1)
     else if($fasid == 3){$fas = $fasname3;}
 		
 		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `tovid` = '$tovid' and `city` = '$city' and `region` = '$reg' and `cat` = '$cat' and `fas` = '$fas' limit 1");
+     		$row = mysqli_fetch_assoc($query);
+		$idtovar = $row['id'];
+		mysqli_query($connect, "UPDATE `tovar` SET `sell` = 1 WHERE `tovar`.`id` = $idtovar");
 		$row = mysqli_fetch_assoc($query);
 		$about = $row['about'];
 		$url = $row['url'];
+		$commee = rand(1000,9999);
+     		mysqli_query($connect, "UPDATE `users` SET `comment` = $commee WHERE `users`.`chatid` = $id");
 		$msg = urlencode("Поздравляем с покупкой! Не забудь оставить отзыв /otziv\n\nОписание: ") . $about . urlencode("\n\nСсылки на фото:\n") . $url;
 		$check = "";
 	}else
