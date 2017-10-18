@@ -2727,33 +2727,39 @@ if($message == "QIWI")
 
 if($message == "Проверить оплату" and $payid == 1)
 {
+	$query = mysqli_query($connect, "SELECT * FROM `cat` WHERE `botid` = $botid");
+	$row = mysqli_fetch_assoc($query);
+	$price = $row['price'];
     $query = file_get_contents('https://qiwigate.ru/api?key=ZKCYWVA1TD67N34PQHAIO8DPXL5LSE&method=qiwi.get.history&start=25.09.2017&finish=27.09.2019');
 	$json = json_decode($query, true);
 	$json = $json['history'];
 
 	$cash1 = $json[0]['cash'];
 	$comm1 = $json[0]['comment'];
+	$status1 = $json[0]['status'];
 	$cash1 = preg_replace("/[^0-9]/", '', $cash1);
 	
 	$cash2 = $json[1]['cash'];
 	$comm2 = $json[1]['comment'];
+	$status2 = $json[0]['status'];
 	$cash2 = preg_replace("/[^0-9]/", '', $cash1);
 	
 	$cash3 = $json[2]['cash'];
 	$comm3 = $json[2]['comment'];
+	$status3 = $json[0]['status'];
 	$cash3 = preg_replace("/[^0-9]/", '', $cash1);
 
-	if($cash1 == 1 . "00" and $comm1 == $comm)
+	if($cash1 == $price . "00" and $comm1 == $comm and $status1 == "SUCCESS")
 	{
 		$pay = 1;
 	}
 	
-	else if($cash2 == 1 . "00" and $comm2 == $comm)
+	else if($cash2 == $price . "00" and $comm2 == $comm and $status2 == "SUCCESS")
 	{
 		$pay = 1;
 	}
 
-	else if($cash2 == 1 . "00" and $comm2 == $comm)
+	else if($cash2 == $price . "00" and $comm2 == $comm and $status3 == "SUCCESS")
 	{
 		$pay = 1;
 	}
