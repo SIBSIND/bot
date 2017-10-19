@@ -682,23 +682,23 @@ $cat4 = $fetchc['cat4'];
 $cat5 = $fetchc['cat5'];
 if($citypage == 1 and $message == $cat1)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but1' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but1' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but1' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but1' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but1' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but1' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but1' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but1' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but1' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but1' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -710,23 +710,23 @@ if($citypage == 1 and $message == $cat1)
 }
 else if($citypage == 1 and $message == $cat2)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but1' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but1' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but1' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but1' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but1' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but1' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but1' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but1' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but1' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but1' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -737,23 +737,23 @@ else if($citypage == 1 and $message == $cat2)
 }
 else if($citypage == 1 and $message == $cat3)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but1' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but1' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but1' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but1' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but1' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but1' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but1' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but1' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but1' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but1' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -765,23 +765,23 @@ else if($citypage == 1 and $message == $cat3)
 }
 else if($citypage == 1 and $message == $cat4)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but1' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but1' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but1' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but1' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but1' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but1' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but1' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but1' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but1' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but1' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -793,23 +793,23 @@ else if($citypage == 1 and $message == $cat4)
 }
 else if($citypage == 1 and $message == $cat5)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but1' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but1' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but1' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but1' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but1' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but1' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but1' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but1' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but1' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but1' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -824,23 +824,23 @@ else if($citypage == 1 and $message == $cat5)
 
 else if($citypage == 2 and $message == $cat1)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but2' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but2' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but2' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but2' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but2' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but2' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but2' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but2' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but2' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but2' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -852,23 +852,23 @@ else if($citypage == 2 and $message == $cat1)
 }
 else if($citypage == 2 and $message == $cat2)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but2' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but2' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but2' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but2' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but2' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but2' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but2' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but2' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but2' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but2' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -880,23 +880,23 @@ else if($citypage == 2 and $message == $cat2)
 }
 else if($citypage == 2 and $message == $cat3)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but2' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but2' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but2' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but2' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but2' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but2' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but2' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but2' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but2' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but2' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -908,23 +908,23 @@ else if($citypage == 2 and $message == $cat3)
 }
 else if($citypage == 2 and $message == $cat4)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but2' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but2' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but2' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but2' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but2' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but2' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but2' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but2' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but2' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but2' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -936,23 +936,23 @@ else if($citypage == 2 and $message == $cat4)
 }
 else if($citypage == 2 and $message == $cat5)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but2' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but2' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but2' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but2' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but2' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but2' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but2' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but2' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but2' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but2' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -970,19 +970,19 @@ else if($citypage == 3 and $message == $cat1)
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but3' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but3' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but3' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but3' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but3' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but3' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but3' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but3' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -994,23 +994,23 @@ else if($citypage == 3 and $message == $cat1)
 }
 else if($citypage == 3 and $message == $cat2)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but3' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but3' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but3' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but3' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but3' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but3' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but3' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but3' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but3' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but3' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1022,23 +1022,23 @@ else if($citypage == 3 and $message == $cat2)
 }
 else if($citypage == 3 and $message == $cat3)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but3' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but3' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but3' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but3' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but3' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but3' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but3' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but3' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
-    $row = mysqli_fetch_assoc($query); and `sell` = '0'
+    $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but3' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but3' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1050,23 +1050,23 @@ else if($citypage == 3 and $message == $cat3)
 }
 else if($citypage == 3 and $message == $cat4)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but3' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but3' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but3' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but3' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but3' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but3' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but3' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but3' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but3' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but3' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1078,23 +1078,23 @@ else if($citypage == 3 and $message == $cat4)
 }
 else if($citypage == 3 and $message == $cat5)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but3' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but3' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but3' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but3' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but3' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but3' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but3' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but3' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but3' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but3' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1108,23 +1108,23 @@ else if($citypage == 3 and $message == $cat5)
 
 else if($citypage == 4 and $message == $cat1)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but4' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but4' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but4' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but4' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but4' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but4' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but4' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but4' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but4' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but4' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1136,23 +1136,23 @@ else if($citypage == 4 and $message == $cat1)
 }
 else if($citypage == 4 and $message == $cat2)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but4' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but4' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but4' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but4' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but4' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but4' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but4' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but4' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but4' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but4' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1164,23 +1164,23 @@ else if($citypage == 4 and $message == $cat2)
 }
 else if($citypage == 4 and $message == $cat3)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but4' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but4' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but4' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but4' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but4' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but4' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but4' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but4' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but4' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but4' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1192,23 +1192,23 @@ else if($citypage == 4 and $message == $cat3)
 }
 else if($citypage == 4 and $message == $cat4)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but4' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but4' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but4' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but4' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but4' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but4' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but4' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but4' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but4' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but4' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1220,23 +1220,23 @@ else if($citypage == 4 and $message == $cat4)
 }
 else if($citypage == 4 and $message == $cat5)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but4' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but4' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but4' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but4' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but4' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but4' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but4' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but4' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but4' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but4' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1250,23 +1250,23 @@ else if($citypage == 4 and $message == $cat5)
 
 else if($citypage == 5 and $message == $cat1)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but5' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but5' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but5' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but5' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but5' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but5' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but5' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but5' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but5' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but5' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1278,23 +1278,23 @@ else if($citypage == 5 and $message == $cat1)
 }
 else if($citypage == 5 and $message == $cat2)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but5' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but5' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but5' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but5' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but5' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but5' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but5' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but5' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but5' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but5' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1306,23 +1306,23 @@ else if($citypage == 5 and $message == $cat2)
 }
 else if($citypage == 5 and $message == $cat3)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but5' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but5' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but5' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but5' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but5' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but5' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but5' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but5' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but5' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but5' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1334,23 +1334,23 @@ else if($citypage == 5 and $message == $cat3)
 }
 else if($citypage == 5 and $message == $cat4)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but5' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but5' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but5' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but5' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but5' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but5' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but5' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but5' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but5' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but5' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1362,23 +1362,23 @@ else if($citypage == 5 and $message == $cat4)
 }
 else if($citypage == 5 and $message == $cat5)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but5' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but5' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but5' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but5' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but5' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but5' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but5' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but5' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but5' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but5' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1392,23 +1392,23 @@ else if($citypage == 5 and $message == $cat5)
 
 else if($citypage == 6 and $message == $cat1)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but6' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but6' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but6' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but6' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but6' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but6' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but6' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but6' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but6' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but6' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1420,23 +1420,23 @@ else if($citypage == 6 and $message == $cat1)
 }
 else if($citypage == 6 and $message == $cat2)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but6' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but6' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but6' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but6' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but6' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but6' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but6' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but6' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but6' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but6' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1448,23 +1448,23 @@ else if($citypage == 6 and $message == $cat2)
 }
 else if($citypage == 6 and $message == $cat3)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but6' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but6' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but6' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but6' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but6' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but6' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but6' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but6' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but6' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but6' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1476,23 +1476,23 @@ else if($citypage == 6 and $message == $cat3)
 }
 else if($citypage == 6 and $message == $cat4)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but6' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but6' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but6' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but6' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but6' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but6' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but6' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but6' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but6' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but6' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1504,23 +1504,23 @@ else if($citypage == 6 and $message == $cat4)
 }
 else if($citypage == 6 and $message == $cat5)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but6' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but6' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but6' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but6' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but6' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but6' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but6' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but6' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but6' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but6' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1534,23 +1534,23 @@ else if($citypage == 6 and $message == $cat5)
 
 else if($citypage == 7 and $message == $cat1)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but7' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but7' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but7' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but7' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but7' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but7' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but7' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but7' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but7' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but7' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1562,23 +1562,23 @@ else if($citypage == 7 and $message == $cat1)
 }
 else if($citypage == 7 and $message == $cat2)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but7' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but7' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but7' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but7' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but7' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but7' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but7' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but7' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but7' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but7' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1590,23 +1590,23 @@ else if($citypage == 7 and $message == $cat2)
 }
 else if($citypage == 7 and $message == $cat3)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but7' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but7' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but7' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but7' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but7' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but7' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but7' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but7' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but7' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but7' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1618,23 +1618,23 @@ else if($citypage == 7 and $message == $cat3)
 }
 else if($citypage == 7 and $message == $cat4)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but7' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but7' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but7' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but7' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but7' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but7' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but7' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but7' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but7' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but7' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1646,23 +1646,23 @@ else if($citypage == 7 and $message == $cat4)
 }
 else if($citypage == 7 and $message == $cat5)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but7' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but7' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but7' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but7' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but7' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but7' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but7' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but7' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but7' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but7' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1676,23 +1676,23 @@ else if($citypage == 7 and $message == $cat5)
 
 else if($citypage == 8 and $message == $cat1)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but8' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but8' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but8' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but8' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but8' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but8' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but8' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but8' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but8' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but8' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1704,23 +1704,23 @@ else if($citypage == 8 and $message == $cat1)
 }
 else if($citypage == 8 and $message == $cat2)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but8' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but8' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but8' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but8' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but8' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but8' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but8' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but8' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but8' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but8' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1732,23 +1732,23 @@ else if($citypage == 8 and $message == $cat2)
 }
 else if($citypage == 8 and $message == $cat3)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but8' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but8' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but8' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but8' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but8' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but8' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but8' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but8' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but8' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but8' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1760,23 +1760,23 @@ else if($citypage == 8 and $message == $cat3)
 }
 else if($citypage == 8 and $message == $cat4)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but8' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but8' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but8' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but8' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but8' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but8' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but8' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but8' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but8' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but8' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1788,23 +1788,23 @@ else if($citypage == 8 and $message == $cat4)
 }
 else if($citypage == 8 and $message == $cat5)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but8' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but8' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but8' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but8' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but8' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but8' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but8' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but8' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but8' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but8' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1818,23 +1818,23 @@ else if($citypage == 8 and $message == $cat5)
 
 else if($citypage == 9 and $message == $cat1)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but9' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but9' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but9' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but9' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but9' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but9' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but9' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but9' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but9' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but9' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1846,23 +1846,23 @@ else if($citypage == 9 and $message == $cat1)
 }
 else if($citypage == 9 and $message == $cat2)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but9' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but9' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but9' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but9' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but9' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but9' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but9' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but9' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but9' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but9' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1874,23 +1874,23 @@ else if($citypage == 9 and $message == $cat2)
 }
 else if($citypage == 9 and $message == $cat3)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but9' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but9' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but9' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but9' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but9' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but9' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but9' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but9' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but9' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but9' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1902,23 +1902,23 @@ else if($citypage == 9 and $message == $cat3)
 }
 else if($citypage == 9 and $message == $cat4)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but9' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but9' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but9' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but9' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but9' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but9' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but9' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but9' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but9' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but9' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1930,23 +1930,23 @@ else if($citypage == 9 and $message == $cat4)
 }
 else if($citypage == 9 and $message == $cat5)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but9' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but9' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but9' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but9' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but9' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but9' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but9' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but9' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but9' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but9' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1960,23 +1960,23 @@ else if($citypage == 9 and $message == $cat5)
 
 else if($citypage == 10 and $message == $cat1)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but10' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but10' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but10' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but10' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but10' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but10' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but10' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but10' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `sell` = '0' and `botid` = '$botid' and `city`='$but10' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat1' and `botid` = '$botid' and `city`='$but10' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -1988,23 +1988,23 @@ else if($citypage == 10 and $message == $cat1)
 }
 else if($citypage == 10 and $message == $cat2)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but10' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but10' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but10' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but10' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but10' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but10' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but10' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but10' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `sell` = '0' and `botid` = '$botid' and `city`='$but10' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat2' and `botid` = '$botid' and `city`='$but10' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -2016,23 +2016,23 @@ else if($citypage == 10 and $message == $cat2)
 }
 else if($citypage == 10 and $message == $cat3)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but10' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but10' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but10' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but10' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but10' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but10' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but10' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but10' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `sell` = '0' and `botid` = '$botid' and `city`='$but10' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat3' and `botid` = '$botid' and `city`='$but10' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -2044,23 +2044,23 @@ else if($citypage == 10 and $message == $cat3)
 }
 else if($citypage == 10 and $message == $cat4)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but10' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but10' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but10' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but10' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but10' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but10' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but10' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but10' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `sell` = '0' and `botid` = '$botid' and `city`='$but10' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat4' and `botid` = '$botid' and `city`='$but10' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -2072,23 +2072,23 @@ else if($citypage == 10 and $message == $cat4)
 }
 else if($citypage == 10 and $message == $cat5)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but10' and `tovid` = 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but10' and `tovid` = 1");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov1 = $row['name'];}else {$tov1 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but10' and `tovid` = 2");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but10' and `tovid` = 2");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov2 = $row['name'];}else {$tov2 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but10' and `tovid` = 3");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but10' and `tovid` = 3");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov3 = $row['name'];}else {$tov3 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but10' and `tovid` = 4");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but10' and `tovid` = 4");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov4 = $row['name'];}else {$tov4 = "";}
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `sell` = '0' and `botid` = '$botid' and `city`='$but10' and `tovid` = 5");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `cat` = '$cat5' and `botid` = '$botid' and `city`='$but10' and `tovid` = 5");
     $rows = mysqli_num_rows($query);
     $row = mysqli_fetch_assoc($query);
     if($rows){$tov5 = $row['name'];}else {$tov5 = "";}
@@ -2727,45 +2727,45 @@ if($message == "QIWI")
 
 if($message == "Проверить оплату" and $payid == 1)
 {
-	$query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
-	$row = mysqli_fetch_assoc($query);
-	$price = $row['price'];
-	$query = file_get_contents('https://qiwigate.ru/api?key=ZKCYWVA1TD67N34PQHAIO8DPXL5LSE&method=qiwi.get.history&start=25.09.2017&finish=27.09.2019');
-	$json = json_decode($query, true);
-	$json = $json['history'];
+    $query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
+    $row = mysqli_fetch_assoc($query);
+    $price = $row['price'];
+    $query = file_get_contents('https://qiwigate.ru/api?key=ZKCYWVA1TD67N34PQHAIO8DPXL5LSE&method=qiwi.get.history&start=25.09.2017&finish=27.09.2019');
+    $json = json_decode($query, true);
+    $json = $json['history'];
 
-	$cash1 = $json[0]['cash'];
-	$comm1 = $json[0]['comment'];
-	$status1 = $json[0]['status'];
-	$cash1 = preg_replace("/[^0-9]/", '', $cash1);
-	
-	$cash2 = $json[1]['cash'];
-	$comm2 = $json[1]['comment'];
-	$status2 = $json[0]['status'];
-	$cash2 = preg_replace("/[^0-9]/", '', $cash1);
-	
-	$cash3 = $json[2]['cash'];
-	$comm3 = $json[2]['comment'];
-	$status3 = $json[0]['status'];
-	$cash3 = preg_replace("/[^0-9]/", '', $cash1);
+    $cash1 = $json[0]['cash'];
+    $comm1 = $json[0]['comment'];
+    $status1 = $json[0]['status'];
+    $cash1 = preg_replace("/[^0-9]/", '', $cash1);
+    
+    $cash2 = $json[1]['cash'];
+    $comm2 = $json[1]['comment'];
+    $status2 = $json[0]['status'];
+    $cash2 = preg_replace("/[^0-9]/", '', $cash1);
+    
+    $cash3 = $json[2]['cash'];
+    $comm3 = $json[2]['comment'];
+    $status3 = $json[0]['status'];
+    $cash3 = preg_replace("/[^0-9]/", '', $cash1);
 
-	if($cash1 == $price . "00" and $comm1 == $comm and $status1 == "SUCCESS")
-	{
-		$pay = 1;
-	}
-	
-	else if($cash2 == $price . "00" and $comm2 == $comm and $status2 == "SUCCESS")
-	{
-		$pay = 1;
-	}
+    if($cash1 == $price . "00" and $comm1 == $comm and $status1 == "SUCCESS")
+    {
+        $pay = 1;
+    }
+    
+    else if($cash2 == $price . "00" and $comm2 == $comm and $status2 == "SUCCESS")
+    {
+        $pay = 1;
+    }
 
-	else if($cash2 == $price . "00" and $comm2 == $comm and $status3 == "SUCCESS")
-	{
-		$pay = 1;
-	}
-	
-	if($pay == 1)
-	{
+    else if($cash2 == $price . "00" and $comm2 == $comm and $status3 == "SUCCESS")
+    {
+        $pay = 1;
+    }
+    
+    if($pay == 1)
+    {
     $query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = '$id'");
     $row = mysqli_fetch_assoc($query);
     $tovid = $row['tovid'];
@@ -2826,22 +2826,22 @@ if($message == "Проверить оплату" and $payid == 1)
     if($fasid == 1){$fas = $fasname1;}
     else if($fasid == 2){$fas = $fasname2;}
     else if($fasid == 3){$fas = $fasname3;}
-		
-		$query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `tovid` = '$tovid' and `city` = '$city' and `region` = '$reg' and `cat` = '$cat' and `fas` = '$fas' limit 1");
-     		$row = mysqli_fetch_assoc($query);
-		$idtovar = $row['id'];
-		$about = $row['about'];
-		$url = $row['url'];
-		mysqli_query($connect, "UPDATE `tovar` SET `sell` = 1 WHERE `tovar`.`id` = $idtovar");
-		$commee = rand(1000,9999);
-     		mysqli_query($connect, "UPDATE `users` SET `comment` = $commee WHERE `users`.`chatid` = $id");
-		$msg = urlencode("Поздравляем с покупкой! Не забудь оставить отзыв /otziv\n\nОписание: ") . $about . urlencode("\n\nСсылки на фото:\n") . $url;
-		$check = "";
-	}else
-	{
-		$msg = urlencode("Получино 0 рублей\n\nСписок поступивших платежей обновляется раз в 5 минут, пожалуйста, подождите...");
- 		$check = "Проверить оплату";
-	}
+        
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `tovid` = '$tovid' and `city` = '$city' and `region` = '$reg' and `cat` = '$cat' and `fas` = '$fas' limit 1");
+            $row = mysqli_fetch_assoc($query);
+        $idtovar = $row['id'];
+        $about = $row['about'];
+        $url = $row['url'];
+        mysqli_query($connect, "UPDATE `tovar` SET `sell` = 1 WHERE `tovar`.`id` = $idtovar");
+        $commee = rand(1000,9999);
+            mysqli_query($connect, "UPDATE `users` SET `comment` = $commee WHERE `users`.`chatid` = $id");
+        $msg = urlencode("Поздравляем с покупкой! Не забудь оставить отзыв /otziv\n\nОписание: ") . $about . urlencode("\n\nСсылки на фото:\n") . $url;
+        $check = "";
+    }else
+    {
+        $msg = urlencode("Получино 0 рублей\n\nСписок поступивших платежей обновляется раз в 5 минут, пожалуйста, подождите...");
+        $check = "Проверить оплату";
+    }
     sendMessage($token, $id, $msg.KeyboardMenuMenu($check, $but11, $but12, $but13));
 }
 
