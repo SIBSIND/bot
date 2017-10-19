@@ -2742,12 +2742,12 @@ if($message == "Проверить оплату" and $payid == 1)
     $cash2 = $json[1]['cash'];
     $comm2 = $json[1]['comment'];
     $status2 = $json[0]['status'];
-    $cash2 = preg_replace("/[^0-9]/", '', $cash1);
+    $cash2 = preg_replace("/[^0-9]/", '', $cash2);
     
     $cash3 = $json[2]['cash'];
     $comm3 = $json[2]['comment'];
     $status3 = $json[0]['status'];
-    $cash3 = preg_replace("/[^0-9]/", '', $cash1);
+    $cash3 = preg_replace("/[^0-9]/", '', $cash3);
 
     if($cash1 == $price . "00" and $comm1 == $comm and $status1 == "SUCCESS")
     {
