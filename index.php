@@ -66,7 +66,7 @@ if( $message == "/start" or $message == "В главное меню")
 
 if($message == $but1)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but1' limit 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but1' and `sell` = '0' limit 1");
     $row = mysqli_num_rows($query);
     if($row)
     {
@@ -128,7 +128,7 @@ if($message == $but1)
 
 else if($message == $but2)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but2' limit 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but2' and `sell` = '0' limit 1");
     $row = mysqli_num_rows($query);
     if($row)
     {
@@ -188,7 +188,7 @@ else if($message == $but2)
 }
 else if($message == $but3)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but3' limit 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but3' and `sell` = '0' limit 1");
     $row = mysqli_num_rows($query);
     if($row)
     {
@@ -248,7 +248,7 @@ else if($message == $but3)
 }
 else if($message == $but4)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but4' limit 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but4' and `sell` = '0' limit 1");
     $row = mysqli_num_rows($query);
     if($row)
     {
@@ -308,7 +308,7 @@ else if($message == $but4)
 }
 if($message == $but5)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but5' limit 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but5' and `sell` = '0' limit 1");
     $row = mysqli_num_rows($query);
     if($row)
     {
@@ -368,7 +368,7 @@ if($message == $but5)
 }
 else if($message == $but6)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but6' limit 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but6' and `sell` = '0' limit 1");
     $row = mysqli_num_rows($query);
     if($row)
     {
@@ -428,7 +428,7 @@ else if($message == $but6)
 }
 if($message == $but7)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but7' limit 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but7' and `sell` = '0' limit 1");
     $row = mysqli_num_rows($query);
     if($row)
     {
@@ -488,7 +488,7 @@ if($message == $but7)
 }
 else if($message == $but8)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but8' limit 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but8' and `sell` = '0' limit 1");
     $row = mysqli_num_rows($query);
     if($row)
     {
@@ -548,7 +548,7 @@ else if($message == $but8)
 }
 else if($message == $but9)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but9' limit 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but9' and `sell` = '0' limit 1");
     $row = mysqli_num_rows($query);
     if($row)
     {
@@ -608,7 +608,7 @@ else if($message == $but9)
 }
 else if($message == $but10)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but10' limit 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but10' and `sell` = '0' limit 1");
     $row = mysqli_num_rows($query);
     if($row)
     {
