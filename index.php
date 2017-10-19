@@ -72,7 +72,7 @@ if($message == $but1)
     {
         mysqli_query($connect, "UPDATE `users` SET `city` = '1' WHERE `users`.`chatid` = $id ");
         $msg = "Вы выбрали "  . "$but1" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but1 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but1' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat1' and `city` = '$but1' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -80,7 +80,7 @@ if($message == $but1)
         }else{
         $cat1 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat2' and `city` = '$but1' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat2' and `city` = '$but1' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -88,7 +88,7 @@ if($message == $but1)
         }else{
         $cat2 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat3' and `city` = '$but1' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat3' and `city` = '$but1' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -96,7 +96,7 @@ if($message == $but1)
         }else{
         $cat3 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat4' and `city` = '$but1' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat4' and `city` = '$but1' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -105,7 +105,7 @@ if($message == $but1)
         $cat4 = "";
         }
 
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat5' and `city` = '$but1' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat5' and `city` = '$but1' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -128,13 +128,13 @@ if($message == $but1)
 
 else if($message == $but2)
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `city` = '$but2' and `sell` = '0' limit 1");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid'  and `city` = '$but2' and `sell` = '0' limit 1");
     $row = mysqli_num_rows($query);
     if($row)
     {
         mysqli_query($connect, "UPDATE `users` SET `city` = '2' WHERE `users`.`chatid` = $id");
         $msg = "Вы выбрали "  . "$but2" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but2 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but2' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat1' and `city` = '$but2' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -142,7 +142,7 @@ else if($message == $but2)
         }else{
         $cat1 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat2' and `city` = '$but2' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat2' and `city` = '$but2' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -150,7 +150,7 @@ else if($message == $but2)
         }else{
         $cat2 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat3' and `city` = '$but2' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat3' and `city` = '$but2' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -158,7 +158,7 @@ else if($message == $but2)
         }else{
         $cat3 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat4' and `city` = '$but2' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat4' and `city` = '$but2' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -166,7 +166,7 @@ else if($message == $but2)
         }else{
         $cat4 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat5' and `city` = '$but2' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat5' and `city` = '$but2' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -194,7 +194,7 @@ else if($message == $but3)
     {
         mysqli_query($connect, "UPDATE `users` SET `city` = '3' WHERE `users`.`chatid` = $id");
         $msg = "Вы выбрали "  . "$but3" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but3 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but3' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat1' and `city` = '$but3' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -202,7 +202,7 @@ else if($message == $but3)
         }else{
         $cat1 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat2' and `city` = '$but3' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat2' and `city` = '$but3' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -210,7 +210,7 @@ else if($message == $but3)
         }else{
         $cat2 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat3' and `city` = '$but3' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat3' and `city` = '$but3' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -218,7 +218,7 @@ else if($message == $but3)
         }else{
         $cat3 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat4' and `city` = '$but3' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat4' and `city` = '$but3' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -226,7 +226,7 @@ else if($message == $but3)
         }else{
         $cat4 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat5' and `city` = '$but3' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat5' and `city` = '$but3' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -254,7 +254,7 @@ else if($message == $but4)
     {
         mysqli_query($connect, "UPDATE `users` SET `city` = '4' WHERE `users`.`chatid` = $id");
         $msg = "Вы выбрали "  . "$but4" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but4 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but4' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat1' and `city` = '$but4' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -262,7 +262,7 @@ else if($message == $but4)
         }else{
         $cat1 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat2' and `city` = '$but4' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat2' and `city` = '$but4' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -270,7 +270,7 @@ else if($message == $but4)
         }else{
         $cat2 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat3' and `city` = '$but4' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat3' and `city` = '$but4' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -278,7 +278,7 @@ else if($message == $but4)
         }else{
         $cat3 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat4' and `city` = '$but4' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat4' and `city` = '$but4' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -286,7 +286,7 @@ else if($message == $but4)
         }else{
         $cat4 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat5' and `city` = '$but4' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat5' and `city` = '$but4' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -314,7 +314,7 @@ if($message == $but5)
     {
         mysqli_query($connect, "UPDATE `users` SET `city` = '5' WHERE `users`.`chatid` = $id");
         $msg = "Вы выбрали "  . "$but5" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but5 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but5' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat1' and `city` = '$but5' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -322,7 +322,7 @@ if($message == $but5)
         }else{
         $cat1 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat5' and `city` = '$but1' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat5' and `city` = '$but1' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -330,7 +330,7 @@ if($message == $but5)
         }else{
         $cat2 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat3' and `city` = '$but5' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat3' and `city` = '$but5' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -338,7 +338,7 @@ if($message == $but5)
         }else{
         $cat3 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat4' and `city` = '$but5' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat4' and `city` = '$but5' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -346,7 +346,7 @@ if($message == $but5)
         }else{
         $cat4 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat5' and `city` = '$but5' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat5' and `city` = '$but5' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -374,7 +374,7 @@ else if($message == $but6)
     {
         mysqli_query($connect, "UPDATE `users` SET `city` = '6' WHERE `users`.`chatid` = $id");
         $msg = "Вы выбрали "  . "$but6" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but6 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but6' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat1' and `city` = '$but6' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -382,7 +382,7 @@ else if($message == $but6)
         }else{
         $cat1 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat2' and `city` = '$but6' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat2' and `city` = '$but6' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -390,7 +390,7 @@ else if($message == $but6)
         }else{
         $cat2 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat3' and `city` = '$but6' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat3' and `city` = '$but6' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -398,7 +398,7 @@ else if($message == $but6)
         }else{
         $cat3 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat4' and `city` = '$but6' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat4' and `city` = '$but6' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -406,7 +406,7 @@ else if($message == $but6)
         }else{
         $cat4 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat5' and `city` = '$but6' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat5' and `city` = '$but6' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -434,7 +434,7 @@ if($message == $but7)
     {
         mysqli_query($connect, "UPDATE `users` SET `city` = '7' WHERE `users`.`chatid` = $id");
         $msg = "Вы выбрали "  . "$but7" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but7 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but7' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat1' and `city` = '$but7' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -442,7 +442,7 @@ if($message == $but7)
         }else{
         $cat1 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat2' and `city` = '$but7' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat2' and `city` = '$but7' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -450,7 +450,7 @@ if($message == $but7)
         }else{
         $cat2 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat3' and `city` = '$but7' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat3' and `city` = '$but7' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -458,7 +458,7 @@ if($message == $but7)
         }else{
         $cat3 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat4' and `city` = '$but7' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat4' and `city` = '$but7' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -466,7 +466,7 @@ if($message == $but7)
         }else{
         $cat4 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat5' and `city` = '$but7' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat5' and `city` = '$but7' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -494,7 +494,7 @@ else if($message == $but8)
     {
         mysqli_query($connect, "UPDATE `users` SET `city` = '8' WHERE `users`.`chatid` = $id");
         $msg = "Вы выбрали "  . "$but8" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but8 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but8' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat1' and `city` = '$but8' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -502,7 +502,7 @@ else if($message == $but8)
         }else{
         $cat1 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat2' and `city` = '$but8' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat2' and `city` = '$but8' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -510,7 +510,7 @@ else if($message == $but8)
         }else{
         $cat2 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat3' and `city` = '$but8' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat3' and `city` = '$but8' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -518,7 +518,7 @@ else if($message == $but8)
         }else{
         $cat3 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat4' and `city` = '$but8' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat4' and `city` = '$but8' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -526,7 +526,7 @@ else if($message == $but8)
         }else{
         $cat4 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat5' and `city` = '$but8' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat5' and `city` = '$but8' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -554,7 +554,7 @@ else if($message == $but9)
     {
         mysqli_query($connect, "UPDATE `users` SET `city` = '9' WHERE `users`.`chatid` = $id");
         $msg = "Вы выбрали "  . "$but9" . urlencode("\n\n▪▪▪▪▪▪▪▪▪▪\nГОРОД: ") . $but9 . urlencode("\n▪▪▪▪▪▪▪▪▪▪\nВыберите категорию:");
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat1' and `city` = '$but9' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat1' and `city` = '$but9' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -562,7 +562,7 @@ else if($message == $but9)
         }else{
         $cat1 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat2' and `city` = '$but9' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat2' and `city` = '$but9' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -570,7 +570,7 @@ else if($message == $but9)
         }else{
         $cat2 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat3' and `city` = '$but9' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat3' and `city` = '$but9' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -578,7 +578,7 @@ else if($message == $but9)
         }else{
         $cat3 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat4' and `city` = '$but9' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat4' and `city` = '$but9' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -586,7 +586,7 @@ else if($message == $but9)
         }else{
         $cat4 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat5' and `city` = '$but9' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat5' and `city` = '$but9' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -622,7 +622,7 @@ else if($message == $but10)
         }else{
         $cat1 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat2' and `city` = '$but10' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat2' and `city` = '$but10' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -630,7 +630,7 @@ else if($message == $but10)
         }else{
         $cat2 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat3' and `city` = '$but10' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat3' and `city` = '$but10' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -638,7 +638,7 @@ else if($message == $but10)
         }else{
         $cat3 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat4' and `city` = '$but10' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat4' and `city` = '$but10' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
@@ -646,7 +646,7 @@ else if($message == $but10)
         }else{
         $cat4 = "";
         }
-        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `cat` = '$cat5' and `city` = '$but10' limit 1");
+        $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `sell` = '0' and `cat` = '$cat5' and `city` = '$but10' limit 1");
         $row = mysqli_num_rows($query);
         $ass = mysqli_fetch_assoc($query);
         if($row){
