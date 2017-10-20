@@ -2845,7 +2845,17 @@ if($message == "Проверить оплату" and $payid == 1)
     sendMessage($token, $id, $msg.KeyboardMenuMenu($check, $but11, $but12, $but13));
 }
 
+if($message == "/otziv" or $message == "/otzivi")
+{
+    $msg = "В данный момент этот раздел не работает, т.к бот еще только разрабатывается!";
+    sendMessage($token, $id, $msg);
+}
 
+if($message == "Помощь")
+{
+    $msg = "В данный момент этот раздел не работает, т.к бот еще только разрабатывается!";
+    sendMessage($token, $id, $msg);
+}
 
 file_put_contents("logs.txt",$message);
 
