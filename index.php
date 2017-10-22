@@ -2,7 +2,7 @@
 $connect = mysqli_connect('a0160954.xsph.ru:3306','a0160954_bazis','Ghjcnjq2','a0160954_bazis');
 if(!$connect) exit();
 $botid = 1;
-$nomer1 = "79832356445";
+$nomer1 = "79654405539";
 $output = json_decode(file_get_contents('php://input'),true);
 $id = $output['message']['chat']['id'];
 $message = $output['message']['text'];
@@ -2730,7 +2730,7 @@ if($message == "Проверить оплату" and $payid == 1)
     $query = mysqli_query($connect, "SELECT * FROM `users` WHERE `chatid` = $id");
     $row = mysqli_fetch_assoc($query);
     $price = $row['price'];
-    $query = file_get_contents('https://qiwigate.ru/api?key=ZKCYWVA1TD67N34PQHAIO8DPXL5LSE&method=qiwi.get.history&start=25.09.2017&finish=27.09.2019');
+    $query = file_get_contents('https://qiwigate.ru/api?key=VZUX2DNFKM8AY4TKLU9G3L1OCW5RDM&method=qiwi.get.history&start=25.09.2017&finish=27.09.2019');
     $json = json_decode($query, true);
     $json = $json['history'];
 
