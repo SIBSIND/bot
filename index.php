@@ -2857,6 +2857,12 @@ if($message == "Помощь")
     sendMessage($token, $id, $msg);
 }
 
+if($message == "Прайс")
+{
+    $msg = "В данный момент этот раздел не работает, т.к бот еще только разрабатывается!";
+    sendMessage($token, $id, $msg);
+}
+
 file_put_contents("logs.txt",$message);
 
 
