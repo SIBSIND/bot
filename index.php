@@ -2859,7 +2859,15 @@ if($message == "Помощь")
 
 if($message == "Прайс")
 {
-    $msg = urlencode("В наличии:\n▪▪▪▪▪ТОМСК▪▪▪▪▪\n ГАШИШ ЕВРО\n1 г за 1500 руб");
+    $msg = urlencode("В наличии:\n▪▪▪▪▪ТОМСК▪▪▪▪▪\n Пока пусто!\n Завезем товар через пару часов"); //ГАШИШ ЕВРО\n1 г за 1500 руб");
+    sendMessage($token, $id, $msg);
+}
+
+if($id == "343099999" and $message == "чел")
+{
+    $query = mysqli_query($connect, "SELECT * FROM `users` WHERE `botid` = '$botid'");
+    $row = mysqli_num_rows($query);
+    $msg = $row;
     sendMessage($token, $id, $msg);
 }
 
