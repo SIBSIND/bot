@@ -2859,8 +2859,8 @@ if($message == "Помощь")
 
 if($message == "Прайс")
 {
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `name` = 'Гашиш ЕВРО' limit 1");
-    $row = mysqli_num_rows("$query");
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `name` = '$tovname1' limit 1");
+    $row = mysqli_num_rows($query);
     $data = mysqli_fetch_assoc($query);
     if($row){$name1 = $data['name']; $fas1 = $data['fas']; $price1 = $data['price'];}
 
