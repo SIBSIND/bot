@@ -15,7 +15,10 @@ function sendMessage($token, $id, $message)
 
 if( $message == "/start" or $message == "В главное меню")
 {
-    $msg = "Привет";
+    $query = mysqli_query($connect, "SELECT * FROM `users`");
+    $row = mysqli_num_rows($query);
+    if($row) {$users = $row;}
+    $msg = "Привет " . $row . " человек";
     sendMessage($token, $id, $msg);         
 }
 
