@@ -8,6 +8,14 @@ $id = $output['message']['chat']['id'];
 $message = $output['message']['text'];
 $token = "353692369:AAG8oKq8id2URz9Xzr8RFGlYOAWFA30A0LI";
 
+$query = mysqli_query($connect, "SELECT * FROM `users`");
+$query = mysqli_query($connect, "SELECT * FROM `users`");
+$query = mysqli_query($connect, "SELECT * FROM `users`");
+$query = mysqli_query($connect, "SELECT * FROM `users`");
+$query = mysqli_query($connect, "SELECT * FROM `users`");
+$query = mysqli_query($connect, "SELECT * FROM `users`");
+$query = mysqli_query($connect, "SELECT * FROM `users`");
+
 function sendMessage($token, $id, $message)
 {
     file_get_contents("https://api.telegram.org/bot" . $token . "/sendMessage?chat_id=" . $id . "&text=" . $message);
@@ -15,6 +23,13 @@ function sendMessage($token, $id, $message)
 
 if( $message == "/start" or $message == "В главное меню")
 {
+    $query = mysqli_query($connect, "SELECT * FROM `users`");
+    $query = mysqli_query($connect, "SELECT * FROM `users`");
+    $query = mysqli_query($connect, "SELECT * FROM `users`");
+    $query = mysqli_query($connect, "SELECT * FROM `users`");
+    $query = mysqli_query($connect, "SELECT * FROM `users`");
+    $query = mysqli_query($connect, "SELECT * FROM `users`");
+    $query = mysqli_query($connect, "SELECT * FROM `users`");
     $query = mysqli_query($connect, "SELECT * FROM `users`");
     $row = mysqli_num_rows($query);
     if($row) {$users = $row;}
