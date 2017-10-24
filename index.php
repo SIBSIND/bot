@@ -2859,7 +2859,12 @@ if($message == "Помощь")
 
 if($message == "Прайс")
 {
-    $msg = "В данный момент этот раздел не работает, т.к бот еще только разрабатывается!";
+    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `name` = '$tovname1' limit 1");
+    $row = mysqli_num_rows("$query");
+    $data = mysqli_fetch_assoc($query);
+    if($row){$name1 = $data['name']; $fas1 = $data['fas']; $price1 = $data['price'];}
+
+    $msg = urlencode("▪▪▪▪▪ТОМСК▪▪▪▪▪\n") . $name1 . urlencode("\n") . $fas1 . " за " . $price1 . " руб";
     sendMessage($token, $id, $msg);
 }
 
