@@ -2859,32 +2859,7 @@ if($message == "Помощь")
 
 if($message == "Прайс")
 {
-    $query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = $botid and `fasid` = 1");
-    $row = mysqli_fetch_assoc($query);
-    $fasname1 = $row['fas'];
-    $query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = $botid and `fasid` = 2");
-    $row = mysqli_fetch_assoc($query);
-    $fasname2 = $row['fas'];
-    $query = mysqli_query($connect, "SELECT * FROM `fas` WHERE `botid` = $botid and `fasid` = 3");
-    $row = mysqli_fetch_assoc($query);
-    $fasname3 = $row['fas'];
-    
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `name` = '$tovname1' and `fas` = '$fasname1' limit 1");
-    $row = mysqli_num_rows($query);
-    $data = mysqli_fetch_assoc($query);
-    if($row){$name11 = $data['name']; $fas11 = $data['fas']; $price11 = $data['price'];}
-
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `name` = '$tovname1' and `fas` = '$fasname2' limit 1");
-    $row = mysqli_num_rows($query);
-    $data = mysqli_fetch_assoc($query);
-    if($row){$name12 = $data['name']; $fas12 = $data['fas']; $price12 = $data['price'];}
-    
-    $query = mysqli_query($connect, "SELECT * FROM `tovar` WHERE `botid` = '$botid' and `name` = '$tovname1' and `fas` = '$fasname3' limit 1");
-    $row = mysqli_num_rows($query);
-    $data = mysqli_fetch_assoc($query);
-    if($row){$name13 = $data['name']; $fas13 = $data['fas']; $price13 = $data['price'];}
-    
-    $msg = urlencode("▪▪▪В НАЛИЧИИ▪▪▪\n▪▪▪▪▪ТОМСК▪▪▪▪▪\n") . $name11 . urlencode("\n") . $fas11 . " г за " . $price11 . " руб" . urlencode("\n") . $name12 . urlencode("\n") . $fas13 . " г за " . $price13 . . $name11 . urlencode("\n") . $fas13 . " г за " . $price13;
+    $msg = urlencode("▪▪▪В НАЛИЧИИ▪▪▪\n▪▪▪▪▪ТОМСК▪▪▪▪▪\n ГАШИШ ЕВРО\n1 г за 1500 руб";
     sendMessage($token, $id, $msg);
 }
 
