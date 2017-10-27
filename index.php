@@ -8,18 +8,11 @@ $nomer1 = "79654405539";
 global $token = "6d0600a19121b7a5ff6ed03ab7016c93ef53992ec2c1533999c3046c1859bf604478094ba5d6da3733ee3";
 $id = "400547697";
 
-send($id);
+sendMessage($id);
 
-function send($id)
+function sendMessage($id)
 {
-    $curl = curl_init();
-    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-    curl_setopt($curl, CURLOPT_URL, 'https://api.vk.com/method/messages.send?user_id=' . $id . '&message=ТУТ%20РУССКИЕ%20БУВЫ%20И%20ПРОБЕЛЫ?&access_token=' . $token);
-    $response = curl_exec($curl);
-    curl_close($curl);
-    $response = json_decode($response, true);
-    return $response;
+    file_get_contents('https://api.vk.com/method/messages.send?user_id=' . $id . '&message=ТУТ%20РУССКИЕ%20БУВЫ%20И%20ПРОБЕЛЫ?&access_token=' . $token);
 }
 
 ?>
