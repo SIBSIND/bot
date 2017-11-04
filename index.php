@@ -1,18 +1,28 @@
-<?php
-$connect = mysqli_connect('a0160954.xsph.ru:3306','a0160954_bazis','Ghjcnjq2','a0160954_bazis');
-if(!$connect) exit();
-$botid = 1;
-$nomer1 = "79654405539";
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="imagetoolbar" content="no" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>404</title>
 
+		<style>
+		body {background: #f9fee8;margin: 0; padding: 20px; text-align:center; font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#666666;}
+		.error_page {width: 600px; padding: 50px; margin: auto;}
+		.error_page h1 {margin: 20px 0 0;}
+		.error_page p {margin: 10px 0; padding: 0;}		
+		a {color: #9caa6d; text-decoration:none;}
+		a:hover {color: #9caa6d; text-decoration:underline;}
+		</style>
 
-global $token = "6d0600a19121b7a5ff6ed03ab7016c93ef53992ec2c1533999c3046c1859bf604478094ba5d6da3733ee3";
-$id = "400547697";
+</head>
 
-sendMessage($id);
-
-function sendMessage($id)
-{
-    file_get_contents('https://api.vk.com/method/messages.send?user_id=' . $id . '&message=ТУТ%20РУССКИЕ%20БУВЫ%20И%20ПРОБЕЛЫ?&access_token=' . $token);
-}
-
-?>
+<body class="login">
+  <div class="error_page">
+    <img alt="Kidmondo_face_sad" src="style/images/kidmondo_face_sad.gif" />
+    <h1>SORRY</h1>
+    <p>NOT FOUND</p>
+  </div>
+</body>
+</html>
